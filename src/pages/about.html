@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Xian Yuhui Biotechnology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-custom-green { background-color: #e5edea; }
+        .text-custom-main { color: #4a5d4e; }
+        .bg-custom-btn { background-color: #4a5d4e; }
+        .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+</head>
+<!-- 只保留这唯一一行body，合并样式 -->
+<body class="bg-custom-green font-sans">
+
+    <!-- 这里是新添加的容器，负责导航栏背景色 -->
+    <div class="bg-custom-green">
+       <nav class="flex items-center justify-between px-12 py-6 w-full">
+    <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+    </div>
+
+    <div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
+        <!-- 这里加回了 Home！！！ -->
+        <a href="/index.html" class="hover:text-green-800">Home</a>
+        <a href="/about.html" class="hover:text-green-800">About Us</a>
+
+        <!-- Products 下拉菜单（正常可用） -->
+        <div class="relative group">
+            <a href="/catalogue.html" class="hover:text-green-800 cursor-pointer">Products ▼</a>
+            <div class="absolute hidden group-hover:block top-full mt-0 w-40 z-10">
+                <div class="bg-white shadow-lg py-2 rounded">
+                    <a href="/Essential-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Single Essential oils</a>
+                    <a href="/carrier-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
+                    <a href="/blended-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="/news.html" class="hover:text-green-800">News</a>
+        <a href="#" class="hover:text-green-800">Blog</a>
+        <a href="#" class="hover:text-green-800">Contact Us</a>
+    </div>
+</nav>
+    </div> <!-- 这里闭合 bg-custom-green 容器 -->
+
+    <div class="relative w-full h-[400px] overflow-visible mb-24"> 
+    
+    <img src="images/1111.jpg" alt="Company Building" class="absolute w-full h-full object-cover">
+    
+    <div class="absolute inset-0 bg-black bg-opacity-5"></div>
+
+    <div class="absolute bottom-0 left-0 right-0 w-full max-w-4xl mx-auto px-4 translate-y-1/2 z-10">
+        
+        <div class="bg-custom-btn py-6 text-center">
+            <h2 class="text-white text-4xl font-bold">About Us</h2>
+        </div>
+
+        <div class="bg-custom-green py-8 text-center shadow-lg"> 
+            <h3 class="text-custom-main text-3xl font-bold">XIAN YUHUI BIOTECHNOLOGY</h3>
+        </div>
+        
+    </div>
+</div>
+<!-- Banner 下方的描述性文字区域 -->
+<section class="max-w-4xl mx-auto px-6 py-16 lg:py-24 text-center">
+    <p class="text-xl lg:text-2xl text-slate-700 leading-relaxed font-light">
+        We combine in-house manufacturing in China with locally sourced raw materials and selected imported essential oils to provide a stable and flexible supply for global B2B customers.
+    </p>
+</section>
+<!-- 公司简介板块 (The Company) -->
+<section class="max-w-7xl mx-auto px-6 py-15">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- 左侧文字内容 -->
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-custom-main">The Company</h2>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                We are a China-based essential oil supplier and manufacturer with over 11 years of experience in in-house processing and structured sourcing of raw materials. Over time, we have developed a reliable and flexible supply system that combines local manufacturing with selected imported essential oils to support global B2B customers.
+            </p>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                Our essential oils are widely used in cosmetics, personal care, fragrance, and related industries. We work closely with importers, brands, and manufacturers, providing consistent quality, flexible supply solutions, and export-ready documentation for long-term cooperation.
+            </p>
+        </div>
+
+        <!-- 右侧图片区域 (参照 QQ20260529-101410_2.jpg 风格) -->
+        <div class="w-full">
+            <div class="aspect-[4/3] bg-slate-200 rounded-2xl shadow-xl overflow-hidden">
+                <!-- 替换为你实际的实验室或工厂图片 -->
+                <img src="images/banner-5.jpg" alt="Professional Laboratory Setting" class="w-full h-full object-cover">
+            </div>
+            <p class="text-sm text-slate-400 mt-4 italic text-right">In-house quality control and manufacturing excellence</p>
+        </div>
+
+    </div>
+</section>
+<!-- 灵活供应板块 (Flexible Supply) -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- 左侧图片区域 (参考 QQ20260529-114021.jpg 风格) -->
+        <div class="w-full">
+            <div class="aspect-[4/3] bg-slate-200 rounded-2xl shadow-xl overflow-hidden">
+                <!-- 替换为你实际的商务沟通或团队协作图片 -->
+                <img src="images/banner-4.jpg"alt="Business Partnership" class="w-full h-full object-cover">
+            </div>
+            <p class="text-sm text-slate-400 mt-4 italic text-left">Committed to collaborative growth and partnership</p>
+        </div>
+
+        <!-- 右侧文字内容 -->
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-custom-main">Flexible Supply for All Business Sizes</h2>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                We work closely with clients of all sizes, from emerging brands to established importers and manufacturers, providing flexible essential oil supply solutions tailored to different market needs.
+            </p>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                Flexibility is an important part of our approach. We support our partners with customized specifications, packaging options, order volumes, and delivery arrangements to help them respond effectively to their own markets and customers.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- 源头到成品板块 (From Growers to Final Product) -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- 左侧文字内容 -->
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-custom-main">From Growers to Final Product</h2>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                All high-quality essential oils are rooted in carefully selected botanical raw materials. Different plants have strict requirements for their growing conditions, and climate, soil, water sources, and cultivation methods all directly influence the aromatic composition and quality of the final oil.
+            </p>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                As a manufacturing-focused company, we fully understand the importance of raw material sourcing. We maintain close, long-term relationships with growers and primary suppliers to ensure a stable and reliable supply of botanicals. In some cases, we also introduce carefully selected imported raw materials or essential oils to meet market demand and expand product applications.
+            </p>
+        </div>
+
+        <!-- 右侧图片区域 (种植源头风格) -->
+        <div class="w-full">
+            <div class="aspect-[4/3] bg-slate-200 rounded-2xl shadow-xl overflow-hidden">
+                <!-- 替换为您种植农场或植物原材料的图片 -->
+                <img src="images/grower.jpg" alt="Botanical Farming" class="w-full h-full object-cover">
+            </div>
+            <p class="text-sm text-slate-400 mt-4 italic text-right">Commitment to quality from the source</p>
+        </div>
+
+    </div>
+</section>
+<!-- 生产与质量控制板块 (Production & Quality Control System) - 左图右文布局 -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- 左侧图片区域 (精油实验室风格) -->
+        <div class="w-full">
+            <div class="aspect-[4/3] bg-slate-200 rounded-2xl shadow-xl overflow-hidden">
+                <!-- 替换为你实际的精油/实验室设备图片 -->
+                <img src="images/lab-testing.jpg" alt="Laboratory Quality Control" class="w-full h-full object-cover">
+            </div>
+            <p class="text-sm text-slate-400 mt-4 italic text-left">Professional laboratory analysis and GMP-standard operations</p>
+        </div>
+
+        <!-- 右侧文字内容 -->
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-custom-main">Production & Quality Control System</h2>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                We operate GMP-compliant production workshops in China, equipped with imported automated production equipment and professional sterilization and testing systems. Standardized production lines are used to maintain consistent quality across production batches.
+            </p>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                A structured quality control system is applied throughout the production process, covering raw material incoming inspection, extraction, processing, and final filling, with sampling checks conducted at key stages.
+            </p>
+            
+            <p class="text-slate-600 text-lg leading-relaxed">
+                Standardized warehousing facilities are in place, supported by a warehouse management system that helps maintain stable storage conditions and product integrity during storage.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- Connect with Sales 板块 (图片放大版) -->
+<section class="bg-custom-green py-20 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- 左侧：文字 + 图片区域 -->
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-custom-main">Contact our sales team</h2>
+            <p class="text-slate-700 text-lg leading-relaxed">
+                Work with a professional essential oil manufacturer and explore tailored botanical ingredient solutions designed to support your formulation and sourcing requirements.
+            </p>
+            
+            <!-- 图片区域：使用 h-[435px] 达到比 h-64 大约 2/3 的效果 -->
+            <div class="h-[435px] rounded-2xl overflow-hidden shadow-lg mt-2">
+                <img src="images/contact-us.jpg" alt="Sales Team" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- 右侧：表单区域 -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-2xl font-bold text-custom-main mb-6">Connect with us</h3>
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
+                        <input type="text" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-800 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Your Email</label>
+                        <input type="email" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-800 outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Business</label>
+                    <input type="text" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-800 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Country</label>
+                    <select class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-800 outline-none">
+                        <option>United States - US</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Your Message</label>
+                    <textarea rows="4" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-800 outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-emerald-900 text-white font-bold rounded-lg hover:bg-emerald-800 transition">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</section>

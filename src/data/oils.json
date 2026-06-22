@@ -1,0 +1,663 @@
+[
+{
+    "name": "Peppermint Oil",
+    "latin": "Mentha piperita",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/peppermint-oil.jpg",
+    "aroma": "Potent, fresh, and minty.",
+    "origin": "China",
+    "partUsed": "Fresh Leaves",
+    "appearance": "Colorless to pale light yellow liquid",
+    "odor": "8006-90-4",
+    "relativeDensity": "0.890 ~ 0.910",
+    "refractiveIndex": "1.458 ~ 1.474",
+    "opticalRotation": "-24° ~ -18°",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+  },
+  {
+    "name": "Lavender Oil",
+    "latin": "Lavandula angustifolia",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/lavender-oil.jpg",
+    "aroma": "Clean, floral, and herbaceous",
+    "origin": "Xinjiang, China",
+    "partUsed": "Flowering Tops",
+    "appearance": "Pale yellow to clear liquid",
+    "odor": "8000-28-0,90063-37-9.",
+    "relativeDensity": "0.875 – 0.895",
+    "refractiveIndex": "1.460 – 1.468",
+    "opticalRotation": "-12° to -6°",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+  },
+  {
+    "name": "Rosemary Oil",
+    "latin": "Rosmarinus officinalis",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/rosemary-oil.jpg",
+    "aroma": "powerful, fresh, and herbaceous",
+    "origin": "China",
+    "partUsed": "Leaves & Twigs",
+    "appearance": "Clear, pale yellow to colorless liquid",
+    "cas": "8000-25-7,84604-14-8.",
+    "relativeDensity": "0.890 – 0.920",
+    "refractiveIndex": "1.464 – 1.472",
+    "opticalRotation": "-5° to +8°",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+
+
+
+
+  },
+  {
+    "name": "Rose Oil",
+    "latin": "Rosa damascena",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/rose.jpg",
+    "aroma": "Deep, intensely floral, sweet, and honey-like.",
+    "origin": "Bulgaria",
+    "partUsed": "Fresh Rose Petals"
+    "appearance": "Clear, pale yellow to colorless liquid",
+    "cas": "8007-01-0 ; 90106-38-0.",
+    "relativeDensity": "0.840 - 0.880 @ 20°C ",
+    "refractiveIndex": "1.452 - 1.470 @ 20°C ",
+    "opticalRotation": "-6° to +2° ",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+
+  },
+  {
+    "name": "Jasmine Oil",
+    "latin": "Jasminum grandifflorum",
+    "category": "floral",
+    "method": "Solvent Extracted",
+    "img": "/images/jasmine.jpg",
+    "aroma": "Extremely intense, sweet, and floral",
+    "origin": "Guangxi, China",
+    "partUsed": "Flowers"
+    "appearance": "Brown to reddish brown liquid",
+    "cas": "8022-96-6.",
+    "relativeDensity": "0.876 to 0.892 @ 20 °C  ",
+    "refractiveIndex": "1.475 to 1.485 @ 20 °C ",
+    "opticalRotation": "+10° to +25° @ 20 °C ",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+  },
+  {
+    "name": "Geranium Oil",
+    "latin": "Pelargonium graveolens",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/geranium.jpg",
+    "aroma": "A complex, herbaceous, and sweet floral scent",
+    "origin": "Madagascar",
+    "partUsed": "Aerial Herb"
+    "appearance": "Colorless, greenish or brownish 	liquid",
+    "cas": "8000-46-2.",
+    "relativeDensity": "0.894 to 0.905 @ 25 °C ",
+    "refractiveIndex": "1.465 to 1.470 @ 25 °C ",
+    "opticalRotation": "-7° to -11° @ 25 °C  ",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+  },
+  {
+    "name": "Ylang Ylang Oil",
+    "latin": "Cananga odorata",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/ylangylang.jpg",
+    "aroma": "Deep, heavy, and intensely sweet",
+    "origin": "China",
+    "partUsed": "Unopened Flower Buds"
+    "appearance": "Clear to pale yellow colored liquid",
+    "cas": "8006-81-3 ; 83863-30-3.",
+    "relativeDensity": "0.905 - 0.960 @ 20°C  ",
+    "refractiveIndex": "1.490 - 1.520 @ 20°C  ",
+    "opticalRotation": "-60° to -20° ",
+    "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
+    "shelfLife": "24 months unopened",
+    "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight"
+  },
+  {
+    "name": "Neroli Oil",
+    "latin": "Citrus aurantium",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/neroli-oil.jpg",
+    "inci": "Citrus Aurantium Flower Oil",
+    "origin": "France",
+    "partUsed": "Orange Blossom Flowers"
+  },
+  {
+    "name": "Chamomile (Roman)",
+    "latin": "Chamaemelum nobile",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/chamomile-roman-oil.jpg",
+    "inci": "Chamaemelum Nobile Flower Oil",
+    "origin": "UK",
+    "partUsed": "Whole Flower Heads"
+  },
+  {
+    "name": "Chamomile (German)",
+    "latin": "Matricaria chamomilla",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/chamomile-german-oil.jpg",
+    "inci": "Matricaria Recutita Flower Oil",
+    "origin": "Hungary",
+    "partUsed": "Whole Flower Tops"
+  },
+  {
+    "name": "Sweet Orange Oil",
+    "latin": "Citrus sinensis",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/sweet-orange-oil.jpg",
+    "inci": "Citrus Sinensis Peel Oil Expressed",
+    "origin": "Brazil",
+    "partUsed": "Orange Peel"
+  },
+  {
+    "name": "Frankincense Oil",
+    "latin": "Boswellia serrata",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/frankincense-oil.jpg",
+    "inci": "Boswellia Serrata Gum Oil",
+    "origin": "India",
+    "partUsed": "Tree Resin Gum"
+  },
+  {
+    "name": "Cinnamon Bark Oil",
+    "latin": "Cinnamomum verum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/cinnamon-bark-oil.jpg",
+    "inci": "Cinnamomum Verum Bark Oil",
+    "origin": "Sri Lanka",
+    "partUsed": "Inner Bark"
+  },
+  {
+    "name": "Lemon Oil",
+    "latin": "Citrus limon",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/lemon-oil.jpg",
+    "inci": "Citrus Limon Peel Oil Expressed",
+    "origin": "Italy",
+    "partUsed": "Lemon Peel"
+  },
+  {
+    "name": "Magnolia Oil",
+    "latin": "Magnolia liliiflora",
+    "category": "floral",
+    "method": "Solvent Extracted",
+    "img": "/images/magnolia-oil.jpg",
+    "inci": "Magnolia Liliiflora Flower Extract",
+    "origin": "China",
+    "partUsed": "Fresh Magnolia Blooms"
+  },
+  {
+    "name": "Helichrysum Oil",
+    "latin": "Helichrysum italicum",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/helichrysum-oil.jpg",
+    "inci": "Helichrysum Italicum Flower Oil",
+    "origin": "France",
+    "partUsed": "Dried Flower Heads"
+  },
+  {
+    "name": "Palmarosa Oil",
+    "latin": "Cymbopogon martinii",
+    "category": "floral",
+    "method": "Steam Distilled",
+    "img": "/images/palmarosa-oil.jpg",
+    "inci": "Cymbopogon Martinii Herb Oil",
+    "origin": "India",
+    "partUsed": "Grass Aerial Parts"
+  },
+  {
+    "name": "Ginger Oil",
+    "latin": "Zingiber officinale",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/ginger-oil.jpg",
+    "inci": "Zingiber Officinale Root Oil",
+    "origin": "India",
+    "partUsed": "Dried Ginger Rhizome"
+  },
+  {
+    "name": "Osmanthus Oil",
+    "latin": "Osmanthus fragrans",
+    "category": "floral",
+    "method": "Solvent Extracted",
+    "img": "/images/osmanthus-oil.jpg",
+    "inci": "Osmanthus Fragrans Flower Extract",
+    "origin": "China",
+    "partUsed": "Small Fragrant Flowers"
+  },
+  {
+    "name": "Bergamot Oil",
+    "latin": "Citrus bergamia",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/bergamot-oil.jpg",
+    "inci": "Citrus Bergamia Peel Oil Expressed",
+    "origin": "Italy",
+    "partUsed": "Bergamot Peel"
+  },
+  {
+    "name": "Grapefruit Oil",
+    "latin": "Citrus paradisi",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/grapefruit-oil.jpg",
+    "inci": "Citrus Paradisi Peel Oil Expressed",
+    "origin": "USA",
+    "partUsed": "Grapefruit Peel"
+  },
+  {
+    "name": "Lime Oil",
+    "latin": "Citrus aurantiifolia",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/lime-oil.jpg",
+    "inci": "Citrus Aurantiifolia Peel Oil Expressed",
+    "origin": "Mexico",
+    "partUsed": "Lime Peel"
+  },
+  {
+    "name": "Mandarin Oil",
+    "latin": "Citrus reticulata",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/mandarin-oil.jpg",
+    "inci": "Citrus Reticulata Peel Oil Expressed",
+    "origin": "Italy",
+    "partUsed": "Mandarin Peel"
+  },
+  {
+    "name": "Tangerine Oil",
+    "latin": "Citrus tangerina",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/tangerine-oil.jpg",
+    "inci": "Citrus Tangerina Peel Oil Expressed",
+    "origin": "USA",
+    "partUsed": "Tangerine Peel"
+  },
+  {
+    "name": "Bitter Orange Oil",
+    "latin": "Citrus aurantium",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/bitter-orange-oil.jpg",
+    "inci": "Citrus Aurantium Peel Oil Expressed",
+    "origin": "Spain",
+    "partUsed": "Sour Orange Peel"
+  },
+  {
+    "name": "Blood Orange Oil",
+    "latin": "Citrus sinensis",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/blood-orange-oil.jpg",
+    "inci": "Citrus Sinensis Peel Oil Expressed",
+    "origin": "Italy",
+    "partUsed": "Blood Orange Peel"
+  },
+  {
+    "name": "Yuzu Oil",
+    "latin": "Citrus junos",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/yuzu-oil.jpg",
+    "inci": "Citrus Junos Peel Oil Expressed",
+    "origin": "Japan",
+    "partUsed": "Yuzu Fruit Peel"
+  },
+  {
+    "name": "Petitgrain Oil",
+    "latin": "Citrus aurantium",
+    "category": "citrus",
+    "method": "Steam Distilled",
+    "img": "/images/petitgrain-oil.jpg",
+    "inci": "Citrus Aurantium Leaf Oil",
+    "origin": "Paraguay",
+    "partUsed": "Orange Tree Leaves & Twigs"
+  },
+  {
+    "name": "Clementine Oil",
+    "latin": "Citrus clementina",
+    "category": "citrus",
+    "method": "Cold Pressed",
+    "img": "/images/clementine-oil.jpg",
+    "inci": "Citrus Clementina Peel Oil Expressed",
+    "origin": "Spain",
+    "partUsed": "Clementine Peel"
+  },
+  {
+    "name": "Tea Tree Oil",
+    "latin": "Melaleuca alternifolia",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/tea-tree-oil.jpg",
+    "inci": "Melaleuca Alternifolia Leaf Oil",
+    "origin": "Australia",
+    "partUsed": "Fresh Tea Tree Leaves"
+  },
+  {
+    "name": "Basil Oil",
+    "latin": "Ocimum basilicum",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/basil-oil.jpg",
+    "inci": "Ocimum Basilicum Herb Oil",
+    "origin": "India",
+    "partUsed": "Basil Aerial Herb"
+  },
+  {
+    "name": "Thyme Oil",
+    "latin": "Thymus vulgaris",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/thyme-oil.jpg",
+    "inci": "Thymus Vulgaris Herb Oil",
+    "origin": "France",
+    "partUsed": "Flowering Thyme Tops"
+  },
+  {
+    "name": "Oregano Oil",
+    "latin": "Origanum vulgare",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/oregano-oil.jpg",
+    "inci": "Origanum Vulgare Herb Oil",
+    "origin": "Turkey",
+    "partUsed": "Oregano Leaf & Stems"
+  },
+  {
+    "name": "Clary Sage Oil",
+    "latin": "Salvia sclarea",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/clary-sage-oil.jpg",
+    "inci": "Salvia Sclarea Herb Oil",
+    "origin": "France",
+    "partUsed": "Flowering Sage Tops"
+  },
+  {
+    "name": "Lemongrass Oil",
+    "latin": "Cymbopogon citratus",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/lemongrass-oil.jpg",
+    "inci": "Cymbopogon Citratus Herb Oil",
+    "origin": "Thailand",
+    "partUsed": "Fresh Grass Stalks"
+  },
+  {
+    "name": "Patchouli Oil",
+    "latin": "Pogostemon cablin",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/patchouli-oil.jpg",
+    "inci": "Pogostemon Cablin Leaf Oil",
+    "origin": "Indonesia",
+    "partUsed": "Dried Patchouli Leaves"
+  },
+  {
+    "name": "Fennel Oil",
+    "latin": "Foeniculum vulgare",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/fennel-oil.jpg",
+    "inci": "Foeniculum Vulgare Seed Oil",
+    "origin": "Egypt",
+    "partUsed": "Dried Fennel Seeds"
+  },
+  {
+    "name": "Marjoram Oil",
+    "latin": "Origanum majorana",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/marjoram-oil.jpg",
+    "inci": "Origanum Majorana Herb Oil",
+    "origin": "Egypt",
+    "partUsed": "Whole Aerial Herb"
+  },
+  {
+    "name": "Melissa Oil",
+    "latin": "Melissa officinalis",
+    "category": "herbal",
+    "method": "Steam Distilled",
+    "img": "/images/melissa-oil.jpg",
+    "inci": "Melissa Officinalis Leaf Oil",
+    "origin": "Germany",
+    "partUsed": "Lemon Balm Leaves"
+  },
+  {
+    "name": "Sandalwood Oil",
+    "latin": "Santalum album",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/sandalwood-oil.jpg",
+    "inci": "Santalum Album Wood Oil",
+    "origin": "India",
+    "partUsed": "Heartwood Chippings"
+  },
+  {
+    "name": "Cedarwood Oil",
+    "latin": "Cedrus atlantica",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/cedarwood-oil.jpg",
+    "inci": "Cedrus Atlantica Wood Oil",
+    "origin": "Morocco",
+    "partUsed": "Cedar Heartwood"
+  },
+  {
+    "name": "Myrrh Oil",
+    "latin": "Commiphora myrrha",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/myrrh-oil.jpg",
+    "inci": "Commiphora Myrrha Gum Oil",
+    "origin": "Somalia",
+    "partUsed": "Tree Oleoresin Gum"
+  },
+  {
+    "name": "Pine Needle Oil",
+    "latin": "Pinus pinaster",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/pine-needle-oil.jpg",
+    "inci": "Pinus Pinaster Needle Oil",
+    "origin": "France",
+    "partUsed": "Fresh Pine Needles"
+  },
+  {
+    "name": "Cypress Oil",
+    "latin": "Cupressus sempervirens",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/cypress-oil.jpg",
+    "inci": "Cupressus Sempervirens Leaf Oil",
+    "origin": "France",
+    "partUsed": "Cypress Twigs & Needles"
+  },
+  {
+    "name": "Vetiver Oil",
+    "latin": "Vetiveria zizanoides",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/vetiver-oil.jpg",
+    "inci": "Vetiveria Zizanoides Root Oil",
+    "origin": "Haiti",
+    "partUsed": "Dried Vetiver Roots"
+  },
+  {
+    "name": "Juniper Berry Oil",
+    "latin": "Juniperus communis",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/juniper-berry-oil.jpg",
+    "inci": "Juniperus Communis Fruit Oil",
+    "origin": "Hungary",
+    "partUsed": "Ripe Juniper Berries"
+  },
+  {
+    "name": "Agarwood Oil",
+    "latin": "Aquilaria malaccensis",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/agarwood-oil.jpg",
+    "inci": "Aquilaria Malaccensis Wood Oil",
+    "origin": "Malaysia",
+    "partUsed": "Resin-Infused Agarwood"
+  },
+  {
+    "name": "Benzoin Oil",
+    "latin": "Styrax benzoin",
+    "category": "wood",
+    "method": "Solvent Extracted",
+    "img": "/images/benzoin-oil.jpg",
+    "inci": "Styrax Benzoin Gum Extract",
+    "origin": "Indonesia",
+    "partUsed": "Tree Gum Resin"
+  },
+  {
+    "name": "Peru Balsam Oil",
+    "latin": "Myroxylon balsamum",
+    "category": "wood",
+    "method": "Solvent Extracted",
+    "img": "/images/peru-balsam-oil.jpg",
+    "inci": "Myroxylon Balsamum Resin Extract",
+    "origin": "El Salvador",
+    "partUsed": "Trunk Balsam Resin"
+  },
+  {
+    "name": "Rosewood Oil",
+    "latin": "Aniba rosaeodora",
+    "category": "wood",
+    "method": "Steam Distilled",
+    "img": "/images/rosewood-oil.jpg",
+    "inci": "Aniba Rosaeodora Wood Oil",
+    "origin": "Brazil",
+    "partUsed": "Rosewood Heartwood"
+  },
+  {
+    "name": "Clove Bud Oil",
+    "latin": "Syzygium aromaticum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/clove-bud-oil.jpg",
+    "inci": "Syzygium Aromaticum Bud Oil",
+    "origin": "Indonesia",
+    "partUsed": "Unopened Clove Flower Buds"
+  },
+  {
+    "name": "Black Pepper Oil",
+    "latin": "Piper nigrum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/black-pepper-oil.jpg",
+    "inci": "Piper Nigrum Fruit Oil",
+    "origin": "India",
+    "partUsed": "Dried Pepper Berries"
+  },
+  {
+    "name": "Cardamom Oil",
+    "latin": "Elettaria cardamomum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/cardamom-oil.jpg",
+    "inci": "Elettaria Cardamomum Seed Oil",
+    "origin": "Guatemala",
+    "partUsed": "Cardamom Seeds"
+  },
+  {
+    "name": "Nutmeg Oil",
+    "latin": "Myristica fragrans",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/nutmeg-oil.jpg",
+    "inci": "Myristica Fragrans Seed Oil",
+    "origin": "Indonesia",
+    "partUsed": "Nutmeg Kernel"
+  },
+  {
+    "name": "Star Anise Oil",
+    "latin": "Illicium verum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/star-anise-oil.jpg",
+    "inci": "Illicium Verum Fruit Oil",
+    "origin": "China",
+    "partUsed": "Dried Star Anise Pods"
+  },
+  {
+    "name": "Turmeric Oil",
+    "latin": "Curcuma longa",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/turmeric-oil.jpg",
+    "inci": "Curcuma Longa Root Oil",
+    "origin": "India",
+    "partUsed": "Turmeric Rhizome"
+  },
+  {
+    "name": "Coriander Seed Oil",
+    "latin": "Coriandrum sativum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/coriander-oil.jpg",
+    "inci": "Coriandrum Sativum Seed Oil",
+    "origin": "Russia",
+    "partUsed": "Dried Coriander Seeds"
+  },
+  {
+    "name": "Cumin Oil",
+    "latin": "Cuminum cyminum",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/cumin-oil.jpg",
+    "inci": "Cuminum Cyminum Seed Oil",
+    "origin": "India",
+    "partUsed": "Cumin Seeds"
+  },
+  {
+    "name": "Cassia Oil",
+    "latin": "Cinnamomum cassia",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/cassia-oil.jpg",
+    "inci": "Cinnamomum Cassia Bark Oil",
+    "origin": "China",
+    "partUsed": "Cassia Tree Bark"
+  },
+  {
+    "name": "Garlic Oil",
+    "latin": "Allium sativum L",
+    "category": "spice",
+    "method": "Steam Distilled",
+    "img": "/images/garlic-oil.jpg",
+    "inci": "Allium Sativum Bulb Oil",
+    "origin": "China",
+    "partUsed": "Fresh Garlic Bulbs"
+  }
+]

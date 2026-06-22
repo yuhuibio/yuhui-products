@@ -1,0 +1,16 @@
+import { defineCollection, z } from 'astro:content';
+
+const productsCollection = defineCollection({
+  type: 'data',
+  schema: z.array(z.object({
+    name: z.string(),
+    latin: z.string(),
+    category: z.string(),
+    method: z.string(),
+    img: z.string().optional(),
+  })),
+});
+
+export const collections = {
+  'products': productsCollection,
+};

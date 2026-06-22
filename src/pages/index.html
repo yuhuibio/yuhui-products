@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xian Yuhui Biotechnology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-custom-green { background-color: #e5edea; }
+        .text-custom-main { color: #4a5d4e; }
+        .bg-custom-btn { background-color: #4a5d4e; }
+        .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+</head>
+<body class="bg-custom-green font-sans">
+
+ <nav class="flex items-center justify-between px-12 py-6 w-full">
+    <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+    </div>
+
+<div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
+        <!-- 这里加回了 Home！！！ -->
+        <a href="/index.html" class="hover:text-green-800">Home</a>
+        <a href="/about.html" class="hover:text-green-800">About Us</a>
+
+        <!-- Products 下拉菜单（正常可用） -->
+        <div class="relative group">
+            <a href="/catalogue.html" class="hover:text-green-800 cursor-pointer">Products ▼</a>
+            <div class="absolute hidden group-hover:block top-full mt-0 w-40 z-10">
+                <div class="bg-white shadow-lg py-2 rounded">
+                    <a href="/Essential-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Single Essential oils</a>
+                    <a href="/carrier-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
+                    <a href="/blended-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="/news.html" class="hover:text-green-800">News</a>
+        <a href="#" class="hover:text-green-800">Blog</a>
+        <a href="#" class="hover:text-green-800">Contact Us</a>
+    </div>
+</nav>
+    <section class="flex items-center justify-between px-12 py-16">
+        <div class="w-1/2">
+            <h1 class="text-6xl font-bold mb-6 text-custom-main">Bulk Essential Oils Supplier for Global Brands</h1>
+            <h2 class="text-3xl font-semibold mb-4">Consistent Quality, Batch Traceability & Technical Documentation</h2>
+            <p class="text-gray-600 mb-8 max-w-md leading-relaxed">
+                Pure Natural Oils for Cosmetics, Aromatherapy & Personal Care Applications since 2015.
+            </p>
+            <button class="bg-custom-btn text-white px-8 py-3 rounded text-lg font-semibold shadow-lg hover:bg-green-900 transition">
+                Inquire Now
+            </button>
+        </div>
+
+        <div class="w-1/2 flex justify-center">
+            <img src="images/banner-2.jpg" alt="banner" class="h-96 object-contain rounded-lg">
+        </div>
+    </section>
+
+</body>
+</html>
+<!-- Stats Section -->
+<section class="bg-white py-12 border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        
+        <!-- Item 1 -->
+        <div>
+            <div class="text-4xl font-bold text-[#4a5d4e] mb-2">11+</div>
+            <div class="text-gray-600 font-medium">Years Manufacturing Experience</div>
+        </div>
+
+        <!-- Item 2 -->
+        <div>
+            <div class="text-4xl font-bold text-[#4a5d4e] mb-2">120+</div>
+            <div class="text-gray-600 font-medium">Essential Oil Varieties</div>
+        </div>
+
+        <!-- Item 3 -->
+        <div>
+            <div class="text-4xl font-bold text-[#4a5d4e] mb-2">25kg–180kg</div>
+            <div class="text-gray-600 font-medium">Flexible Bulk Packaging</div>
+        </div>
+
+        <!-- Item 4 -->
+        <div>
+            <div class="text-4xl font-bold text-[#4a5d4e] mb-2">Worldwide</div>
+            <div class="text-gray-600 font-medium">Industrial Supply Support</div>
+        </div>
+
+    </div>
+</section>
+<!-- About Us Section -->
+<section class="bg-[#f2eede] py-20 px-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        
+        <!-- 左侧图片区 (参考 QQ20260528-103802.jpg) -->
+        <div class="w-full md:w-1/2 flex justify-center">
+            <img src="images/about-us.jpg" alt="About Us" class="h-[400px] object-contain">
+        </div>
+
+        <!-- 右侧文本区 -->
+        <div class="w-full md:w-1/2 text-left">
+            <h2 class="text-4xl font-bold text-[#4a5d4e] mb-6">ABOUT US</h2>
+            <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                Founded in 2015, XIAN YUHUI BIOTECHNOLOGY CO., LTD. is a professional manufacturer and exporter of high-purity essential oils and plant-based carrier oils. 
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-8 text-lg">
+                We operate integrated production facilities covering raw material sourcing, refining, and quality control. Every stage of production is carefully managed to ensure consistent quality, stable composition, and full batch traceability. Our products are widely supplied to cosmetic formulators, fragrance houses, and industrial manufacturers worldwide.
+            </p>
+            
+            <!-- 仅保留查看详情，去掉 Buy Now -->
+            <button class="bg-[#1a1a1a] text-white px-8 py-3 rounded hover:bg-black transition">
+                View Full Profile
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Advantages/Features Section -->
+<section class="py-20 px-12 bg-white">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold text-[#4a5d4e] mb-4">Why Choose Us</h2>
+        <p class="text-gray-600 text-lg">Partnering for quality, innovation, and long-term supply stability.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        
+        <!-- 01 Industry Expertise -->
+        <div class="flex flex-col items-center">
+            <span class="text-5xl font-extrabold text-gray-200 mb-4">01</span>
+            <h3 class="text-2xl font-bold text-[#4a5d4e] mb-4">Industry-Leading Expertise</h3>
+            <p class="text-gray-600 leading-relaxed">
+                We specialize in high-purity essential oils that meet rigorous international standards. Our reliable supply chain is backed by full documentation (COA/MSDS/TDS) to ensure seamless production compliance.
+            </p>
+        </div>
+
+        <!-- 02 Direct-Source Advantage -->
+        <div class="flex flex-col items-center">
+            <span class="text-5xl font-extrabold text-gray-200 mb-4">02</span>
+            <h3 class="text-2xl font-bold text-[#4a5d4e] mb-4">Direct-Source Advantage</h3>
+            <p class="text-gray-600 leading-relaxed">
+                Quality starts at the root. With our 3,000-acre sustainable plantation, we control the entire process from ethical cultivation to advanced extraction, ensuring consistent purity in every batch.
+            </p>
+        </div>
+
+        <!-- 03 Full Brand Partnership -->
+        <div class="flex flex-col items-center">
+            <span class="text-5xl font-extrabold text-gray-200 mb-4">03</span>
+            <h3 class="text-2xl font-bold text-[#4a5d4e] mb-4">Full Brand Partnership</h3>
+            <p class="text-gray-600 leading-relaxed">
+                Beyond supply, we are your growth partner. From custom product development and specification guidance to branding strategies, we provide end-to-end support to help you scale your business.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section class="py-16 bg-white w-full"> <div class="max-w-6xl mx-auto text-center mb-12 px-12"> <h2 class="text-4xl font-bold text-[#4a5d4e] mb-4">Pure Essence in Every Drop</h2>
+        <p class="text-gray-600 text-lg">Witness the precision of our extraction process.</p>
+    </div>
+
+    <div class="w-full overflow-hidden">
+        <video 
+            class="w-full h-[400px] object-cover" 
+            autoplay 
+            loop 
+            muted 
+            playsinline>
+            <source src="images/oil-drop.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频标签。
+        </video>
+    </div>
+</section>
+</section>
+<!-- Featured Products Section: 8 Products, 4 per row -->
+<section class="py-20 px-12 bg-white">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+        <h3 class="text-[#4a5d4e] font-semibold tracking-wider uppercase mb-4">Featured Products</h3>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">High-Purity Essential Oils & Carrier Oils</h2>
+    </div>
+
+    <!-- 一行 4 个产品 -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- 产品 1: Lavender -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/lavender-oil.jpg" alt="Lavender" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Lavender Essential Oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Lavandula angustifolia Mill.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 2: Peppermint -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/peppermint-oil.jpg" alt="Peppermint" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Peppermint Oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Mentha × piperita.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 3: Ginger -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/ginger-oil.jpg" alt="Ginger" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Ginger Oil</h4>
+            <p class="text-sm text-gray-500 mb-4"> ‌Zingiber officinale.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 4: Camellia -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/camellia-seed-oil.jpg" alt="Camellia" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Camellia Seed Oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Camellia oleifera Abel.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 5: Boswellia carterii -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/frankincense-oil.jpg" alt="Boswellia" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Frankincense Oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Boswellia carterii</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 6: Chamomile -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/chamomile-german-oil.jpg" alt="Chamomile" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Chamomile oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Matricaria chamomilla.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 7: Eucalyptus -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/eucalyptus-oil.jpg" alt="Eucalyptus" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Eucalyptus oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Eucalyptus globulus.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+        <!-- 产品 8: Lemon -->
+        <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
+            <img src="images/lemon-oil.jpg" alt="Lemon" class="w-full h-auto object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900">Lemon oil</h4>
+            <p class="text-sm text-gray-500 mb-4">Citrus limonum.</p>
+            <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
+        </div>
+
+    </div>
+</section>
+<!-- Contact Section with Background -->
+<section class="py-20 px-12 bg-custom-green"> <!-- 统一使用品牌背景色 -->
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+        
+        <!-- 左侧图片区 -->
+        <div class="w-full md:w-1/2">
+            <img src="images/product-showcase.jpg" alt="Contact Us Visual" class="w-full rounded-2xl shadow-lg">
+        </div>
+
+        <!-- 右侧表单区 -->
+        <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold text-[#4a5d4e] mb-8">Contact Us</h2>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#4a5d4e] outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" placeholder="Your Email" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#4a5d4e] outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Contact No</label>
+                    <input type="tel" placeholder="Your Contact Number" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#4a5d4e] outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea rows="4" placeholder="How can we help you?" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#4a5d4e] outline-none"></textarea>
+                </div>
+                <button type="submit" class="bg-[#4a5d4e] text-white px-10 py-3 rounded-lg font-bold hover:bg-green-900 transition">
+                    SUBMIT
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-[#2d322b] text-white py-16 px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        <!-- Column 1: Company Info & Payments -->
+        <div>
+            <h3 class="text-xl font-bold mb-6">XIAN YUHUI BIOTECHNOLOGY CO., LTD</h3>
+            <p class="text-gray-400 mb-6 leading-relaxed text-sm">
+                Professional manufacturer and exporter of high-purity essential oils, carrier oils, and botanical extracts since 2015. Delivering quality and supply stability worldwide.
+            </p>
+            
+            <!-- Payment Icons Section -->
+            <div class="mt-6">
+                <h4 class="text-sm font-semibold text-gray-300 mb-3">Accepted Payments</h4>
+                <div class="flex flex-wrap gap-2">
+                    <!-- Bank Transfer -->
+                    <div class="bg-white p-1 rounded" title="Bank Transfer"><svg class="w-8 h-5 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M4 10h16v2H4v-2zm0 4h16v2H4v-2zm0-8h16v2H4V6zm0 12h16v2H4v-2z"/></svg></div>
+                    <!-- PayPal -->
+                    <div class="bg-white p-1 rounded" title="PayPal"><img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" class="w-8 h-5" alt="PayPal"></div>
+                    <!-- Wise -->
+                    <div class="bg-white p-1 rounded" title="Wise"><img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" class="w-8 h-5" alt="Wise"></div>
+                    <!-- WU -->
+                    <div class="bg-white px-2 py-1 rounded text-[10px] font-bold text-black" title="Western Union">WU</div>
+                    <!-- MG -->
+                    <div class="bg-white px-2 py-1 rounded text-[10px] font-bold text-black" title="MoneyGram">MG</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Useful Links -->
+        <div>
+            <h3 class="text-xl font-bold mb-6">Useful Links</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+                <li><a href="#" class="hover:text-white">Home</a></li>
+                <li><a href="#" class="hover:text-white">About Us</a></li>
+                <li><a href="#" class="hover:text-white">Products</a></li>
+                <li><a href="#" class="hover:text-white">Technical Support (COA/MSDS)</a></li>
+                <li><a href="#" class="hover:text-white">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Let Us Help -->
+        <div>
+    <h3 class="text-xl font-bold mb-6">Let Us Help</h3>
+    <ul class="space-y-3 text-gray-400 text-sm">
+        <li><a href="/help" class="hover:text-white">Export Process</a></li>
+        <li><a href="/shipping" class="hover:text-white">Shipping & Logistics</a></li>
+        <li><a href="/quality" class="hover:text-white">Quality Assurance</a></li>
+        <li><a href="/terms" class="hover:text-white">Terms & Conditions</a></li>
+        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+    </ul>
+</div>
+
+        <!-- Column 4: Contact Us -->
+        <div>
+            <h3 class="text-xl font-bold mb-6">Contact Us</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+                <li>Xi'an, Shaanxi, China</li>
+                <li>Email: plantextract66@163.com</li>
+                <li>WhatsApp: +86 15829552458</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+        &copy; 2026 XIAN YUHUI BIOTECHNOLOGY CO., LTD. All Rights Reserved.
+    </div>
+</footer>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blended Oils - Xian Yuhui Biotechnology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-custom-green { background-color: #e5edea; }
+        .text-custom-main { color: #4a5d4e; }
+        .bg-custom-btn { background-color: #4a5d4e; }
+        .dropdown:hover .dropdown-menu { display: block; }
+
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: white ; color: #333; margin: 0; padding: 0;background: #ffffff; }
+        .container { display: flex; gap: 80px; max-width: 1400px; margin: 0 auto; padding: 40px; }
+        
+        .sidebar { width: 200px; flex-shrink: 0; }
+        .filter-list { list-style: none; padding: 0; }
+        .filter-list li { margin-bottom: 20px; }
+        .filter-list a { text-decoration: none; color: #999; font-size: 0.9rem; display: block; transition: 0.3s; }
+        .filter-list a.active { color: #000; font-weight: 500; border-left: 2px solid #000; padding-left: 12px; }
+
+        .product-grid { 
+            flex-grow: 1; 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 40px; 
+        }
+        .card { 
+            border: 1px solid #e0e0e0; 
+            padding: 20px; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+  border-radius: 0.5rem; /* 卡片也加圆角 */
+            transition: box-shadow 0.3s ease;
+            background: #fff;
+.card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 增加悬停效果 */
+        }
+        .img-box {
+            width: 100%;
+            height: 350px;
+            background:  #f9f9f9;
+            border-radius: 0.5rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+ object-position: center;
+            display: block;
+        }
+        .card h4 { margin: 5px 0; font-size: 0.9rem; font-weight: 500; }
+        .card p { margin: 0; font-size: 0.75rem; color: #888; font-style: italic; }
+        .method { font-size: 0.7rem; color: #777; margin: 4px 0 10px 0; }
+        .view-btn { margin-top:10px; padding: 6px 12px; background:#4a5d4e; color:white; border:none; border-radius:4px; font-size:0.75rem; cursor-pointer; }
+        
+        .pagination { grid-column: 1 / -1; margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
+        .page-btn { cursor: pointer; border: 1px solid #ddd; background: none; padding: 5px 12px; font-size: 0.8rem; }
+        .page-btn.active { background: #000; color: #fff; border-color: #000; }
+    </style>
+</head>
+<body class="bg-white font-sans">
+
+<nav class="flex items-center justify-between px-12 py-6">
+    <div class="flex items-center space-x-3">
+        <img src="/images/logo.png" alt="logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+    </div>
+    <div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
+        <a href="/index.html" class="hover:text-green-800">Home</a>
+        <a href="/about.html" class="hover:text-green-800">About Us</a>
+        <div class="relative dropdown">
+            <a href="/catalogue.html" class="hover:text-green-800 cursor-pointer">Products ▼</a>
+            <div class="dropdown-menu absolute hidden pt-4 w-40 z-10">
+                <a href="/essential-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Essential oils</a>
+                <a href="/carrier-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
+                <a href="/blended-oils-cata.html" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
+            </div>
+        </div>
+        <a href="/news.html" class="hover:text-green-800">News</a>
+        <a href="#" class="hover:text-green-800">Blog</a>
+        <a href="#" class="hover:text-green-800">Contact Us</a>
+    </div>
+</nav>
+
+<section class="py-10 mb-16">
+    <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">Bulk Blended Oils</h2>
+    <div class="relative w-full overflow-hidden">
+        <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
+            <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">100% Pure & Natural</h3>
+            <p class="text-3xl font-normal tracking-wide">Quality You Can Trust | Supply You Can Rely On</p>
+        </div>
+    </div>
+</section>
+
+<div class="flex justify-end px-12 mb-6">
+    <div class="flex items-center border border-gray-200 rounded-md overflow-hidden shadow-sm">
+        <input type="text" placeholder="Search Products..." class="px-4 py-2 outline-none text-gray-600 w-48 focus:w-64 transition-all duration-300">
+        <button class="bg-[#facc15] px-4 py-2.5 hover:bg-[#eab308] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<div class="container">
+    <aside class="sidebar">
+        <ul class="filter-list" id="filterList">
+            <li><a href="#" class="active" data-filter="all">All Ingredients</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="pagination" id="pagination"></div>
+    </main>
+</div>
+
+<script>
+// 修复1：全部img加前置斜杠，统一latin字段
+const products = [
+    { name: "Lymphatic Drainage Blend", latin: "Ginger + Grapeseed", category: "all", method: "Blended", img: "/images/blend-relax.jpg" },
+    { name: "Energy Boost Blend", latin: "Peppermint + Lemon", category: "all", method: "Blended", img: "/images/blend-energy.jpg" },
+    { name: "Sleep Well Blend", latin: "Lavender + Sandalwood", category: "all", method: "Blended", img: "/images/sleep-well-blend.jpg" },
+    { name: "Stress Relief Blend", latin: "Bergamot + Ylang Ylang", category: "all", method: "Blended", img: "/images/stress-relief-blend.jpg" },
+    { name: "Immune Support Blend", latin: "Tea Tree + Eucalyptus", category: "all", method: "Blended", img: "/images/immune-support-blend.jpg" },
+    { name: "Focus & Clarity Blend", latin: "Rosemary + Peppermint", category: "all", method: "Blended", img: "/images/blend-focus.jpg" },
+    { name: "Breath Easy Blend", latin: "Eucalyptus + Peppermint", category: "all", method: "Blended", img: "/images/blend-breath.jpg" },
+    { name: "Skin Care Blend", latin: "Lavender + Geranium", category: "all", method: "Blended", img: "/images/blend-skin.jpg" },
+    { name: "Muscle Relief Blend", latin: "Peppermint + Rosemary", category: "all", method: "Blended", img: "/images/blend-muscle.jpg" },
+    { name: "Deodorizing Blend", latin: "Lemon + Tea Tree", category: "all", method: "Blended", img: "/images/blend-deo.jpg" },
+    { name: "Romantic Blend", latin: "Jasmine + Ylang Ylang", category: "all", method: "Blended", img: "/images/blend-romantic.jpg" },
+    { name: "Fresh Home Blend", latin: "Citrus Mix", category: "all", method: "Blended", img: "/images/blend-fresh.jpg" }
+];
+
+let currentPage = 1;
+let currentCat = 'all';
+
+function render() {
+    const filtered = currentCat === 'all' ? products : products.filter(p => p.category === currentCat);
+    const start = (currentPage - 1) * 12;
+    const pageItems = filtered.slice(start, start + 12);
+    
+    // 修复2：图片套img-box容器，和精油页面样式统一
+    document.getElementById('productGrid').innerHTML = pageItems.map(p => `
+        <div class="card">
+            <div class="img-box">
+                <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/400x400?text=No+Image'">
+            </div>
+            <h4>${p.name}</h4>
+            <p>${p.latin}</p>
+            <p class="method">${p.method}</p>
+            <a href="/products/${p.name.toLowerCase().replace(/\s+/g, '-')}" class="view-btn">View Details</a>
+        </div>
+    `).join('');
+
+    const total = Math.ceil(filtered.length / 12);
+    document.getElementById('pagination').innerHTML = Array.from({length: total}, (_, i) => 
+        `<button class="page-btn ${i+1===currentPage?'active':''}" onclick="go(${i+1})">${i+1}</button>`
+    ).join('');
+}
+
+function go(p) { currentPage = p; render(); }
+
+document.addEventListener('DOMContentLoaded', function(){
+    render();
+});
+</script>
+</body>
+</html>

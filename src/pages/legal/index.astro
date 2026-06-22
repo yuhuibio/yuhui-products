@@ -1,0 +1,50 @@
+---
+const { type } = Astro.params;
+
+const content = {
+  "help": {
+    title: "Let Us Help",
+    html: `<p>Contact us anytime for support.</p>`
+  },
+  "export-process": {
+    title: "Export Process",
+    html: `<p>1. Inquiry 2. Order 3. Payment 4. Production 5. Shipping</p>`
+  },
+  "shipping": {
+    title: "Shipping & Logistics",
+    html: `<p>We ship worldwide by air, sea, and express courier.</p>`
+  },
+  "quality": {
+    title: "Quality Assurance",
+    html: `<p>100% pure essential oils with COA, MSDS.</p>`
+  },
+  "terms": {
+    title: "Terms & Conditions",
+    html: `<p>All sales are final. Please read before ordering.</p>`
+  },
+  "privacy": {
+    title: "Privacy Policy",
+    html: `<p>We protect your personal data.</p>`
+  }
+};
+
+const current = content["help"]; // 默认页面
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{current.title}</title>
+  <style>
+    .container{max-width:1000px;margin:60px auto;padding:0 30px;font-family:sans-serif;line-height:1.8;}
+    h1{color:#4a5d4e;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{current.title}</h1>
+    <div set:html={current.html}></div>
+  </div>
+</body>
+</html>
