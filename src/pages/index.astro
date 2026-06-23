@@ -1,23 +1,19 @@
+---
+import '../styles/global.css'; // 确保这里引入了 Tailwind
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xian Yuhui Biotechnology</title>
-   
-    <style>
-        .bg-custom-green { background-color: #e5edea; }
-        .text-custom-main { color: #4a5d4e; }
-        .bg-custom-btn { background-color: #4a5d4e; }
-        .dropdown:hover .dropdown-menu { display: block; }
-    </style>
 </head>
-<body class="bg-custom-green font-sans">
-
+<body class="bg-[#e5edea] font-sans text-[#4a5d4e]"> <!-- [MODIFIED]
+<div class="bg-[#e5edea]">
  <nav class="flex items-center justify-between px-12 py-6 w-full">
     <div class="flex items-center gap-3">
-        <img src="images/logo.png" alt="logo" class="h-10 w-auto">
-        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+        <img src="/images/logo.png" alt="logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold">XIAN YUHUI BIOTECH</span>
     </div>
 
 <div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
@@ -27,8 +23,8 @@
 
         <!-- Products 下拉菜单（正常可用） -->
         <div class="relative group">
-            <a href="/catalogue.html" class="hover:text-green-800 cursor-pointer">Products ▼</a>
-            <div class="absolute hidden group-hover:block top-full mt-0 w-40 z-10">
+            <a href="/catalogue" class="hover:text-green-800 cursor-pointer">Products ▼</a>
+         <div class="absolute hidden group-hover:block top-full mt-0 w-48 z-10">
                 <div class="bg-white shadow-lg py-2 rounded">
                     <a href="/Essential-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Single Essential oils</a>
                     <a href="/carrier-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
@@ -55,7 +51,7 @@
         </div>
 
         <div class="w-1/2 flex justify-center">
-            <img src="images/banner-2.jpg" alt="banner" class="h-96 object-contain rounded-lg">
+            <img src="/images/banner-2.jpg" alt="banner" class="h-96 object-contain rounded-lg">
         </div>
     </section>
 
@@ -97,7 +93,7 @@
         
         <!-- 左侧图片区 (参考 QQ20260528-103802.jpg) -->
         <div class="w-full md:w-1/2 flex justify-center">
-            <img src="images/about-us.jpg" alt="About Us" class="h-[400px] object-contain">
+            <img src="/images/about-us.jpg" alt="About Us" class="h-[400px] object-contain">
         </div>
 
         <!-- 右侧文本区 -->
@@ -166,7 +162,7 @@
             loop 
             muted 
             playsinline>
-            <source src="images/oil-drop.mp4" type="video/mp4">
+            <source src="/images/oil-drop.mp4" type="video/mp4">
             您的浏览器不支持 HTML5 视频标签。
         </video>
     </div>
@@ -184,7 +180,7 @@
         
         <!-- 产品 1: Lavender -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/lavender-oil.jpg" alt="Lavender" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/lavender-oil.jpg" alt="Lavender" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Lavender Essential Oil</h4>
             <p class="text-sm text-gray-500 mb-4">Lavandula angustifolia Mill.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -192,7 +188,7 @@
 
         <!-- 产品 2: Peppermint -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/peppermint-oil.jpg" alt="Peppermint" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/peppermint-oil.jpg" alt="Peppermint" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Peppermint Oil</h4>
             <p class="text-sm text-gray-500 mb-4">Mentha × piperita.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -200,7 +196,7 @@
 
         <!-- 产品 3: Ginger -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/ginger-oil.jpg" alt="Ginger" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/ginger-oil.jpg" alt="Ginger" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Ginger Oil</h4>
             <p class="text-sm text-gray-500 mb-4"> ‌Zingiber officinale.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -208,7 +204,7 @@
 
         <!-- 产品 4: Camellia -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/camellia-seed-oil.jpg" alt="Camellia" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/camellia-seed-oil.jpg" alt="Camellia" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Camellia Seed Oil</h4>
             <p class="text-sm text-gray-500 mb-4">Camellia oleifera Abel.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -216,7 +212,7 @@
 
         <!-- 产品 5: Boswellia carterii -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/frankincense-oil.jpg" alt="Boswellia" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/frankincense-oil.jpg" alt="Boswellia" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Frankincense Oil</h4>
             <p class="text-sm text-gray-500 mb-4">Boswellia carterii</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -224,7 +220,7 @@
 
         <!-- 产品 6: Chamomile -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/chamomile-german-oil.jpg" alt="Chamomile" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/chamomile-german-oil.jpg" alt="Chamomile" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Chamomile oil</h4>
             <p class="text-sm text-gray-500 mb-4">Matricaria chamomilla.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -232,7 +228,7 @@
 
         <!-- 产品 7: Eucalyptus -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/eucalyptus-oil.jpg" alt="Eucalyptus" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/eucalyptus-oil.jpg" alt="Eucalyptus" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Eucalyptus oil</h4>
             <p class="text-sm text-gray-500 mb-4">Eucalyptus globulus.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -240,7 +236,7 @@
 
         <!-- 产品 8: Lemon -->
         <div class="border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition">
-            <img src="images/lemon-oil.jpg" alt="Lemon" class="w-full h-auto object-cover rounded-lg mb-4">
+            <img src="/images/lemon-oil.jpg" alt="Lemon" class="w-full h-auto object-cover rounded-lg mb-4">
             <h4 class="text-lg font-bold text-gray-900">Lemon oil</h4>
             <p class="text-sm text-gray-500 mb-4">Citrus limonum.</p>
             <button class="w-full bg-[#4a5d4e] text-white py-2 rounded-lg text-sm hover:bg-green-900 transition">Request Quote</button>
@@ -254,7 +250,7 @@
         
         <!-- 左侧图片区 -->
         <div class="w-full md:w-1/2">
-            <img src="images/product-showcase.jpg" alt="Contact Us Visual" class="w-full rounded-2xl shadow-lg">
+            <img src="/images/product-showcase.jpg" alt="Contact Us Visual" class="w-full rounded-2xl shadow-lg">
         </div>
 
         <!-- 右侧表单区 -->
