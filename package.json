@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "NPM_CONFIG_LEGACY_PEER_DEPS=true astro build",
+   "build": "astro build --legacy-peer-deps",
     "preview": "astro preview",
     "astro": "astro"
   },
