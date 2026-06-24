@@ -7,12 +7,12 @@
   },
   "scripts": {
     "dev": "astro dev",
-   "build": "astro build --legacy-peer-deps",
+   "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.4.4"
+     "astro": "^5.18.2"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",

@@ -1,0 +1,59 @@
+---
+// Header.astro
+// 获取当前路径以实现导航高亮
+const pathname = Astro.url.pathname;
+
+// 辅助函数：判断是否为当前页面
+const isActive = (path: string) => {
+  return pathname === path ? "text-green-900 font-bold border-b-2 border-green-900" : "text-gray-700 hover:text-green-800";
+};
+---
+
+<header class="w-full border-b bg-white sticky top-0 z-50">
+  <nav class="max-w-6xl mx-auto flex flex-row flex-nowrap items-center justify-between py-4 px-6 text-lg font-medium">
+
+    <!-- Logo -->
+    <a href="/" class="font-bold text-2xl text-green-900 flex items-center gap-2">
+      <img src="/images/logo.png" alt="Logo" class="h-8 w-auto" />
+      XIAN YUHUI BIOTECHNOLOGY
+    </a>
+
+    <!-- Navigation -->
+    <div class="flex flex-row flex-nowrap items-center gap-8">
+      <a href="/" class={`${isActive('/')} transition-colors duration-200`}>Home</a>
+      <a href="/about" class={`${isActive('/about')} transition-colors duration-200`}>About Us</a>
+
+      <!-- Products Dropdown -->
+<div class="relative group">
+  <a href="/catalogue" class={`${isActive('/catalogue')} cursor-pointer flex items-center gap-1 transition-colors duration-200`}>
+    Products
+    <span class="text-xs">&#9662;</span>
+  </a>
+
+  <!-- 下拉菜单 -->
+  <div class="absolute left-0 hidden group-hover:block pt-2 w-52 z-50">
+    <div class="bg-white shadow-xl py-2 rounded-lg border border-gray-100">
+
+      <a href="/Essential-oils-cata" class="block px-4 py-2 hover:bg-green-50 hover:text-green-900 transition-colors">
+        Single Essential oils
+      </a>
+
+      <a href="/carrier-oils-cata" class="block px-4 py-2 hover:bg-green-50 hover:text-green-900 transition-colors">
+        Carrier oils
+      </a>
+
+      <a href="/blended-oils-cata" class="block px-4 py-2 hover:bg-green-50 hover:text-green-900 transition-colors">
+        Blended oils
+      </a>
+
+    </div>
+  </div>
+</div>
+
+      <a href="/news" class={`${isActive('/news')} transition-colors duration-200`}>News</a>
+      <a href="/blog" class={`${isActive('/blog')} transition-colors duration-200`}>Blog</a>
+      <a href="/contact" class={`${isActive('/contact')} transition-colors duration-200`}>Contact Us</a>
+    </div>
+
+  </nav>
+</header>

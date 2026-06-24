@@ -1,735 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'custom-green': '#e5edea',
-                        'custom-main': '#3d4d45'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-custom-green">
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-    <!-- 导航栏区域 -->
-  <nav class="flex items-center justify-between px-12 py-6 w-full">
-    <div class="flex items-center gap-3">
-        <img src="images/logo.png" alt="logo" class="h-10 w-auto">
-        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+<Layout title="Catalog | Xian Yuhui Biotechnology">
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-5 py-10">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+    <div class="space-y-4">
+      <h1 class="text-4xl font-bold text-[#3d4d45]">
+        Pure Oils for Global Applications
+      </h1>
+
+      <p class="text-lg text-[#3d4d45]/80">
+        Essential oils, carrier oils, and blended oils for cosmetics, personal care, fragrance, and industrial formulation.
+      </p>
+
+      <button class="bg-[#3d4d45] text-white px-8 py-3 rounded hover:bg-emerald-900 transition">
+        Inquire Now
+      </button>
     </div>
 
-    <div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
-        <!-- 这里加回了 Home！！！ -->
-        <a href="/" class="hover:text-green-800">Home</a>
-        <a href="/about" class="hover:text-green-800">About Us</a>
-
-        <!-- Products 下拉菜单（正常可用） -->
-        <div class="relative group">
-            <a href="/catalogue" class="hover:text-green-800 cursor-pointer">Products ▼</a>
-            <div class="absolute hidden group-hover:block top-full mt-0 w-40 z-10">
-                <div class="bg-white shadow-lg py-2 rounded">
-                    <a href="/Essential-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Single Essential oils</a>
-                    <a href="/carrier-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
-                    <a href="/blended-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
-                </div>
-            </div>
-        </div>
-
-        <a href="/news" class="hover:text-green-800">News</a>
-        <a href="#" class="hover:text-green-800">Blog</a>
-        <a href="#" class="hover:text-green-800">Contact Us</a>
+    <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-xl">
+      <img src="/images/your-image-url.jpg" class="w-full h-full object-cover" />
     </div>
-</nav>
 
-    <!-- Hero 板块 -->
-<!-- 修改点：将 py-12 lg:py-15 改为 py-10 lg:py-12 -->
-<section class="max-w-7xl mx-auto px-5 py-8 lg:py-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- 左侧内容 -->
-        <div class="space-y-3"> <!-- 修改点：将 space-y-6 改为 space-y-4，减少段落间距 -->
-            <h1 class="text-3xl lg:text-4xl font-bold text-custom-main leading-tight"> <!-- 修改点：将 5xl/6xl 改为 4xl/5xl -->
-              Pure Oils for Global Applications
-            </h1>
-            <p class="text-lg lg:text-l font-medium text-custom-main/80"> <!-- 修改点：将 2xl 改为 xl，字体更精致 -->
-                Essential oils, carrier oils, and blended oils for cosmetics, personal care, fragrance, and industrial formulation.
-            </p>
-            
-            <div class="pt-2"> <!-- 修改点：调整按钮上方的间距 -->
-                <button class="bg-custom-main text-white px-8 py-3 rounded-sm font-semibold hover:bg-emerald-900 transition shadow-lg">
-                    Inquire Now
-                </button>
-            </div>
-        </div>
-
-        <!-- 右侧图片 -->
-        <div class="w-full">
-            <!-- 修改点：如果图片还是觉得太高，可以将 aspect-[4/3] 改为 aspect-[16/9] 或者直接给 height -->
-            <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
-                <img src="images/your-image-url.jpg" alt="Essential Oils" class="w-full h-full object-cover">
-            </div>
-        </div>
-        
-    </div>
+  </div>
 </section>
-  
- <!-- PRODUCT CATEGORIES SECTION -->
-<section class="w-full py-20 px-6 bg-[#f2eede]">
-    <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="mb-12 text-center lg:text-left">
-            <h2 class="text-3xl font-light text-custom-800 mb-3">Product Categories</h2>
-            <p class="text-slate-600 font-normal">Explore our range of botanical oils for different formulation needs.</p>
+
+<!-- PRODUCT CATEGORIES -->
+<section class="py-20 px-6 bg-[#f2eede]">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="text-3xl font-light mb-2 text-[#3d4d45]">Product Categories</h2>
+    <p class="text-slate-600 mb-10">
+      Explore our range of botanical oils for different formulation needs.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <a href="/essential-oils" class="bg-white border hover:border-[#3d4d45] transition">
+        <img src="/images/path-to-distillation-image.jpg" class="aspect-[4/3] object-cover w-full" />
+        <div class="p-6">
+          <h3 class="text-xl text-[#3d4d45]">Essential Oils</h3>
         </div>
+      </a>
 
-        <!-- Category Grid: 使用 w-full 确保撑满父容器，md:grid-cols-3 确保三列布局 -->
-        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Essential Oils Card -->
-            <a href="essential-oils.html" class="group block border border-slate-200 bg-white hover:border-custom-main transition-all duration-300">
-                <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-                    <img src="images/path-to-distillation-image.jpg" alt="Essential Oils" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-custom-main mb-3">Essential Oils</h3>
-                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">Natural essential oils for aromatherapy, cosmetics, personal care, and fragrance applications.</p>
-                    <span class="inline-block text-sm font-semibold text-custom-main underline underline-offset-4 group-hover:no-underline">Explore Essential Oils</span>
-                </div>
-            </a>
-
-            <!-- Carrier Oils Card -->
-            <a href="carrier-oils.html" class="group block border border-slate-200 bg-white hover:border-custom-main transition-all duration-300">
-                <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-                    <img src="images/path-to-pressing-image.jpg" alt="Carrier Oils" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-custom-main mb-3">Carrier Oils</h3>
-                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">Cold-pressed plant oils used for dilution, skincare formulations, and cosmetic applications.</p>
-                    <span class="inline-block text-sm font-semibold text-custom-main underline underline-offset-4 group-hover:no-underline">Explore Carrier Oils</span>
-                </div>
-            </a>
-
-            <!-- Blended Oils Card -->
-            <a href="blended-oils.html" class="group block border border-slate-200 bg-white hover:border-custom-main transition-all duration-300">
-                <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-                    <img src="images/path-to-blending-image.jpg" alt="Blended Oils" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-custom-main mb-3">Blended Oils</h3>
-                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">Pre-formulated oil blends designed for fragrance, aromatherapy, and custom applications.</p>
-                    <span class="inline-block text-sm font-semibold text-custom-main underline underline-offset-4 group-hover:no-underline">Explore Blends</span>
-                </div>
-            </a>
-
+      <a href="/carrier-oils" class="bg-white border hover:border-[#3d4d45] transition">
+        <img src="/images/path-to-pressing-image.jpg" class="aspect-[4/3] object-cover w-full" />
+        <div class="p-6">
+          <h3 class="text-xl text-[#3d4d45]">Carrier Oils</h3>
         </div>
+      </a>
+
+      <a href="/blended-oils" class="bg-white border hover:border-[#3d4d45] transition">
+        <img src="/images/path-to-blending-image.jpg" class="aspect-[4/3] object-cover w-full" />
+        <div class="p-6">
+          <h3 class="text-xl text-[#3d4d45]">Blended Oils</h3>
+        </div>
+      </a>
+
     </div>
+  </div>
 </section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries We Serve | Essential Oils Wholesale</title>
-    <style>
-        /* Base Reset & Global Style - Premium B2B Minimal */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
 
-        body {
-            background-color: #f8f7f4; /* Soft warm natural tone */
-            color: #222;
-            line-height: 1.5;
-        }
+<!-- INDUSTRIES -->
+<section class="py-20 max-w-7xl mx-auto px-6">
 
-        /* Section Wrapper */
-        .industries-section {
-            max-width: 1400px;
-            margin: 80px auto;
-            padding: 0 24px;
-        }
+  <h2 class="text-3xl font-bold mb-8 text-[#3d4d45]">Industries We Serve</h2>
 
-        /* Section Headings */
-        .section-title {
-            font-size: 38px;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-align: center;
-            margin-bottom: 12px;
-        }
+  <div class="grid md:grid-cols-3 gap-6">
 
-        .section-subtitle {
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 50px;
-            line-height: 1.6;
-        }
-
-        /* Responsive Grid Layout */
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        /* Industry Card Core Style */
-        .industry-card {
-            position: relative;
-            height: 360px; /* Fixed equal card height */
-            border-radius: 18px; /* Large rounded corners */
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: all 300ms ease-in-out;
-            cursor: pointer;
-        }
-
-        /* Background Image + Gradient Overlay */
-        .card-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: 85%;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: transform 300ms ease-in-out;
-        }
-
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Bottom dark gradient: Top transparent → Bottom rgba(0,0,0,0.75) */
-            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
-        }
-
-        /* Text Content Container */
-        .card-content {
-            position: absolute;
-            bottom: 32px;
-            left: 30px;
-            right: 30px;
-            z-index: 2;
-        }
-
-        .card-title {
-            font-size: 26px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .card-desc {
-            font-size: 15px;
-            color: #ffffff;
-            opacity: 0.88;
-            line-height: 1.5;
-        }
-
-        /* Hover Effects (All requirements applied) */
-        .industry-card:hover {
-            transform: translateY(-6px); /* Lift upward 6px */
-            box-shadow: 0 12px 28px rgba(0,0,0,0.18); /* Deeper shadow */
-        }
-
-        .industry-card:hover .card-bg {
-            transform: scale(1.05); /* Image scale 1.05 */
-        }
-
-        /* Tablet Breakpoint: 2 columns × 3 rows */
-        @media (max-width: 992px) {
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .section-title {
-                font-size: 32px;
-            }
-        }
-
-        /* Mobile Breakpoint: 1 column × 6 rows */
-        @media (max-width: 576px) {
-            .industries-grid {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 28px;
-            }
-            .section-subtitle {
-                font-size: 16px;
-            }
-            .card-title {
-                font-size: 22px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries We Serve | Essential Oils Wholesale</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8f7f4;
-            color: #222;
-            line-height: 1.5;
-        }
-
-        .industries-section {
-            max-width: 1200px; /* 整体区域也缩小一点 */
-            margin: 80px auto;
-            padding: 0 24px;
-        }
-
-        .section-title {
-            font-size: 38px;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 50px;
-            line-height: 1.6;
-        }
-
-        /* 网格间距变小 */
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        /* ========== 卡片整体变小了！ ========== */
-        .industry-card {
-            position: relative;
-            height: 280px; /* 原来360px → 现在280px（变小） */
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: all 300ms ease-in-out;
-            cursor: pointer;
-        }
-
-        .card-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: transform 300ms ease-in-out;
-        }
-
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
-        }
-
-        .card-content {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            right: 24px;
-            z-index: 2;
-        }
-
-        .card-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .card-desc {
-            font-size: 14px;
-            color: #ffffff;
-            opacity: 0.88;
-        }
-
-        .industry-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-        }
-
-        .industry-card:hover .card-bg {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 992px) {
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .industries-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <section class="industries-section">
-        <h2 class="section-title">Industries We Serve</h2>
-        <p class="section-subtitle">Our essential oils, carrier oils, and blended oils are widely used across cosmetics, personal care, aromatherapy, hair care, soap manufacturing, and home fragrance industries worldwide.</p>
-
-        <div class="industries-grid">
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/skincare.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title" style="color:white;">Cosmetics & Skincare</h3>
-                    <p class="card-desc">Natural oils for serums, creams, lotions, and facial care formulations.</p>
-                </div>
-            </div>
-
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/personalcare.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title"style="color:white;">Personal Care</h3>
-                    <p class="card-desc">Essential ingredients for soaps, body wash, and hygiene products.</p>
-                </div>
-            </div>
-
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/aromatherapy.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title"style="color:white;">Aromatherapy</h3>
-                    <p class="card-desc">Premium essential oils for diffusers, massage blends, and wellness applications.</p>
-                </div>
-            </div>
-
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/haircare.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title"style="color:white;">Hair Care</h3>
-                    <p class="card-desc">Natural oils used in shampoos, conditioners, and scalp treatments.</p>
-                </div>
-            </div>
-
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/soapmake.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title"style="color:white;">Soap Making</h3>
-                    <p class="card-desc">Functional and aromatic oils for handmade and industrial soap production.</p>
-                </div>
-            </div>
-
-            <div class="industry-card">
-                <div class="card-bg" style="background-image: url('images/candles.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <h3 class="card-title"style="color:white;">Candles & Fragrance</h3>
-                    <p class="card-desc">Aromatic oils for candles, home fragrance, and scent manufacturing.</p>
-                </div>
-            </div>
+    {[
+      ["Cosmetics & Skincare", "skincare.jpg"],
+      ["Personal Care", "personalcare.jpg"],
+      ["Aromatherapy", "aromatherapy.jpg"],
+      ["Hair Care", "haircare.jpg"],
+      ["Soap Making", "soapmake.jpg"],
+      ["Candles & Fragrance", "candles.jpg"]
+    ].map(([title, img]) => (
+      <div class="relative h-64 overflow-hidden rounded-xl shadow group">
+        <img src={`/images/${img}`} class="absolute w-full h-full object-cover group-hover:scale-105 transition" />
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute bottom-4 left-4 text-white font-semibold">
+          {title}
         </div>
-    </section>
-</body>
-</html>
+      </div>
+    ))}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead Capture | Essential Oils Wholesale</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-        }
+  </div>
+</section>
 
-        /* Section Base Style */
-        .lead-section {
-            background-color: #F8F6F1; /* Light cream background */
-            padding: 70px 24px;
-        }
+<!-- LEAD FORM -->
+<section class="bg-[#F8F6F1] py-20 px-6">
 
-        .lead-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            /* Desktop: 60% + 40% column split */
-            grid-template-columns: 60% 40%;
-            gap: 32px;
-            align-items: flex-start;
-        }
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
 
-        /* Universal Card Style */
-        .lead-card {
-            background: #ffffff;
-            border-radius: 18px; /* 16-20px rounded corners */
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-            padding: 40px;
-            transition: box-shadow 0.3s ease;
-        }
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h3 class="text-2xl font-bold mb-4 text-[#3d4d45]">
+        Request Full Product Catalog
+      </h3>
 
-        .lead-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
+      <p class="mb-6 text-slate-600">
+        Get COA, MSDS, wholesale pricing and full specifications.
+      </p>
 
-        /* Typography */
-        .card-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: #1A1A1A;
-            margin-bottom: 12px;
-        }
+      <form class="space-y-4">
+        <input class="w-full p-3 border rounded" placeholder="Full Name" />
+        <input class="w-full p-3 border rounded" placeholder="Email" />
+        <textarea class="w-full p-3 border rounded" placeholder="Message"></textarea>
 
-        .card-subtitle {
-            font-size: 16px;
-            color: #555555;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-
-        /* Left Side: Catalog Request Form */
-        .trust-list {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .trust-list li {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 10px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .trust-list li::before {
-            content: "✔";
-            color: #25a25a;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .trust-statement {
-            font-size: 15px;
-            color: #444;
-            font-style: italic;
-            margin-bottom: 32px;
-            padding-top: 12px;
-            border-top: 1px solid #eee;
-        }
-
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            color: #222;
-            margin-bottom: 6px;
-        }
-
-        .form-group label span {
-            color: #e53935;
-        }
-
-        .form-control {
-            width: 100%;
-            height: 46px;
-            padding: 0 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: #25a25a;
-            box-shadow: 0 0 0 3px rgba(37, 162, 90, 0.15);
-        }
-
-        textarea.form-control {
-            height: 90px;
-            padding-top: 12px;
-            resize: none;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            width: 100%;
-            height: 48px;
-            line-height: 48px;
-            background-color: #25a25a;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #1f8e4d;
-            transform: translateY(-2px);
-        }
-
-        /* Right Side: WhatsApp Inquiry */
-        .whatsapp-box {
-            text-align: center;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            width: 100%;
-            height: 52px;
-            line-height: 52px;
-            background-color: #25D366;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 20px 0 28px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebe5c;
-            transform: translateY(-2px);
-        }
-
-        .support-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .support-list li {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 10px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .support-list li::before {
-            content: "✔";
-            color: #25a25a;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* Mobile: Stack vertically */
-        @media (max-width: 768px) {
-            .lead-container {
-                grid-template-columns: 1fr;
-            }
-            .lead-card {
-                padding: 28px;
-            }
-            .card-title {
-                font-size: 24px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <section class="lead-section">
-        <div class="lead-container">
-            <!-- Left 60%: Catalog Request Form (Primary CTA) -->
-            <div class="lead-card">
-                <h3 class="card-title">Request Full Product Catalog</h3>
-                <p class="card-subtitle">Get complete essential oils, carrier oils, and blended oils catalog with specifications, COA, MSDS, and wholesale pricing.</p>
-<p class="trust-statement">Trusted by importers, distributors, and brand owners in over 50 countries worldwide.</p>
-               
-
-                <form action="" method="POST">
-                    <div class="form-group">
-                        <label for="fullname">Full Name <span>*</span></label>
-                        <input type="text" id="fullname" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email <span>*</span></label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-
-   
-                    <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" class="form-control"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary">Send Request</button>
-                </form>
-            </div>
-
-            <!-- Right 40%: WhatsApp Quick Inquiry (Secondary CTA) -->
-            <div class="lead-card whatsapp-box">
-                <h3 class="card-title">Quick Inquiry via WhatsApp</h3>
-                <p class="card-subtitle">Chat directly with our sales team for fast quotation, samples, and product recommendations.</p>
-
-                <!-- Replace XXXXXXXXXXX with your WhatsApp number (country code + number, no +/spaces) -->
-                <a href="https://wa.me/XXXXXXXXXXX?text=Hi, I would like to get your essential oils catalog and wholesale pricing." class="btn-whatsapp" target="_blank">
-                    Chat on WhatsApp
-                </a>
-
-                <ul class="support-list">
-                    <li>Response within 1–3 hours</li>
-                    <li>Sample support available</li>
-                    <li>MOQ guidance instantly</li>
-<div style="margin-top:22px; text-align:center; font-size:15px; color:#555; font-weight:500;">
-Best for: Importers | Distributors | Brand Owners
-</div>
- <div style="margin-top:24px;">
-        <img src="images/bk.jpg" alt="Wholesale Essential Oils" style="width:100%; height:auto; border-radius:10px;">
+        <button class="w-full bg-[#3d4d45] text-white py-3 rounded hover:bg-emerald-900">
+          Send Request
+        </button>
+      </form>
     </div>
-</div>
-                </ul>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h3 class="text-2xl font-bold text-[#3d4d45]">
+        WhatsApp Inquiry
+      </h3>
+
+      <a class="block mt-6 bg-green-500 text-white text-center py-3 rounded"
+         href="https://wa.me/XXXXXXXXXXX">
+        Chat on WhatsApp
+      </a>
+
+      <p class="mt-6 text-sm text-slate-600">
+        Response within 1–3 hours
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+</Layout>

@@ -1,63 +1,100 @@
-<!-- src/components/Footer.astro -->
-<footer style="background:#2d322b; color:white; padding:60px 30px; width:100%; box-sizing:border-box; margin:0;">
-  <div style="max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:40px;">
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
 
-    <!-- 1 -->
-    <div>
-      <h3 style="font-size:18px; font-weight:bold; margin-bottom:20px;">XIAN YUHUI BIOTECHNOLOGY CO., LTD</h3>
-      <p style="color:#9ca3af; font-size:14px; line-height:1.6; margin-bottom:20px;">
-        Professional manufacturer and exporter of high-purity essential oils, carrier oils, and botanical extracts since 2015. Delivering quality and supply stability worldwide.
+<footer class="bg-[#2d322b] text-white py-16 px-6">
+
+  <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <!-- Company -->
+    <div class="space-y-4">
+
+      <h3 class="text-lg font-bold">
+        XIAN YUHUI BIOTECHNOLOGY
+      </h3>
+
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Professional manufacturer and exporter of high-purity essential oils,
+        carrier oils, and botanical extracts since 2015.
+        Delivering quality and supply stability worldwide.
       </p>
-      <p style="color:#d1d5db; font-size:14px; font-weight:600; margin-bottom:10px;">Accepted Payments</p>
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <div style="background:white; padding:4px; border-radius:4px;"><img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" style="height:20px; width:auto;"></div>
-        <div style="background:white; padding:4px; border-radius:4px;"><img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" style="height:20px; width:auto;"></div>
-        <div style="background:white; padding:4px 8px; border-radius:4px; font-size:10px; font-weight:bold; color:black;">WU</div>
-        <div style="background:white; padding:4px 8px; border-radius:4px; font-size:10px; font-weight:bold; color:black;">MG</div>
+
+      <!-- Payments -->
+      <div class="pt-4">
+
+        <p class="text-gray-200 text-sm font-semibold">
+          Accepted Payments
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-3">
+
+  <div class="bg-white rounded p-2 w-24 h-14 flex items-center justify-center">
+    <img src="/images/payments/bank-transfer.png"
+         class="max-h-10 max-w-full object-contain"
+         alt="Bank Transfer">
+  </div>
+
+  <div class="bg-white rounded p-2 w-24 h-14 flex items-center justify-center">
+    <img src="/images/payments/western-union.png"
+         class="max-h-10 max-w-full object-contain"
+         alt="Western Union">
+  </div>
+
+  <div class="bg-white rounded p-2 w-24 h-14 flex items-center justify-center">
+    <img src="/images/payments/moneygram.png"
+         class="max-h-10 max-w-full object-contain"
+         alt="MoneyGram">
+  </div>
+
+  <div class="bg-white rounded p-2 w-24 h-14 flex items-center justify-center">
+    <img src="/images/payments/paypal.png"
+         class="max-h-10 max-w-full object-contain"
+         alt="PayPal">
+  </div>
+
+  
+</div>
+          
       </div>
     </div>
 
-    <!-- 2 -->
+    <!-- Links -->
     <div>
-      <h3 style="font-size:18px; font-weight:bold; margin-bottom:20px;">Useful Links</h3>
-      <ul style="list-style:none; padding:0; margin:0;">
-        <li style="margin-bottom:10px;"><a href="/" style="color:#9ca3af; text-decoration:none; font-size:14px;">Home</a></li>
-       <li style="margin-bottom:10px;">
-  <a href="/about.html" style="color:#9ca3af; text-decoration:none; font-size:14px;">About Us</a>
-</li>
-      <li style="margin-bottom:10px;">
-  <a href="/catalogue.html" class="hover:text-green-800 cursor-pointer">Products ▼</a>
-</li>
-        <li style="margin-bottom:10px;"><a href="#" style="color:#9ca3af; text-decoration:none; font-size:14px;">Technical Support</a></li>
-        <li style="margin-bottom:10px;"><a href="#" style="color:#9ca3af; text-decoration:none; font-size:14px;">Contact Us</a></li>
+      <h3 class="text-lg font-bold mb-6">Useful Links</h3>
+      <ul class="space-y-3 text-gray-400 text-sm">
+        <li><a href="/" class="hover:text-white">Home</a></li>
+        <li><a href="/about" class="hover:text-white">About Us</a></li>
+        <li><a href="/catalogue" class="hover:text-white">Products</a></li>
+        <li><a href="#" class="hover:text-white">Technical Support</a></li>
       </ul>
     </div>
 
-    <!-- 3 -->
+    <!-- Help -->
     <div>
-      <h3 style="font-size:18px; font-weight:bold; margin-bottom:20px;">Let Us Help</h3>
-      <ul style="list-style:none; padding:0; margin:0;">
-        <li style="margin-bottom:10px;"><a href="/info/export-process" style="color:#9ca3af; text-decoration:none; font-size:14px;">Export Process</a></li>
-        <li style="margin-bottom:10px;"><a href="/info/shipping" style="color:#9ca3af; text-decoration:none; font-size:14px;">Shipping & Logistics</a></li>
-        <li style="margin-bottom:10px;"><a href="/info/quality" style="color:#9ca3af; text-decoration:none; font-size:14px;">Quality Assurance</a></li>
-        <li style="margin-bottom:10px;"><a href="/info/terms" style="color:#9ca3af; text-decoration:none; font-size:14px;">Terms & Conditions</a></li>
-        <li style="margin-bottom:10px;"><a href="/info/privacy" style="color:#9ca3af; text-decoration:none; font-size:14px;">Privacy Policy</a></li>
+      <h3 class="text-lg font-bold mb-6">Let Us Help</h3>
+      <ul class="space-y-3 text-gray-400 text-sm">
+        <li><a href="/info/export-process" class="hover:text-white">Export Process</a></li>
+        <li><a href="/info/shipping" class="hover:text-white">Shipping & Logistics</a></li>
+        <li><a href="/info/quality" class="hover:text-white">Quality Assurance</a></li>
       </ul>
     </div>
 
-    <!-- 4 -->
+    <!-- Contact -->
     <div>
-      <h3 style="font-size:18px; font-weight:bold; margin-bottom:20px;">Contact Us</h3>
-      <ul style="list-style:none; padding:0; margin:0; color:#9ca3af; font-size:14px;">
-        <li style="margin-bottom:10px;">Xi'an, Shaanxi, China</li>
-        <li style="margin-bottom:10px;">plantextract66@163.com</li>
-        <li style="margin-bottom:10px;">WhatsApp: +86 15829552458</li>
+      <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+      <ul class="space-y-3 text-gray-400 text-sm">
+        <li>Xi'an, Shaanxi, China</li>
+        <li>plantextract66@163.com</li>
+        <li>WhatsApp: +86 15829552458</li>
       </ul>
     </div>
 
   </div>
 
-  <div style="max-width:1300px; margin:40px auto 0; padding-top:30px; border-top:1px solid #4b5563; text-align:center; color:#6b7280; font-size:14px;">
-    &copy; 2026 XIAN YUHUI BIOTECHNOLOGY CO., LTD. All Rights Reserved.
+  <!-- Bottom -->
+  <div class="max-w-[1300px] mx-auto mt-12 pt-8 border-t border-gray-600 text-center text-gray-500 text-sm">
+    &copy; {currentYear} XIAN YUHUI BIOTECHNOLOGY CO., LTD. All Rights Reserved.
   </div>
+
 </footer>

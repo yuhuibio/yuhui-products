@@ -1,192 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Detail - Xian Yuhui Biotechnology</title>
-    
-    <style>
-        .bg-custom-green { background-color: #e5edea; }
-        .text-custom-main { color: #4a5d4e; }
-        .bg-custom-btn { background-color: #4a5d4e; }
-        .dropdown:hover .dropdown-menu { display: block; }
-    </style>
-</head>
-<body class="bg-white font-sans">
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { allNews } from '../data/news.js';
+---
 
-<nav class="flex items-center justify-between px-6 md:px-12 py-6 max-w-7xl mx-auto">
-    <div class="flex items-center space-x-3">
-        <img src="/images/logo.png" alt="logo" class="h-10 w-auto">
-        <span class="text-xl md:text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
-    </div>
-    <div class="hidden md:flex flex-row flex-nowrap items-center gap-6 text-lg text-gray-700 font-medium">
-        <a href="/" class="hover:text-green-800">Home</a>
-        <a href="about" class="hover:text-green-800">About Us</a>
-        <div class="relative dropdown">
-            <a href="catalogue" class="hover:text-green-800 cursor-pointer">Products ▼</a>
-            <div class="dropdown-menu absolute hidden pt-4 w-40 z-10">
-                <div class="bg-white shadow-lg py-2 rounded">
-                    <a href="/essential-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Essential oils</a>
-                    <a href="/carrier-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
-                    <a href="/blended-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
-                </div>
-            </div>
-        </div>
-        <a href="news" class="hover:text-green-800 font-semibold text-custom-main">News</a>
-        <a href="#" class="hover:text-green-800">Blog</a>
-        <a href="#" class="hover:text-green-800">Contact Us</a>
-    </div>
-    <div class="md:hidden text-2xl text-custom-main">☰</div>
-</nav>
+<Header />
 
-<section class="relative h-[380px] flex items-center px-6 md:px-16 overflow-hidden">
-    <div class="absolute inset-0 bg-custom-green"></div>
-    <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('images/news-banner.jpg');"></div>
-    <div class="relative z-10 max-w-xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-custom-main">News & Insights</h1>
-        <p class="text-xl text-gray-700 leading-relaxed">
-            Follow our latest company news,<br>
-            industry developments, and product updates.
-        </p>
-    </div>
+<section class="h-[250px] flex items-center px-10 bg-[#e5edea]">
+  <h1 class="text-4xl font-bold text-[#4a5d4e]">News Detail</h1>
 </section>
 
-<div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-10">
-    <aside class="w-full md:w-1/4">
-        <h2 class="text-xl font-bold text-custom-main mb-6 border-b pb-2 border-custom-green">Recent News</h2>
-        <div class="space-y-5" id="recentNews"></div>
-    </aside>
-
-    <main class="w-full md:w-3/4 text-gray-700 text-lg leading-relaxed">
-        <div id="newsDetail"></div>
-
-        <!-- 上一篇 / 下一篇 -->
-        <div class="flex justify-end gap-4 mt-10" id="prevNextContainer"></div>
-
-        <!-- 返回按钮 -->
-        <div class="mt-12">
-            <a href="news.html" class="bg-custom-main text-white px-6 py-3 rounded-md inline-block hover:bg-opacity-90">← Back to News List</a>
-        </div>
-    </main>
+<div class="max-w-6xl mx-auto px-6 py-12">
+  <div id="newsDetail"></div>
 </div>
 
-<script>
-const allNews = [
-{id:1,img:"https://picsum.photos/id/1011/600/400",title:"Happy New Year from XIAN YUHUI BIOTECHNOLOGY CO., LTD",date:"2024-12-31",desc:"Season greetings to all global partners and clients.",content:`As we welcome 2025, we would like to take a moment to reflect on the incredible journey we’ve shared with you in the past year. It has been a year full of growth, learning, and building stronger connections with our valued customers. We are incredibly grateful for your continued support and trust in our essential oils products. A Year in Review: Highlights & Achievements
+<Footer />
 
-2024 was a year of exciting milestones. We introduced new products to our collection, received outstanding feedback from customers, and continued to ensure that our essential oils meet the highest quality standards. Whether you’ve enjoyed our best-selling oils or explored new offerings, we’re proud to have been part of your wellness journey.
+<script is:inline define:vars={{ allNews }}>
 
-Here are a few highlights from 2024:
-
-Expanded Product Range: We have launched a series of compound essential oils including fat burning and weight loss essential oils, whitening and tender skin essential oils, sunscreen repair essential oils, gastrointestinal conditioning essential oils, lymphatic detoxification essential oils, etc.
-
-Customer Satisfaction: Thanks to your feedback, we improved our packaging and shipping processes to serve you better.
-
-Sustainability Commitment: Our dedication to sustainable sourcing and eco-friendly packaging continues to be a priority.
-
-Looking Ahead: Exciting Plans for 2025
-
-We are thrilled to continue serving you in the new year with even more exciting offerings and initiatives. Here’s a sneak peek at what’s coming up in 2024:
-
-New Product Launches: Stay tuned for new essential oil blends and wellness products designed to support your health, beauty, and relaxation needs.
-
-Exclusive Offers: We’ll be rolling out special discounts and promotions to help you discover the best of nature at an even better price.
-
-Sustainability Efforts: We will further enhance our sustainability efforts to ensure that every bottle of oil you receive is as kind to the Earth as it is to you.
-
-Wishing You a Year of Wellness and Joy
-
-We hope that 2025 brings you peace, joy, and a renewed sense of well-being. Whether you’re looking to relax, rejuvenate, or enhance your daily self-care routine, we are here to provide the highest quality essential oils to support you every step of the way.
-
-Thank you for being a customer of our company. We look forward to another wonderful year with you!`},
-{id:2,img:"https://picsum.photos/id/1012/600/400",title:"Leading the Way: Our Company Recognized as Key Supplier of Clove Leaf Oil",date:"2024-04-17",desc:"Our stable supply chain gains wide industry recognition.",content:"In recent industry surveys, our company has been recognized as a primary provider of high-quality Clove Leaf Oil, showcasing our commitment to excellence in the essential oils market. This recognition highlights not only our expertise but also the trust our clients and partners place in us.\n\nClove leaf oil, renowned for its aromatic and therapeutic properties, is widely used across industries including aromatherapy, cosmetics, and pharmaceuticals. As a leading supplier, we pride ourselves on delivering top-grade Clove Leaf Oil that meets and exceeds industry standards, ensuring efficacy and purity for our customers.\n\nAs demand for natural, eco-conscious products continues to rise, Clove Leaf Oil remains a versatile, sought-after ingredient. Whether for its antibacterial properties, soothing aroma, or holistic benefits, our oil caters to a wide range of applications, driving growth and opportunities for our partners.\n\nLooking ahead, we remain committed to upholding our reputation as a trusted supplier of Clove Leaf Oil, empowering businesses and consumers alike with quality solutions that inspire wellness and prosperity.\n\nFor inquiries or to experience the benefits of our Clove Leaf Oil firsthand, contact us today."},
-{id:3,img:"https://picsum.photos/id/1013/600/400",title:"Our Plant Extract Liquids Reach Australian Markets",date:"2023-09-14",desc:"Our plant extract liquids pass local safety certification.",content:"We are excited to announce that our company has successfully exported a significant shipment of plant extract liquids to the Australian market. This expansion into Australia marks a significant milestone in our ongoing commitment to providing high-quality botanical extracts to a global customer base.\n\n\nOur plant extract liquids, derived from a diverse range of plants known for their health and wellness benefits, have been well-received by consumers and businesses alike in Australia. With a focus on quality, sustainability, and innovation, our products have quickly gained traction in the Australian market.\n\n\nThe Australian market's demand for natural and organic products aligns perfectly with our mission to deliver premium plant extracts. These extracts are used in various applications, including health supplements, cosmetics, food and beverages, and pharmaceuticals. We believe that our products will not only meet but exceed the expectations of Australian consumers and businesses.Our company remains committed to fostering strong relationships with our Australian partners and customers. We look forward to working closely with local distributors, manufacturers, and retailers to ensure that our plant extract liquids are readily available to Australians seeking high-quality, plant-based solutions.\n\n\nFor more information about our plant extract liquids or to inquire about distribution opportunities in Australia, please do not hesitate to contact us. We are excited about the growth of our brand in Australia and are dedicated to delivering the benefits of nature to the Australian market."},
-{id:4,img:"https://picsum.photos/id/1014/600/400",title:"We received Positive Feedback From Global Buyers",date:"2024-03-02",desc:"Long-term cooperation feedback and repeat orders keep growing.",content:"XIAN YUHUI BIOTECHNOLOGY CO.,LTD has recently received a high volume of positive feedback from our customers, praising the quality and benefits of our products.\n\n\nThe customers have reported noticeable improvements in their overall health and well-being after incorporating the essential oils into their daily routines. Some have used the oils for aromatherapy purposes, while others have applied them topically for specific health issues such as headaches, joint pain and skin irritation.\n\n\nThe customers have also praised the company for their exceptional customer service and support, as well as their commitment to using only natural, high-quality ingredients in their products.\n\n\nThe owner of our company expressed her gratitude for the feedback, stating, \"We are so pleased to hear from our customers about the positive impact our essential oils have had on their lives. It is a true testament to the power of nature and the commitment we have to providing the best products possible.\"\n\n\nThis news is a clear indication of the increasing popularity and effectiveness of natural health solutions, and we are poised to continue its growth and success in the market."},
-{id:5,img:"https://picsum.photos/id/1015/600/400",title:"XIAN YUHUI BIOTEC Exports Rosehip Oil to Australia",date:"2024-01-20",desc:"Large batch cold-pressed rosehip oil delivered to Australia warehouse.",content:"[Xi'an， China] – [XIAN YUHUI BIOTECHNOLOGY CO.,LTD], a leading producer of natural skincare products, announces its successful export of rosehip oil to Australia. The company's signature product, rosehip oil, has gained popularity among skincare enthusiasts and is known for its nourishing and rejuvenating properties.\n\n\nThe company's rosehip oil is derived from the seeds of the rose hip, a fruit that grows on wild roses. The oil is rich in antioxidants, vitamins, and essential fatty acids that help hydrate, brighten and regenerate the skin. The product has been carefully crafted to meet international standards of quality and sustainability.\n\n\n\"We are thrilled to expand our reach to Australia,\" said Mr Lau, \"We have received tremendous feedback from customers in Australia and are excited to offer them the best quality rosehip oil on the market.\"\n\n\nThe company has a strong commitment to using only the finest ingredients and following ethical manufacturing processes. The rosehip oil is 100% pure and natural, and is free from harmful chemicals, synthetic fragrances, and preservatives.\n\n\n\"Our aim is to provide our customers with a product that is not only effective, but also safe and environmentally responsible,\" added Mr Lau.\n\n\nThe company's rosehip oil is available in a variety of sizes and is sold through the company's website and select retail locations in Australia.\n\n\nAbout XIAN YUHUI BIOTECHNOLOGY CO.,LTD\n\n\nXIAN YUHUI BIOTECHNOLOGY CO.,LTD is a leading producer of natural and organic skincare products, committed to using only the finest ingredients and ethical manufacturing processes. The company offers a range of products, including rosehip oil, that are designed to nourish and rejuvenate the skin.\n\n\nFor more information about XIAN YUHUI BIOTECHNOLOGY CO.,LTD, please visit www.yuhuibiotec.com    .\n\n\nContact: Jessica Zhang \n\n[WhatsApp/WeChat]+86 15829552458\n\n[Email]: plantextract66@163.com "},
-{id:6,img:"https://picsum.photos/id/1016/600/400",title:"Our Company Expands to Europe Market",date:"2023-11-08",desc:"Food-grade sealed barrels and small trial bottle options available.",content:"XIAN YUHUI BIOTECHNOLOGY CO.,LTD, has announced their expansion into the European market. With a growing demand for natural and high-quality products, the company aims to introduce their range of pure essential oils to consumers in Europe.\n\nXIAN YUHUI BIOTECHNOLOGY CO.,LTD, which has established a reputation for producing pure and authentic essential oils, will offer our products through various channels, including online and in select retail stores. The move into the European market is expected to increase the company's global reach and strengthen their position as a leading producer of essential oils.\n\nThe CEO of XIAN YUHUI BIOTECHNOLOGY CO.,LTD stated, “We are thrilled to be expanding our reach into the European market and bringing our pure essential oils to a new audience. Our products are made from the finest natural ingredients and are a reflection of our commitment to producing high-quality, authentic essential oils.”\n\nOur essential oils will be available in popular scents such as lavender, eucalyptus, and peppermint, and will be packaged in recyclable materials to align with the company's commitment to sustainability.\n\nThis expansion into the European market is a significant milestone for the company and a testament to their commitment to producing pure and authentic essential oils. The company looks forward to introducing their products to new customers and becoming a trusted source for essential oils in Europe."},
-{id:7,img:"https://picsum.photos/id/1017/600/400",title:"2025 Frankfurt Beauty Expo Schedule",date:"2025-02-10",desc:"We exported premium quality jojoba oil to Australia once again.",content:"Our company announced today that we will once again be exporting their premium quality jojoba oil to Australia. Our company has been a leading producer of jojoba oil for several years, and their products have been well received in the Australian market.\n\n\nThe jojoba oil, which is extracted from the jojoba plant, is a highly valued ingredient in the cosmetics and personal care industry due to its moisturizing and nourishing properties. XIAN YUHUI BIOTECHNOLOGY CO.,LTD is known for producing top-quality jojoba oil that is free of harmful chemicals and preservatives, making it a popular choice for those looking for natural skincare products.\n\n\n\"We are thrilled to announce our return to the Australian market,\" said XIAN YUHUI BIOTECHNOLOGY's CEO, Mr Lau. \"Australia has always been a key market for us, and we are confident that our customers will continue to appreciate the quality and purity of our jojoba oil.\"\n\n\nXIAN YUHUI BIOTECHNOLOGY will be working closely with their Australian distributor to ensure that the products reach their customers in a timely and efficient manner. The company is committed to providing exceptional customer service, and they are confident that their customers in Australia will continue to be satisfied with their products.\n\n\nThis latest move is part of XIAN YUHUI BIOTECHNOLOGY's larger expansion strategy, which aims to increase their global reach and bring their products to more customers around the world. \"We are excited about this opportunity to expand our reach and bring the benefits of our jojoba oil to more people,\" said Mr Lau. \"We are confident that this will be a successful venture for us and that we will continue to grow and succeed in the Australian market.\"\n\n\nIn conclusion, XIAN YUHUI BIOTECHNOLOGY's return to the Australian market is great news for those looking for high-quality, natural skincare products. With their commitment to producing top-quality jojoba oil, and their focus on customer satisfaction, XIAN YUHUI BIOTECHNOLOGY is poised to be a leading provider of natural skincare products in Australia."},
-{id:8,img:"https://picsum.photos/id/1018/600/400",title:"Our Company Expands Global Reach with Exportation of Neroli Oil to Yemen",date:"2025-01-22",desc:"More carrier oils now hold EU organic standard certificates.",content:"Our has announced the successful export of its high-quality neroli oil to Yemen. XIAN YUHUI BIOTECHNOLOGY CO.,LTD, known for its commitment to sustainability and ethical sourcing, is thrilled to bring its products to a wider international market.\n\n\nNeroli oil, extracted from the blossom of the bitter orange tree, is valued for its distinctive citrus fragrance and numerous health benefits. The company's neroli oil is steam distilled using only the finest quality flowers, ensuring a pure and potent product.\n\n\nThis latest expansion is part of our company's ongoing efforts to expand its reach and bring its products to new customers around the world. With its focus on quality and sustainability, our company is well-positioned to meet the growing demand for natural and environmentally-friendly products.\n\n\nThe CEO of the company stated, \"We are proud to be able to offer our neroli oil to customers in Yemen and beyond. This marks a significant step in our mission to make our products available to those who value natural and ethical alternatives. We look forward to continuing to expand our reach and bring the benefits of our products to people around the world.\"\n\n\nThe shipment of neroli oil to Yemen is set to arrive in the coming days and will be available for purchase at select retailers."},
-{id:9,img:"https://picsum.photos/id/1019/600/400",title:"New Blended Relax Formula Launched",date:"2025-03-05",desc:"Custom aromatherapy blend for spa and home diffuser use.",content:"We are delighted to announce the launch of our new Blended Relax Formula, a custom aromatherapy blend designed for spa treatments and home diffuser use. Carefully crafted with natural essential oils, this blend helps relieve stress, calm the mind, and create a peaceful atmosphere for relaxation and sleep improvement."},
-{id:10,img:"https://picsum.photos/id/1020/600/400",title:"Raw Material Harvest Season Update",date:"2025-04-01",desc:"New lavender and peppermint crop ready for distillation.",content:"The annual harvest season for our key raw materials has begun. Fresh lavender and peppermint crops have been carefully selected and are ready for steam distillation. All raw materials are sourced from certified organic farms to ensure the highest purity and quality in every batch of our essential oils."}
-];
-
-// 点击侧边栏跳转
-function goDetail(id) {
-    window.location.href = "news-detail.html?id=" + id;
+function getId() {
+  const id = new URLSearchParams(window.location.search).get("id");
+  return id ? Number(id) : null;
 }
 
-// 渲染侧边栏
-function renderRecentNews() {
-    const container = document.getElementById('recentNews');
-    const list = allNews.slice(0, 4);
-    let html = '';
-    list.forEach(item => {
-        html += `
-        <div onclick="goDetail(${item.id})" class="border-l-4 border-custom-main pl-3 cursor-pointer hover:bg-gray-50 transition">
-            <p class="text-xs text-gray-500">${item.date}</p>
-            <p class="text-sm font-medium line-clamp-2">${item.title}</p>
-        </div>`;
-    });
-    container.innerHTML = html;
+function renderDetail() {
+  const id = getId();
+  const el = document.getElementById("newsDetail");
+
+  if (!id) {
+    el.innerHTML = "<p class='text-red-500'>Missing news id</p>";
+    return;
+  }
+
+  const news = allNews.find(n => n.id === id);
+
+  if (!news) {
+    el.innerHTML = "<p class='text-red-500'>News not found</p>";
+    return;
+  }
+
+  const highlight = new Set([
+    "A Year in Review: Highlights & Achievements",
+    "Here are a few highlights from 2024:",
+    "Looking Ahead: Exciting Plans for 2025",
+    "Wishing You a Year of Wellness and Joy"
+  ]);
+
+  const lines = news.content.split(/\n+/);
+
+  const contentHTML = lines.map(line => {
+    const text = line.trim();
+    if (!text) return "";
+
+    if (highlight.has(text)) {
+      return `<h2 class="text-2xl font-bold text-[#4a5d4e] mt-8 mb-3">${text}</h2>`;
+    }
+
+    return `<p class="mb-3 leading-7 text-gray-700">${text}</p>`;
+  }).join("");
+
+  el.innerHTML = `
+    <h1 class="text-3xl font-bold mb-3 text-[#4a5d4e]">${news.title}</h1>
+    <p class="text-gray-500 mb-6">${news.date}</p>
+    <img src="${news.image}" class="w-full rounded-xl mb-8"/>
+    <div>${contentHTML}</div>
+  `;
 }
 
-// 获取当前新闻ID
-function getNewsIdFromUrl() {
-    const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id'));
-}
+document.addEventListener("DOMContentLoaded", renderDetail);
 
-// 渲染详情
-function renderNewsDetail() {
-    const id = getNewsIdFromUrl();
-    const news = allNews.find(item => item.id === id);
-    if (!news) {
-        document.getElementById('newsDetail').innerHTML = "<h1>News not found</h1>";
-        return;
-    }
-    const html = `
-        <h1 class="text-3xl font-bold text-custom-main mb-3">${news.title}</h1>
-        <p class="text-gray-500 mb-8">${news.date}</p>
-        <img src="${news.img}" class="w-full h-auto rounded-xl mb-8">
-        <div class="whitespace-pre-line">${news.content}</div>
-    `;
-    document.getElementById('newsDetail').innerHTML = html;
-}
-
-// 渲染 上一篇 / 下一篇 —— 最终修复版
-function renderPrevNext() {
-    const currentId = getNewsIdFromUrl();
-    const sortedNews = [...allNews].sort((a, b) => a.id - b.id);
-    const currentIndex = sortedNews.findIndex(n => n.id === currentId);
-
-    let prevItem = null;
-    let nextItem = null;
-
-    if (currentIndex > 0) {
-        prevItem = sortedNews[currentIndex - 1];
-    }
-    if (currentIndex + 1 < sortedNews.length) {
-        nextItem = sortedNews[currentIndex + 1];
-    }
-
-    let html = '';
-    if (prevItem) {
-        html += `<a href="news-detail.html?id=${prevItem.id}" class="px-5 py-2 bg-gray-100 hover:bg-gray-200 rounded transition">← Previous</a>`;
-    }
-    if (nextItem) {
-        html += `<a href="news-detail.html?id=${nextItem.id}" class="px-5 py-2 bg-custom-main text-white hover:bg-opacity-90 rounded transition">Next →</a>`;
-    }
-
-    document.getElementById('prevNextContainer').innerHTML = html;
-}
-
-// 初始化
-document.addEventListener('DOMContentLoaded', () => {
-    renderRecentNews();
-    renderNewsDetail();
-    renderPrevNext();
-});
 </script>
-
-</body>
-</html>

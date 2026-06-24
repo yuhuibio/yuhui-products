@@ -1,268 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xian Yuhui Biotechnology</title>
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Single Essential Oils | Xian Yuhui Biotechnology">
     
-    <style>
-        .bg-custom-green { background-color: #e5edea; }
-        .text-custom-main { color: #4a5d4e; }
-        .bg-custom-btn { background-color: #4a5d4e; }
-        .dropdown:hover .dropdown-menu { display: block; }
+    <!-- Hero Banner -->
+    <section class="py-10 mb-16">
+        <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">Bulk Single Essential Oils</h2>
+        <div class="relative w-full overflow-hidden">
+            <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
+                <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">100% Pure & Natural</h3>
+                <p class="text-3xl font-normal tracking-wide">Quality You Can Trust | Supply You Can Rely On</p>
+            </div>
+        </div>
+    </section>
 
-        * { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: white ; color: #333; margin: 0; padding: 0;background: #ffffff; }
-        .container { display: flex; gap: 80px; max-width: 1400px; margin: 0 auto; padding: 40px; }
-        
-        .sidebar { width: 200px; flex-shrink: 0; }
-        .filter-list { list-style: none; padding: 0; }
-        .filter-list li { margin-bottom: 20px; }
-        .filter-list a { text-decoration: none; color: #999; font-size: 0.9rem; display: block; transition: 0.3s; }
-        .filter-list a.active { color: #000; font-weight: 500; border-left: 2px solid #000; padding-left: 12px; }
+    <!-- Main Content -->
+    <div class="max-w-[1400px] mx-auto px-6 mb-20 flex gap-12">
+        <!-- Sidebar -->
+        <aside class="w-48 flex-shrink-0">
+            <ul class="space-y-5" id="filterList">
+                <li><a href="#" class="font-bold border-l-2 border-black pl-3 text-black" data-filter="all">All Single Essential Oils</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="floral">Floral Oils</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="citrus">Citrus Oils</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="herbal">Herbal Oils</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="wood">Wood & Resin</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="spice">Spice Oils</a></li>
+            </ul>
+        </aside>
 
-        .product-grid { 
-            flex-grow: 1; 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 30px; 
-        }
-        .card { 
-          border: 1px solid #e0e0e0;
-            padding: 20px; /* 增加一点内边距 */
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            border-radius: 0.5rem; /* 卡片也加圆角 */
-            transition: box-shadow 0.3s ease;
-            background: #fff;
-        }
-.card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 增加悬停效果 */
-        }
-       /* 统一的正方形或固定高度图片外框 */
-        .img-box {
-            width: 100%;
-            height: 350px; /* 维持原高度 */
-            background: #f9f9f9; /* 关键：给个淡淡的灰色背景，让不同宽度的图片有边界感 */
-            border-radius: 0.5rem;
-            margin-bottom: 12px;
-            overflow: hidden;
-            
-            /* 使用 Flexbox 让图片完全居中 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            /* 模拟一个内边距，防止图片紧贴边缘 */
-            padding: 10px;
-        }
-
-        .img-box img {
-            max-width: 100%; /* 防止图片溢出容器 */
-            max-height: 100%; /* 关键：确保图片完全在350px高度内 */
-            width: auto; /* 关键：让图片保持原比例缩放 */
-            height: auto; /* 关键：让图片保持原比例缩放 */
-            object-fit: contain; /* 关键：不裁切，保留桶的完整性 */
-            object-position: center; /* 保持内容居中 */
-            display: block;
-        }
-
-        /* 确保卡片内部内容（标题、按钮）整体到底部对齐 */
-        .card h4 {
-            margin: 5px 0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-top: auto; /* 关键：把标题以下的部分自动推向底部 */
-        }
-
-        .card p { margin: 0; font-size: 0.75rem; color: #888; font-style: italic; }
-        .card p.method { font-size: 0.7rem; color: #777; margin: 4px 0 10px 0; }
-        .view-btn { margin-top:10px; padding: 6px 12px; background:#4a5d4e; color:white; border:none; border-radius:4px; font-size:0.75rem; cursor:pointer; }
-      
-      
-      .pagination { grid-column: 1 / -1; margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
-        .page-btn { cursor: pointer; border: 1px solid #ddd; background: none; padding: 5px 12px; font-size: 0.8rem; }
-        .page-btn.active { background: #000; color: #fff; border-color: #000; }
-    </style>
-</head>
-<body class="bg-white font-sans">
-
-<nav class="flex items-center justify-between px-12 py-6">
-    <div class="flex items-center space-x-3">
-        <img src="/images/logo.png" alt="logo" class="h-10 w-auto">
-        <span class="text-2xl font-bold text-custom-main">XIAN YUHUI BIOTECH</span>
+        <!-- Product Grid -->
+        <main class="flex-grow">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid"></div>
+            <div class="flex justify-center mt-12 gap-2" id="pagination"></div>
+        </main>
     </div>
-   <div class="flex flex-row flex-nowrap items-center gap-8 text-lg text-gray-700 font-medium">
-        <a href="/" class="hover:text-green-800">Home</a>
-        <a href="/about" class="hover:text-green-800">About Us</a>
-        <div class="relative dropdown">
-            <a href="#" class="hover:text-green-800 cursor-pointer">Products ▼</a>
-            <div class="dropdown-menu absolute hidden pt-4 w-40 z-10">
-                <div class="bg-white shadow-lg py-2 rounded">
-                    <a href="/Essential-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Single Essential oils</a>
-                    <a href="/carrier-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Carrier oils</a>
-                    <a href="/blended-oils-cata" class="block px-4 py-2 hover:bg-gray-100">Blended oils</a>
+
+    <script is:inline>
+        const products = [
+            { name: "Peppermint Oil", latin: "Mentha piperita", category: "herbal", method: "Steam Distilled", img: "/images/peppermint-oil.jpg" },
+            { name: "Lavender Oil", latin: "Lavandula angustifolia", category: "floral", method: "Steam Distilled", img: "/images/lavender-oil.jpg" },
+            { name: "Rosemary Oil", latin: "Rosmarinus officinalis", category: "herbal", method: "Steam Distilled", img: "/images/rosemary-oil.jpg" },
+            { name: "Rose Oil", latin: "Rosa damascena", category: "floral", method: "Steam Distilled", img: "/images/rose.jpg" },
+            { name: "Jasmine Oil", latin: "Jasminum grandifflorum", category: "floral", method: "Solvent Extracted", img: "/images/jasmine.jpg" },
+            { name: "Geranium Oil", latin: "Pelargonium graveolens", category: "floral", method: "Steam Distilled", img: "/images/geranium.jpg" },
+            { name: "Ylang Ylang Oil", latin: "Cananga odorata", category: "floral", method: "Steam Distilled", img: "/images/ylangylang.jpg"},
+            { name: "Neroli Oil", latin: "Citrus aurantium", category: "floral", method: "Steam Distilled", img: "/images/neroli-oil.jpg" },
+            { name: "Chamomile (Roman)", latin: "Chamaemelum nobile", category: "floral", method: "Steam Distilled", img: "/images/chamomile-roman-oil.jpg" },
+            { name: "Chamomile (German)", latin: "Matricaria chamomilla", category: "floral", method: "Steam Distilled", img: "/images/chamomile-german-oil.jpg" },
+            { name: "Sweet Orange Oil", latin: "Citrus sinensis", category: "citrus", method: "Cold Pressed", img: "/images/sweet-orange-oil.jpg" },
+            { name: "Frankincense Oil", latin: "Boswellia serrata", category: "wood", method: "Steam Distilled", img: "/images/frankincense-oil.jpg" },
+            { name: "Cinnamon Bark Oil", latin: "Cinnamomum verum", category: "spice", method: "Steam Distilled", img: "/images/cinnamon-bark-oil.jpg" },
+            { name: "Lemon Oil", latin: "Citrus limon", category: "citrus", method: "Cold Pressed", img: "/images/lemon-oil.jpg" },
+            { name: "Tea Tree Oil", latin: "Melaleuca alternifolia", category: "herbal", method: "Steam Distilled", img: "/images/tea-tree-oil.jpg" },
+            { name: "Sandalwood Oil", latin: "Santalum album", category: "wood", method: "Steam Distilled", img: "/images/sandalwood-oil.jpg" }
+        ];
+
+        let currentPage = 1;
+        let currentCat = 'all';
+
+        function render() {
+            const grid = document.getElementById('productGrid');
+            const filtered = currentCat === 'all' ? products : products.filter(p => p.category === currentCat);
+            const start = (currentPage - 1) * 12;
+            const pageItems = filtered.slice(start, start + 12);
+            
+            grid.innerHTML = pageItems.map(p => `
+                <div class="border border-gray-100 p-5 rounded-lg flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="h-64 w-full bg-gray-50 mb-4 flex items-center justify-center rounded overflow-hidden">
+                        <img src="${p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/400x400'">
+                    </div>
+                    <h4 class="font-medium text-gray-800 mt-auto">${p.name}</h4>
+                    <p class="text-xs text-gray-400 italic">${p.latin}</p>
+                    <p class="text-xs text-gray-500 mb-4">${p.method}</p>
+                    <a href="/products/${p.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/gi, '')}" 
+                       class="w-full bg-[#4a5d4e] text-white py-2 rounded text-xs hover:bg-emerald-900 transition">View Details</a>
                 </div>
-            </div>
-        </div>
-        <a href="/news" class="hover:text-green-800">News</a>
-        <a href="#" class="hover:text-green-800">Blog</a>
-        <a href="#" class="hover:text-green-800">Contact Us</a>
-    </div>
-</nav>
+            `).join('');
 
-<section class="py-10 mb-16">
-    <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">Bulk Single Essential oils</h2>
-    <div class="relative w-full overflow-hidden">
-        <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
-            <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">100% Pure & Natural</h3>
-            <p class="text-3xl font-normal tracking-wide">Quality You Can Trust | Supply You Can Rely On</p>
-        </div>
-    </div>
-</section>
-
-<div class="flex justify-end px-12 mb-6">
-    <div class="flex items-center border border-gray-200 rounded-md overflow-hidden shadow-sm">
-        <input type="text" placeholder="Search Products..." class="px-4 py-2 outline-none text-gray-600 w-48 focus:w-64 transition-all duration-300">
-        <button class="bg-[#facc15] px-4 py-2.5 hover:bg-[#eab308] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </button>
-    </div>
-</div>
-
-<div class="container">
-    <aside class="sidebar">
-        <ul class="filter-list" id="filterList">
-            <li><a href="#" class="active" data-filter="all">All Single Essential Oils</a></li>
-            <li><a href="#" data-filter="floral">Floral Oils</a></li>
-            <li><a href="#" data-filter="citrus">Citrus Oils</a></li>
-            <li><a href="#" data-filter="herbal">Herbal Oils</a></li>
-            <li><a href="#" data-filter="wood">Wood & Resin</a></li>
-            <li><a href="#" data-filter="spice">Spice Oils</a></li>
-        </ul>
-    </aside>
-
-    <main>
-        <div class="product-grid" id="productGrid"></div>
-        <div class="pagination" id="pagination"></div>
-    </main>
-</div>
-
-<script>
-// 全部商品补齐img路径，无缺失字段
-const products = [
-    { name: "Peppermint Oil", latin: "Mentha piperita", category: "herbal", method: "Steam Distilled", img: "/images/peppermint-oil.jpg" },
-    { name: "Lavender Oil", latin: "Lavandula angustifolia", category: "floral", method: "Steam Distilled", img: "/images/lavender-oil.jpg" },
-    { name: "Rosemary Oil", latin: "Rosmarinus officinalis", category: "herbal", method: "Steam Distilled", img: "/images/rosemary-oil.jpg" },
-    { name: "Rose Oil", latin: "Rosa damascena", category: "floral", method: "Steam Distilled", img: "/images/rose.jpg" },
-    { name: "Jasmine Oil", latin: "Jasminum grandifflorum", category: "floral", method: "Solvent Extracted", img: "/images/jasmine.jpg" },
-    { name: "Geranium Oil", latin: "Pelargonium graveolens", category: "floral", method: "Steam Distilled", img: "/images/geranium.jpg" },
-    { name: "Ylang Ylang Oil", latin: "Cananga odorata", category: "floral", method: "Steam Distilled", img: "/images/ylangylang.jpg"},
-    { name: "Neroli Oil", latin: "Citrus aurantium", category: "floral", method: "Steam Distilled", img: "/images/neroli-oil.jpg" },
-    { name: "Chamomile (Roman)", latin: "Chamaemelum nobile", category: "floral", method: "Steam Distilled", img: "/images/chamomile-roman-oil.jpg" },
-    { name: "Chamomile (German)", latin: "Matricaria chamomilla", category: "floral", method: "Steam Distilled", img: "/images/chamomile-german-oil.jpg" },
-    { name: "Sweet Orange Oil", latin: "Citrus sinensis", category: "citrus", method: "Cold Pressed", img: "/images/sweet-orange-oil.jpg" },
-    { name: "Frankincense Oil", latin: "Boswellia serrata", category: "wood", method: "Steam Distilled", img: "/images/frankincense-oil.jpg" },
-    { name: "Cinnamon Bark Oil", latin: "Cinnamomum verum", category: "spice", method: "Steam Distilled", img: "/images/cinnamon-bark-oil.jpg" },
-    { name: "Lemon Oil", latin: "Citrus limon", category: "citrus", method: "Cold Pressed", img: "/images/lemon-oil.jpg" },
-    { name: "Magnolia Oil", latin: "Magnolia liliiflora", category: "floral", method: "Solvent Extracted", img: "/images/magnolia-oil.jpg" },
-    { name: "Helichrysum Oil", latin: "Helichrysum italicum", category: "floral", method: "Steam Distilled", img: "/images/helichrysum-oil.jpg" },
-    { name: "Palmarosa Oil", latin: "Cymbopogon martinii", category: "herbal", method: "Steam Distilled", img: "/images/palmarosa-oil.jpg" },
-    { name: "Ginger Oil", latin: "Zingiber officinale", category: "spice", method: "Steam Distilled", img: "/images/ginger-oil.jpg" },
-    { name: "Osmanthus Oil", latin: "Osmanthus fragrans", category: "floral", method: "Solvent Extracted", img: "/images/osmanthus-oil.jpg" },
-    { name: "Bergamot Oil", latin: "Citrus bergamia", category: "citrus", method: "Cold Pressed", img: "/images/bergamot-oil.jpg" },
-    { name: "Grapefruit Oil", latin: "Citrus paradisi", category: "citrus", method: "Cold Pressed", img: "/images/grapefruit-oil.jpg" },
-    { name: "Lime Oil", latin: "Citrus aurantiifolia", category: "citrus", method: "Cold Pressed", img: "/images/lime-oil.jpg" },
-    { name: "Mandarin Oil", latin: "Citrus reticulata", category: "citrus", method: "Cold Pressed", img: "/images/mandarin-oil.jpg" },
-    { name: "Tangerine Oil", latin: "Citrus tangerina", category: "citrus", method: "Cold Pressed", img: "/images/tangerine-oil.jpg" },
-    { name: "Bitter Orange Oil", latin: "Citrus aurantium", category: "citrus", method: "Cold Pressed", img: "/images/bitter-orange-oil.jpg" },
-    { name: "Blood Orange Oil", latin: "Citrus sinensis", category: "citrus", method: "Cold Pressed", img: "/images/blood-orange-oil.jpg" },
-    { name: "Pomelo Peel Oil", latin: "Citrus maxima", category: "citrus", method: "Cold Pressed", img: "/images/pomelo-peel-oil.jpg" },
-    { name: "Petitgrain Oil", latin: "Citrus aurantium", category: "citrus", method: "Steam Distilled", img: "/images/petitgrain-oil.jpg" },
-    { name: "Tea Tree Oil", latin: "Melaleuca alternifolia", category: "herbal", method: "Steam Distilled", img: "/images/tea-tree-oil.jpg" },
-    { name: "Basil Oil", latin: "Ocimum basilicum", category: "herbal", method: "Steam Distilled", img: "/images/basil-oil.jpg"},
-    { name: "Carrot Seed Oil", latin: "Daucus carota", category: "herbal", method: "Steam Distilled", img: "/images/carrot-seed-oil.jpg"},
-    { name: "Thyme Oil", latin: "Thymus vulgaris", category: "herbal", method: "Steam Distilled", img: "/images/thyme-oil.jpg" },
-    { name: "Oregano Oil", latin: "Origanum vulgare", category: "herbal", method: "Steam Distilled", img: "/images/oregano-oil.jpg" },
-    { name: "Clary Sage Oil", latin: "Salvia sclarea", category: "herbal", method: "Steam Distilled", img: "/images/clary-sage-oil.jpg" },
-    { name: "Lemongrass Oil", latin: "Cymbopogon citratus", category: "herbal", method: "Steam Distilled", img: "/images/lemongrass-oil.jpg" },
-    { name: "Patchouli Oil", latin: "Pogostemon cablin", category: "herbal", method: "Steam Distilled", img: "/images/patchouli-oil.jpg" },
-    { name: "Fennel Oil", latin: "Foeniculum vulgare", category: "spice", method: "Steam Distilled", img: "/images/fennel-oil.jpg" },
-    { name: "Thuja Oil", latin: "Thuja Orientalis", category: "herbal", method: "Steam Distilled", img: "/images/thuja-oil.jpg" },
-    { name: "Melissa Oil", latin: "Melissa officinalis", category: "herbal", method: "Steam Distilled", img: "/images/melissa-oil.jpg" },
-    { name: "Sandalwood Oil", latin: "Santalum album", category: "wood", method: "Steam Distilled", img: "/images/sandalwood-oil.jpg" },
-    { name: "Cedarwood Oil", latin: "Cedrus atlantica", category: "wood", method: "Steam Distilled", img: "/images/cedarwood-oil.jpg" },
-    { name: "Myrrh Oil", latin: "Commiphora myrrha", category: "wood", method: "Steam Distilled", img: "/images/myrrh-oil.jpg" },
-    { name: "Pine Needle Oil", latin: "Pinus pinaster", category: "wood", method: "Steam Distilled", img: "/images/pine-needle-oil.jpg" },
-    { name: "Camphor Oil", latin: "Cinnamomum camphora", category: "wood", method: "Steam Distilled", img: "/images/camphor-oil.jpg" },
-
-    { name: "Cypress Oil", latin: "Cupressus sempervirens", category: "wood", method: "Steam Distilled", img: "/images/cypress-oil.jpg"},
-    { name: "Vetiver Oil", latin: "Vetiveria zizanoides", category: "wood", method: "Steam Distilled", img: "/images/vetiver-oil.jpg" },
-    { name: "Juniper Berry Oil", latin: "Juniperus communis", category: "wood", method: "Steam Distilled", img: "/images/juniper-berry-oil.jpg"},
-    { name: "Agarwood Oil", latin: "Aquilaria malaccensis", category: "wood", method: "Steam Distilled", img: "/images/agarwood-oil.jpg"},
-    { name: "Benzoin Oil", latin: "Styrax benzoin", category: "wood", method: "Solvent Extracted", img: "/images/benzoin-oil.jpg" },
-    { name: "Rosewood Oil", latin: "Aniba rosaeodora", category: "wood", method: "Steam Distilled", img: "/images/rosewood-oil.jpg"},
-    { name: "Clove Bud Oil", latin: "Syzygium aromaticum", category: "spice", method: "Steam Distilled", img: "/images/clove-bud-oil.jpg" },
-    { name: "Black Pepper Oil", latin: "Piper nigrum", category: "spice", method: "Steam Distilled", img: "/images/black-pepper-oil.jpg" },
-    { name: "Cardamom Oil", latin: "Elettaria cardamomum", category: "spice", method: "Steam Distilled", img: "/images/cardamom-oil.jpg" },
-    { name: "Nutmeg Oil", latin: "Myristica fragrans", category: "spice", method: "Steam Distilled", img: "/images/nutmeg-oil.jpg" },
-    { name: "Star Anise Oil", latin: "Illicium verum", category: "spice", method: "Steam Distilled", img: "/images/star-anise-oil.jpg" },
-    { name: "Garlic Oil", latin: "Allium sativum L", category: "spice", method: "Steam Distilled", img: "/images/garlic-oil.jpg" },
-    { name: "Coriander Seed Oil", latin: "Coriandrum sativum", category: "spice", method: "Steam Distilled", img: "/images/coriander-seed-oil.jpg" },
-    { name: "Cumin Oil", latin: "Cuminum cyminum", category: "spice", method: "Steam Distilled", img: "/images/cumin-oil.jpg" },
-   
-  
-];
-
-let currentPage = 1;
-let currentCat = 'all';
-
-function render() {
-    const filtered = currentCat === 'all' ? products : products.filter(p => p.category === currentCat);
-    const start = (currentPage - 1) * 12;
-    const pageItems = filtered.slice(start, start + 12);
-    
-    // 修复标签嵌套：img-box只包裹图片，文字按钮在外层card内
-    document.getElementById('productGrid').innerHTML = pageItems.map(p => `
-        <div class="card">
-            <div class="img-box">
-                <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/400x400?text=No+Image'">
-            </div>
-            <h4>${p.name}</h4>
-            <p>${p.latin}</p>
-            <p class="method">${p.method}</p>
-            <a href="/products/${p.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/gi, '')}" class="view-btn">View Details</a>
-        </div>
-    `).join('');
-
-    const total = Math.ceil(filtered.length / 12);
-    document.getElementById('pagination').innerHTML = Array.from({length: total}, (_, i) => 
-        `<button class="page-btn ${i+1===currentPage?'active':''}" onclick="go(${i+1})">${i+1}</button>`
-    ).join('');
-}
-
-function go(p) { 
-    currentPage = p; 
-    render(); 
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('filterList').addEventListener('click', e => {
-        if(e.target.tagName === 'A') {
-            document.querySelector('.filter-list a.active').classList.remove('active');
-            e.target.classList.add('active');
-            currentCat = e.target.dataset.filter; 
-            currentPage = 1; 
-            render();
+            const total = Math.ceil(filtered.length / 12);
+            document.getElementById('pagination').innerHTML = Array.from({length: total}, (_, i) => 
+                `<button class="px-4 py-2 border ${i+1===currentPage?'bg-black text-white':'bg-white text-black'} rounded text-sm" onclick="go(${i+1})">${i+1}</button>`
+            ).join('');
         }
-    });
-    render();
-});
-</script>
-</body>
-</html>
+
+        function go(p) { currentPage = p; render(); }
+
+        document.getElementById('filterList').addEventListener('click', e => {
+            if(e.target.tagName === 'A') {
+                e.preventDefault();
+                document.querySelectorAll('#filterList a').forEach(a => a.className = "text-gray-400 hover:text-black transition");
+                e.target.className = "font-bold border-l-2 border-black pl-3 text-black";
+                currentCat = e.target.dataset.filter; 
+                currentPage = 1; 
+                render();
+            }
+        });
+
+        render();
+    </script>
+</Layout>
