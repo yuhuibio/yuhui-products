@@ -183,27 +183,81 @@ import Layout from '../layouts/Layout.astro';
       />
     </div>
 
-    <!-- FORM -->
-    <div class="bg-white p-8 rounded-2xl shadow-sm">
-      <h3 class="text-2xl font-bold text-[#4a5d4e] mb-6">
-        Connect with us
-      </h3>
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="space-y-4"
+>
 
-      <form class="space-y-4">
-        <input class="w-full p-3 border rounded-lg" placeholder="Your Name" />
-        <input class="w-full p-3 border rounded-lg" placeholder="Your Email" />
-        <input class="w-full p-3 border rounded-lg" placeholder="Business" />
+  <!-- Web3Forms Key -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="5807e193-4a84-4b76-8713-b2b85da12526"
+  />
 
-        <select class="w-full p-3 border rounded-lg">
-          <option>United States - US</option>
-        </select>
+  <!-- Subject -->
+  <input
+    type="hidden"
+    name="subject"
+    value="About Us Inquiry From Website"
+  />
 
-        <textarea class="w-full p-3 border rounded-lg" rows="4" placeholder="Message"></textarea>
+  <!-- Bot check -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden"
+    style="display:none"
+  />
 
-        <button class="w-full bg-[#4a5d4e] text-white py-3 rounded-lg font-bold">
-          SUBMIT
-        </button>
-      </form>
+  <input
+    name="name"
+    required
+    class="w-full p-3 border rounded-lg"
+    placeholder="Your Name"
+  />
+
+  <input
+    name="email"
+    type="email"
+    required
+    class="w-full p-3 border rounded-lg"
+    placeholder="Your Email"
+  />
+
+  <input
+    name="company"
+    class="w-full p-3 border rounded-lg"
+    placeholder="Business"
+  />
+
+  <select
+    name="country"
+    class="w-full p-3 border rounded-lg"
+  >
+    <option>United States - US</option>
+    <option>United Kingdom - UK</option>
+    <option>China</option>
+    <option>Other</option>
+  </select>
+
+  <textarea
+    name="message"
+    required
+    class="w-full p-3 border rounded-lg"
+    rows="4"
+    placeholder="Message"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="w-full bg-[#4a5d4e] text-white py-3 rounded-lg font-bold hover:opacity-90"
+  >
+    SUBMIT
+  </button>
+
+</form>
     </div>
 
   </div>
