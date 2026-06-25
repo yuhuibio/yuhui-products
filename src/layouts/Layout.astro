@@ -35,9 +35,11 @@ const { title = "Xian Yuhui Biotechnology" } = Astro.props;
     <Header />
 
     <!-- 页面主体内容区域 -->
-    <main class="flex-grow">
-      <slot />
-    </main>
+  <main class="flex-grow">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <slot />
+  </div>
+</main>
 
     <!-- 底部页脚 -->
     <Footer />
