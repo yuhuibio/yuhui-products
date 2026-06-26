@@ -1,6 +1,7 @@
 [
   {
     "name": "Peppermint Oil",
+   "slug": "peppermint-oil",
     "latin": "Mentha piperita",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -19,6 +20,7 @@
   },
   {
     "name": "Lavender Oil",
+"slug": "lavender-oil",
     "latin": "Lavandula angustifolia",
     "category": "floral",
     "method": "Steam Distilled",
@@ -37,6 +39,7 @@
   },
   {
     "name": "Rosemary Oil",
+"slug": "rosemary-oil",
     "latin": "Rosmarinus officinalis",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -55,6 +58,7 @@
   },
   {
     "name": "Rose Oil",
+ "slug": "rose-oil",
     "latin": "Rosa damascena",
     "category": "floral",
     "method": "Steam Distilled",
@@ -73,6 +77,7 @@
   },
   {
     "name": "Jasmine Oil",
+"slug": "jasmine-oil",
     "latin": "Jasminum grandifflorum",
     "category": "floral",
     "method": "Solvent Extracted",
@@ -91,6 +96,7 @@
   },
   {
     "name": "Geranium Oil",
+"slug": "geranium-oil",
     "latin": "Pelargonium graveolens",
     "category": "floral",
     "method": "Steam Distilled",
@@ -109,6 +115,7 @@
   },
   {
     "name": "Ylang Ylang Oil",
+"slug": "ylang-ylang-oil",
     "latin": "Cananga odorata",
     "category": "floral",
     "method": "Steam Distilled",
@@ -127,6 +134,7 @@
   },
   {
     "name": "Neroli Oil",
+ "slug": "neroli-oil",
     "latin": "Citrus aurantium",
     "category": "floral",
     "method": "Steam Distilled",
@@ -137,6 +145,7 @@
   },
   {
     "name": "Chamomile (Roman)",
+"slug": "chamomile-roman",
     "latin": "Chamaemelum nobile",
     "category": "floral",
     "method": "Steam Distilled",
@@ -147,6 +156,7 @@
   },
   {
     "name": "Chamomile (German)",
+"slug": "chamomile-german",
     "latin": "Matricaria chamomilla",
     "category": "floral",
     "method": "Steam Distilled",
@@ -157,6 +167,7 @@
   },
   {
     "name": "Sweet Orange Oil",
+"slug": "sweet-orange-oil",
     "latin": "Citrus sinensis",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -167,6 +178,7 @@
   },
   {
     "name": "Frankincense Oil",
+"slug": "frankincense-oil",
     "latin": "Boswellia serrata",
     "category": "wood",
     "method": "Steam Distilled",
@@ -177,6 +189,7 @@
   },
   {
     "name": "Cinnamon Bark Oil",
+ "slug": "cinnamon-bark-oil",
     "latin": "Cinnamomum verum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -187,6 +200,7 @@
   },
   {
     "name": "Lemon Oil",
+ "slug": "lemon-oil",
     "latin": "Citrus limon",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -197,6 +211,7 @@
   },
   {
     "name": "Magnolia Oil",
+"slug": "magnolia-oil",
     "latin": "Magnolia liliiflora",
     "category": "floral",
     "method": "Solvent Extracted",
@@ -207,6 +222,7 @@
   },
   {
     "name": "Helichrysum Oil",
+ "slug": "helichrysum-oil",
     "latin": "Helichrysum italicum",
     "category": "floral",
     "method": "Steam Distilled",
@@ -217,6 +233,7 @@
   },
   {
     "name": "Palmarosa Oil",
+ "slug": "palmarosa-oil",
     "latin": "Cymbopogon martinii",
     "category": "floral",
     "method": "Steam Distilled",
@@ -227,6 +244,7 @@
   },
   {
     "name": "Ginger Oil",
+"slug": "ginger-oil",
     "latin": "Zingiber officinale",
     "category": "spice",
     "method": "Steam Distilled",
@@ -237,6 +255,7 @@
   },
   {
     "name": "Osmanthus Oil",
+"slug": "osmanthus-oil",
     "latin": "Osmanthus fragrans",
     "category": "floral",
     "method": "Solvent Extracted",
@@ -247,6 +266,7 @@
   },
   {
     "name": "Bergamot Oil",
+"slug": "bergamot-oil",
     "latin": "Citrus bergamia",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -257,6 +277,7 @@
   },
   {
     "name": "Grapefruit Oil",
+ "slug": "grapefruit-oil",
     "latin": "Citrus paradisi",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -267,6 +288,7 @@
   },
   {
     "name": "Lime Oil",
+"slug": "lime-oil",
     "latin": "Citrus aurantiifolia",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -277,6 +299,7 @@
   },
   {
     "name": "Mandarin Oil",
+"slug": "mandarin-oil",
     "latin": "Citrus reticulata",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -287,6 +310,7 @@
   },
   {
     "name": "Tangerine Oil",
+"slug": "tangerine-oil",
     "latin": "Citrus tangerina",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -297,6 +321,7 @@
   },
   {
     "name": "Bitter Orange Oil",
+"slug": "bitter-orange-oil",
     "latin": "Citrus aurantium",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -307,6 +332,7 @@
   },
   {
     "name": "Blood Orange Oil",
+"slug": "blood-orange-oil",
     "latin": "Citrus sinensis",
     "category": "citrus",
     "method": "Cold Pressed",
@@ -315,18 +341,10 @@
     "origin": "Italy",
     "partUsed": "Blood Orange Peel"
   },
-  {
-    "name": "Yuzu Oil",
-    "latin": "Citrus junos",
-    "category": "citrus",
-    "method": "Cold Pressed",
-    "img": "/images/yuzu-oil.jpg",
-    "inci": "Citrus Junos Peel Oil Expressed",
-    "origin": "Japan",
-    "partUsed": "Yuzu Fruit Peel"
-  },
+
   {
     "name": "Petitgrain Oil",
+"slug": "petitgrain-oil",
     "latin": "Citrus aurantium",
     "category": "citrus",
     "method": "Steam Distilled",
@@ -335,18 +353,10 @@
     "origin": "Paraguay",
     "partUsed": "Orange Tree Leaves & Twigs"
   },
-  {
-    "name": "Clementine Oil",
-    "latin": "Citrus clementina",
-    "category": "citrus",
-    "method": "Cold Pressed",
-    "img": "/images/clementine-oil.jpg",
-    "inci": "Citrus Clementina Peel Oil Expressed",
-    "origin": "Spain",
-    "partUsed": "Clementine Peel"
-  },
+
   {
     "name": "Tea Tree Oil",
+"slug": "tea-tree-oil",
     "latin": "Melaleuca alternifolia",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -357,6 +367,7 @@
   },
   {
     "name": "Basil Oil",
+"slug": "basil-oil",
     "latin": "Ocimum basilicum",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -367,6 +378,7 @@
   },
   {
     "name": "Thyme Oil",
+"slug": "thyme-oil",
     "latin": "Thymus vulgaris",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -377,6 +389,7 @@
   },
   {
     "name": "Oregano Oil",
+"slug": "oregano-oil",
     "latin": "Origanum vulgare",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -387,6 +400,7 @@
   },
   {
     "name": "Clary Sage Oil",
+"slug": "clary-sage-oil",
     "latin": "Salvia sclarea",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -397,6 +411,7 @@
   },
   {
     "name": "Lemongrass Oil",
+ "slug": "lemongrass-oil",
     "latin": "Cymbopogon citratus",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -407,6 +422,7 @@
   },
   {
     "name": "Patchouli Oil",
+"slug": "patchouli-oil",
     "latin": "Pogostemon cablin",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -417,6 +433,7 @@
   },
   {
     "name": "Fennel Oil",
+"slug": "fennel-oil",
     "latin": "Foeniculum vulgare",
     "category": "spice",
     "method": "Steam Distilled",
@@ -427,6 +444,7 @@
   },
   {
     "name": "Marjoram Oil",
+"slug": "marjoram-oil",
     "latin": "Origanum majorana",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -437,6 +455,7 @@
   },
   {
     "name": "Melissa Oil",
+"slug": "melissa-oil",
     "latin": "Melissa officinalis",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -447,6 +466,7 @@
   },
   {
     "name": "Sandalwood Oil",
+"slug": "sandalwood-oil",
     "latin": "Santalum album",
     "category": "wood",
     "method": "Steam Distilled",
@@ -457,6 +477,7 @@
   },
   {
     "name": "Cedarwood Oil",
+"slug": "cedarwood-oil",
     "latin": "Cedrus atlantica",
     "category": "wood",
     "method": "Steam Distilled",
@@ -467,6 +488,7 @@
   },
   {
     "name": "Myrrh Oil",
+"slug": "myrrh-oil",
     "latin": "Commiphora myrrha",
     "category": "wood",
     "method": "Steam Distilled",
@@ -477,6 +499,7 @@
   },
   {
     "name": "Pine Needle Oil",
+"slug": "pine-needle-oil",
     "latin": "Pinus pinaster",
     "category": "wood",
     "method": "Steam Distilled",
@@ -487,6 +510,7 @@
   },
   {
     "name": "Cypress Oil",
+"slug": "cypress-oil",
     "latin": "Cupressus sempervirens",
     "category": "wood",
     "method": "Steam Distilled",
@@ -497,6 +521,7 @@
   },
   {
     "name": "Vetiver Oil",
+"slug": "vetiver-oil",
     "latin": "Vetiveria zizanoides",
     "category": "wood",
     "method": "Steam Distilled",
@@ -507,6 +532,7 @@
   },
   {
     "name": "Juniper Berry Oil",
+"slug": "juniper-berry-oil",
     "latin": "Juniperus communis",
     "category": "wood",
     "method": "Steam Distilled",
@@ -517,6 +543,7 @@
   },
   {
     "name": "Agarwood Oil",
+"slug": "agarwood-oil",
     "latin": "Aquilaria malaccensis",
     "category": "wood",
     "method": "Steam Distilled",
@@ -528,6 +555,7 @@
   {
     "name": "Benzoin Oil",
     "latin": "Styrax benzoin",
+"slug": "benzoin-oil",
     "category": "wood",
     "method": "Solvent Extracted",
     "img": "/images/benzoin-oil.jpg",
@@ -536,17 +564,8 @@
     "partUsed": "Tree Gum Resin"
   },
   {
-    "name": "Peru Balsam Oil",
-    "latin": "Myroxylon balsamum",
-    "category": "wood",
-    "method": "Solvent Extracted",
-    "img": "/images/peru-balsam-oil.jpg",
-    "inci": "Myroxylon Balsamum Resin Extract",
-    "origin": "El Salvador",
-    "partUsed": "Trunk Balsam Resin"
-  },
-  {
     "name": "Rosewood Oil",
+"slug": "rosewood-oil",
     "latin": "Aniba rosaeodora",
     "category": "wood",
     "method": "Steam Distilled",
@@ -557,6 +576,7 @@
   },
   {
     "name": "Clove Bud Oil",
+"slug": "clove-bud-oil",
     "latin": "Syzygium aromaticum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -567,6 +587,7 @@
   },
   {
     "name": "Black Pepper Oil",
+"slug": "black-pepper-oil",
     "latin": "Piper nigrum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -577,6 +598,7 @@
   },
   {
     "name": "Cardamom Oil",
+"slug": "cardamom-oil",
     "latin": "Elettaria cardamomum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -587,6 +609,7 @@
   },
   {
     "name": "Nutmeg Oil",
+"slug": "nutmeg-oil",
     "latin": "Myristica fragrans",
     "category": "spice",
     "method": "Steam Distilled",
@@ -597,6 +620,7 @@
   },
   {
     "name": "Star Anise Oil",
+"slug": "star-anise-oil",
     "latin": "Illicium verum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -605,28 +629,21 @@
     "origin": "China",
     "partUsed": "Dried Star Anise Pods"
   },
-  {
-    "name": "Turmeric Oil",
-    "latin": "Curcuma longa",
-    "category": "spice",
-    "method": "Steam Distilled",
-    "img": "/images/turmeric-oil.jpg",
-    "inci": "Curcuma Longa Root Oil",
-    "origin": "India",
-    "partUsed": "Turmeric Rhizome"
-  },
+  
   {
     "name": "Coriander Seed Oil",
+"slug": "coriander-seed-oil",
     "latin": "Coriandrum sativum",
     "category": "spice",
     "method": "Steam Distilled",
-    "img": "/images/coriander-oil.jpg",
+    "img": "/images/coriander-seed-oil.jpg",
     "inci": "Coriandrum Sativum Seed Oil",
     "origin": "Russia",
     "partUsed": "Dried Coriander Seeds"
   },
   {
     "name": "Cumin Oil",
+"slug": "cumin-oil",
     "latin": "Cuminum cyminum",
     "category": "spice",
     "method": "Steam Distilled",
@@ -635,18 +652,10 @@
     "origin": "India",
     "partUsed": "Cumin Seeds"
   },
-  {
-    "name": "Cassia Oil",
-    "latin": "Cinnamomum cassia",
-    "category": "spice",
-    "method": "Steam Distilled",
-    "img": "/images/cassia-oil.jpg",
-    "inci": "Cinnamomum Cassia Bark Oil",
-    "origin": "China",
-    "partUsed": "Cassia Tree Bark"
-  },
+  
   {
     "name": "Garlic Oil",
+"slug": "garlic-oil",
     "latin": "Allium sativum L",
     "category": "spice",
     "method": "Steam Distilled",

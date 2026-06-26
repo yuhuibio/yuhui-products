@@ -1,0 +1,15 @@
+---
+const categories = ['Essential Oils 101', 'Health & Wellness', 'Beauty & Skincare', 'Essential Oils Business', 'DIY Projects & Recipes'];
+---
+<aside class="w-64 flex-shrink-0">
+  <h3 class="font-bold text-gray-800 mb-6 uppercase tracking-wider text-sm">Choose a Topic</h3>
+  <ul class="space-y-4">
+    {categories.map(cat => (
+      <li class="border-b border-gray-200 pb-4">
+        <a href={`/blog/category/${cat.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} class="text-gray-700 hover:text-[#4a5d4e]">
+          {cat}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Lymphatic Drainage Blend",
+    "slug": "lymphatic-drainage-blend",
+    "latin": "Ginger + Grapeseed",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-relax.jpg"
+  },
+  {
+    "name": "Energy Boost Blend",
+    "slug": "energy-boost-blend",
+    "latin": "Peppermint + Lemon",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-energy.jpg"
+  },
+  {
+    "name": "Sleep Well Blend",
+    "slug": "sleep-well-blend",
+    "latin": "Lavender + Sandalwood",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/sleep-well-blend.jpg"
+  },
+  {
+    "name": "Stress Relief Blend",
+    "slug": "stress-relief-blend",
+    "latin": "Bergamot + Ylang Ylang",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/stress-relief-blend.jpg"
+  },
+  {
+    "name": "Immune Support Blend",
+    "slug": "immune-support-blend",
+    "latin": "Tea Tree + Eucalyptus",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/immune-support-blend.jpg"
+  },
+  {
+    "name": "Focus & Clarity Blend",
+    "slug": "focus-clarity-blend",
+    "latin": "Rosemary + Peppermint",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-focus.jpg"
+  },
+  {
+    "name": "Breath Easy Blend",
+    "slug": "breath-easy-blend",
+    "latin": "Eucalyptus + Peppermint",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-breath.jpg"
+  },
+  {
+    "name": "Skin Care Blend",
+    "slug": "skin-care-blend",
+    "latin": "Lavender + Geranium",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-skin.jpg"
+  },
+  {
+    "name": "Muscle Relief Blend",
+    "slug": "muscle-relief-blend",
+    "latin": "Peppermint + Rosemary",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-muscle.jpg"
+  },
+  {
+    "name": "Deodorizing Blend",
+    "slug": "deodorizing-blend",
+    "latin": "Lemon + Tea Tree",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-deo.jpg"
+  },
+  {
+    "name": "Romantic Blend",
+    "slug": "romantic-blend",
+    "latin": "Jasmine + Ylang Ylang",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-romantic.jpg"
+  },
+  {
+    "name": "Fresh Home Blend",
+    "slug": "fresh-home-blend",
+    "latin": "Citrus Mix",
+    "category": "blend",
+    "method": "Blended Formula",
+    "img": "/images/blend-fresh.jpg"
+  }
+]

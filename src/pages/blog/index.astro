@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import BlogSidebar from '../../components/BlogSidebar.astro';
+
+const allPosts = await getCollection('blog');
+---
+
+<Layout title="Blog | Xian Yuhui">
+  <div class="max-w-6xl mx-auto py-12 px-6 flex gap-12">
+    <BlogSidebar />
+
+    <!-- 主容器，带右侧装饰线 -->
+    <main class="flex-grow border-r border-gray-300 pr-12">
+      <div class="grid grid-cols-2 gap-8">
+        {allPosts.map(post => (
+          <article class="group">
+            <a href={`/blog/${post.slug}`}>
+              <img src={post.data.image || '/default-placeholder.jpg'} alt={post.data.title} class="w-full h-64 object-cover mb-4" />
+              <h2 class="text-xl font-bold mb-2 group-hover:text-[#4a5d4e]">{post.data.title}</h2>
+              <p class="text-sm text-gray-500 mb-2">{post.data.pubDate.toLocaleDateString()}</p>
+              <p class="text-gray-600 text-sm line-clamp-2">{post.data.description}</p>
+            </a>
+          </article>
+        ))}
+      </div>
+    </main>
+  </div>
+</Layout>

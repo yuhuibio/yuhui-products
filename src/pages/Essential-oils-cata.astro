@@ -1,103 +1,81 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import products from '../data/oils.json';
 ---
 
 <Layout title="Single Essential Oils | Xian Yuhui Biotechnology">
-    
-    <!-- Hero Banner -->
-    <section class="py-10 mb-16">
-        <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">Bulk Single Essential Oils</h2>
-        <div class="relative w-full overflow-hidden">
-            <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
-                <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">100% Pure & Natural</h3>
-                <p class="text-3xl font-normal tracking-wide">Quality You Can Trust | Supply You Can Rely On</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Main Content -->
-    <div class="max-w-[1400px] mx-auto px-6 mb-20 flex gap-12">
-        <!-- Sidebar -->
-        <aside class="w-48 flex-shrink-0">
-            <ul class="space-y-5" id="filterList">
-                <li><a href="#" class="font-bold border-l-2 border-black pl-3 text-black" data-filter="all">All Single Essential Oils</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="floral">Floral Oils</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="citrus">Citrus Oils</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="herbal">Herbal Oils</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="wood">Wood & Resin</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-black transition" data-filter="spice">Spice Oils</a></li>
-            </ul>
-        </aside>
+  <!-- Hero Banner -->
+  <section class="py-10 mb-16">
+    <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">
+      Bulk Single Essential Oils
+    </h2>
 
-        <!-- Product Grid -->
-        <main class="flex-grow">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid"></div>
-            <div class="flex justify-center mt-12 gap-2" id="pagination"></div>
-        </main>
+    <div class="relative w-full overflow-hidden">
+      <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover" />
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
+        <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">
+          100% Pure & Natural
+        </h3>
+        <p class="text-3xl font-normal tracking-wide">
+          Quality You Can Trust | Supply You Can Rely On
+        </p>
+      </div>
     </div>
+  </section>
 
-    <script is:inline>
-        const products = [
-            { name: "Peppermint Oil", latin: "Mentha piperita", category: "herbal", method: "Steam Distilled", img: "/images/peppermint-oil.jpg" },
-            { name: "Lavender Oil", latin: "Lavandula angustifolia", category: "floral", method: "Steam Distilled", img: "/images/lavender-oil.jpg" },
-            { name: "Rosemary Oil", latin: "Rosmarinus officinalis", category: "herbal", method: "Steam Distilled", img: "/images/rosemary-oil.jpg" },
-            { name: "Rose Oil", latin: "Rosa damascena", category: "floral", method: "Steam Distilled", img: "/images/rose.jpg" },
-            { name: "Jasmine Oil", latin: "Jasminum grandifflorum", category: "floral", method: "Solvent Extracted", img: "/images/jasmine.jpg" },
-            { name: "Geranium Oil", latin: "Pelargonium graveolens", category: "floral", method: "Steam Distilled", img: "/images/geranium.jpg" },
-            { name: "Ylang Ylang Oil", latin: "Cananga odorata", category: "floral", method: "Steam Distilled", img: "/images/ylangylang.jpg"},
-            { name: "Neroli Oil", latin: "Citrus aurantium", category: "floral", method: "Steam Distilled", img: "/images/neroli-oil.jpg" },
-            { name: "Chamomile (Roman)", latin: "Chamaemelum nobile", category: "floral", method: "Steam Distilled", img: "/images/chamomile-roman-oil.jpg" },
-            { name: "Chamomile (German)", latin: "Matricaria chamomilla", category: "floral", method: "Steam Distilled", img: "/images/chamomile-german-oil.jpg" },
-            { name: "Sweet Orange Oil", latin: "Citrus sinensis", category: "citrus", method: "Cold Pressed", img: "/images/sweet-orange-oil.jpg" },
-            { name: "Frankincense Oil", latin: "Boswellia serrata", category: "wood", method: "Steam Distilled", img: "/images/frankincense-oil.jpg" },
-            { name: "Cinnamon Bark Oil", latin: "Cinnamomum verum", category: "spice", method: "Steam Distilled", img: "/images/cinnamon-bark-oil.jpg" },
-            { name: "Lemon Oil", latin: "Citrus limon", category: "citrus", method: "Cold Pressed", img: "/images/lemon-oil.jpg" },
-            { name: "Tea Tree Oil", latin: "Melaleuca alternifolia", category: "herbal", method: "Steam Distilled", img: "/images/tea-tree-oil.jpg" },
-            { name: "Sandalwood Oil", latin: "Santalum album", category: "wood", method: "Steam Distilled", img: "/images/sandalwood-oil.jpg" }
-        ];
+  <!-- Main Content -->
+  <div class="max-w-[1400px] mx-auto px-6 mb-20 flex gap-12">
 
-        let currentPage = 1;
-        let currentCat = 'all';
+    <!-- Sidebar -->
+    <aside class="w-48 flex-shrink-0">
+      <ul class="space-y-5">
+        <li>
+          <a href="/essential-oils-cata" class="font-bold border-l-2 border-black pl-3 text-black">
+            All Single Essential Oils
+          </a>
+        </li>
+        <li><a href="#" class="text-gray-400 hover:text-black">Floral Oils</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-black">Citrus Oils</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-black">Herbal Oils</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-black">Wood & Resin</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-black">Spice Oils</a></li>
+      </ul>
+    </aside>
 
-        function render() {
-            const grid = document.getElementById('productGrid');
-            const filtered = currentCat === 'all' ? products : products.filter(p => p.category === currentCat);
-            const start = (currentPage - 1) * 12;
-            const pageItems = filtered.slice(start, start + 12);
-            
-            grid.innerHTML = pageItems.map(p => `
-                <div class="border border-gray-100 p-5 rounded-lg flex flex-col items-center text-center hover:shadow-lg transition">
-                    <div class="h-64 w-full bg-gray-50 mb-4 flex items-center justify-center rounded overflow-hidden">
-                        <img src="${p.img}" alt="${p.name}" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/400x400'">
-                    </div>
-                    <h4 class="font-medium text-gray-800 mt-auto">${p.name}</h4>
-                    <p class="text-xs text-gray-400 italic">${p.latin}</p>
-                    <p class="text-xs text-gray-500 mb-4">${p.method}</p>
-                    <a href="/products/${p.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/gi, '')}" 
-                       class="w-full bg-[#4a5d4e] text-white py-2 rounded text-xs hover:bg-emerald-900 transition">View Details</a>
-                </div>
-            `).join('');
+    <!-- Product Grid -->
+    <main class="flex-grow">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            const total = Math.ceil(filtered.length / 12);
-            document.getElementById('pagination').innerHTML = Array.from({length: total}, (_, i) => 
-                `<button class="px-4 py-2 border ${i+1===currentPage?'bg-black text-white':'bg-white text-black'} rounded text-sm" onclick="go(${i+1})">${i+1}</button>`
-            ).join('');
-        }
+        {products.map((p) => (
+          <div class="border border-gray-100 p-5 rounded-lg flex flex-col text-center hover:shadow-lg transition">
 
-        function go(p) { currentPage = p; render(); }
+            <div class="h-64 w-full bg-gray-50 mb-4 flex items-center justify-center rounded overflow-hidden">
+              <img
+                src={p.img}
+                alt={p.name}
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
 
-        document.getElementById('filterList').addEventListener('click', e => {
-            if(e.target.tagName === 'A') {
-                e.preventDefault();
-                document.querySelectorAll('#filterList a').forEach(a => a.className = "text-gray-400 hover:text-black transition");
-                e.target.className = "font-bold border-l-2 border-black pl-3 text-black";
-                currentCat = e.target.dataset.filter; 
-                currentPage = 1; 
-                render();
-            }
-        });
+            <h4 class="font-medium text-gray-800 mt-auto">{p.name}</h4>
+            <p class="text-xs text-gray-400 italic">{p.latin}</p>
+            <p class="text-xs text-gray-500 mb-4">{p.method}</p>
 
-        render();
-    </script>
+            <a
+              href={`/products/${p.slug}`}
+              class="w-full bg-[#4a5d4e] text-white py-2 rounded text-xs hover:bg-emerald-900 transition"
+            >
+              View Details
+            </a>
+
+          </div>
+        ))}
+
+      </div>
+    </main>
+
+  </div>
+
 </Layout>

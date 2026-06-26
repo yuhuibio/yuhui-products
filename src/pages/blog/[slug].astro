@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import BlogSidebar from '../../components/BlogSidebar.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: { 
+      post,
+      prevPost: posts[index - 1] || null,
+      nextPost: posts[index + 1] || null
+    },
+  }));
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+const { Content } = await post.render();
+---
+<Layout title={post.data.title}>
+  <div class="max-w-6xl mx-auto py-12 px-6 flex">
+    <!-- 侧边栏 -->
+    <BlogSidebar />
+
+    <!-- 文章主体 -->
+    <main class="flex-grow">
+      <article class="prose lg:prose-xl">
+        <h1>{post.data.title}</h1>
+        <p class="text-sm text-gray-500">
+          Author: {post.data.author} | Published: {post.data.pubDate.toLocaleDateString()}
+        </p>
+        <Content />
+      </article>
+
+      <!-- 底部导航 -->
+      <nav class="mt-16 pt-8 border-t flex justify-between">
+        <div>
+          {prevPost && <a href={`/blog/${prevPost.slug}`} class="text-[#4a5d4e] font-bold">← Prev: {prevPost.data.title}</a>}
+        </div>
+        <div>
+          {nextPost && <a href={`/blog/${nextPost.slug}`} class="text-[#4a5d4e] font-bold">Next: {nextPost.data.title} →</a>}
+        </div>
+      </nav>
+    </main>
+  </div>
+</Layout>

@@ -1,383 +1,87 @@
 ---
-import products from "../../data/oils.json";
+import Layout from '../../layouts/Layout.astro';
+import oils from "../../data/oils.json";
+import carriers from "../../data/carrier-oils.json";
+import blends from "../../data/blended-oils.json";
 
+// 1. 专门用于 getStaticPaths 的合并逻辑
 export async function getStaticPaths() {
-  return products.map((p) => {
-    // ✅ 和列表页完全一致
-    const slug = p.slug || p.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/gi, "");
-    return {
-      params: { slug },
-      props: { product: p },
-    };
-  });
+  const pathsData = [...oils, ...carriers, ...blends];
+  return pathsData.map((p) => ({
+    params: { slug: p.slug },
+    props: { product: p }
+  }));
 }
 
+// 2. 页面主体逻辑
 const { product } = Astro.props;
 
-const description = `${product.name} is derived from ${product.latin}, offering a characteristic natural aroma. It is widely used in aromatherapy, skincare, cosmetics, soap making, candles, home fragrance and industrial applications. This premium oil is highly valued for its unique aromatic profile and versatility in wellness and fragrance formulations.`;
+if (!product) {
+  throw new Error("Product not found");
+}
 
-const relatedProducts = products
-  .filter(item => item.category === product.category && item.name !== product.name)
-  .slice(0, 5);
+// 3. 在页面主体内再次定义一份数据，仅供页面渲染使用
+const allProducts = [...oils, ...carriers, ...blends];
 
-const pageTitle = `${product.name} | Wholesale B2B Supplier`;
-const metaDesc = description.slice(0, 155);
+// ... 其余逻辑保持不变 ...
+function generateDescription(p) {
+  const base = `${p.name} (INCI: ${p.latin})`;
+  if (p.category === "carrier" || p.type === "carrier") {
+    return `${base} is a premium carrier oil derived from natural botanical sources. It is widely used in skincare, cosmetic formulations, and aromatherapy applications as a base ingredient for dilution and formulation support.\n\nIt is produced using ${p.method || "carefully controlled extraction methods"} to ensure purity, stability, and excellent skin compatibility.\n\nCarrier oils serve as essential base materials for blending essential oils and improving formulation safety and absorption.`;
+  }
+  if (p.category === "blend" || p.type === "blend") {
+    return `${base} is a professionally formulated aromatic blend designed for targeted wellness applications.\n\nIt combines carefully selected natural ingredients to create a balanced aroma profile suitable for diffusion, massage, spa treatments, and functional aromatherapy use.\n\nThis blend is ready to use and optimized for emotional and environmental wellness support.`;
+  }
+  return `${base} is a natural essential oil extracted from ${p.origin || "selected botanical sources"} using ${p.method || "controlled extraction methods"}.\n\nIt is widely used in aromatherapy, fragrance formulation, skincare, and cosmetic applications due to its characteristic aroma and plant-derived properties.\n\nIt blends well with carrier oils and other essential oils for professional formulation and product development.`;
+}
+
+const description = generateDescription(product);
+
+const techFields = [
+  ["Latin Name", product.latin],
+  ["Category", product.category],
+  ["Origin", product.origin],
+  ["Extraction Method", product.method],
+  ["Plant Part", product.partUsed],
+  ["Appearance", product.appearance],
+  ["Aroma", product.aroma],
+  ["CAS / Code", product.cas || product.odor],
+  ["Relative Density", product.relativeDensity],
+  ["Refractive Index", product.refractiveIndex],
+  ["Optical Rotation", product.opticalRotation],
+  ["Solubility", product.solubility],
+  ["Shelf Life", product.shelfLife],
+  ["Storage Conditions", product.storageConditions]
+].filter(([_, v]) => v);
+
+const relatedProducts = allProducts
+  .filter(p => p.category === product.category && p.slug !== product.slug)
+  .slice(0, 6);
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{pageTitle}</title>
-  <meta name="description" content={metaDesc} />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
-    :root {
-      --primary: #1F4D3A;
-      --light-bg: #FCFCF9;
-      --cream: #F8F5F0;
-      --text-dark: #2D2D2D;
-      --border: #E0E0E0;
-      --shadow: 0 2px 10px rgba(0,0,0,0.08);
-      --radius: 8px;
-    }
-    body {
-      background: var(--light-bg);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    .page-wrapper {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 30px;
-    }
-
-    .breadcrumbs {
-      padding: 20px 0;
-      font-size: 14px;
-      color: #666;
-    }
-    .breadcrumbs a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin: 20px 0 50px;
-      align-items: center;
-    }
-    .product-image {
-      background: white;
-      padding: 30px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
-    .product-image img {
-      max-width: 100%;
-      max-height: 350px;
-      object-fit: contain;
-    }
-    .product-summary {
-      background: white;
-      padding: 35px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .product-summary h1 {
-      color: var(--primary);
-      margin-bottom: 25px;
-      font-size: 28px;
-    }
-    .summary-grid {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 12px 16px;
-      margin-bottom: 25px;
-    }
-    .summary-grid span:first-child {
-      font-weight: 600;
-      color: var(--primary);
-    }
-    .inquiry-btn {
-      display: inline-block;
-      background: #1F4D3A;
-      color: white;
-      padding: 12px 32px;
-      border-radius: 2px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .inquiry-btn:hover {
-      background: #0F3D2A;
-    }
-    section {
-      margin-bottom: 45px;
-    }
-    section h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-      font-size: 22px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--cream);
-    }
-    .description {
-      background: white;
-      padding: 25px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      line-height: 1.7;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tag {
-      background: var(--cream);
-      color: var(--primary);
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 14px;
-    }
-    .specs-table {
-      width: 100%;
-      background: white;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border-collapse: collapse;
-    }
-    .specs-table th, .specs-table td {
-      padding: 14px 20px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    .specs-table th {
-      background: var(--cream);
-      color: var(--primary);
-      width: 28%;
-    }
-    .packaging {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .pack-size {
-      background: white;
-      padding: 14px 22px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      font-weight: 600;
-      color: var(--primary);
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 20px;
-    }
-    .product-card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 15px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    .product-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 8px;
-    }
-    .product-card h4 {
-      font-size: 14px;
-      color: var(--primary);
-    }
-    .product-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .faq-item {
-      background: white;
-      padding: 18px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 10px;
-    }
-    .faq-question {
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-    .quote-form {
-      background: white;
-      padding: 30px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .form-group {
-      margin-bottom: 18px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-    .submit-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="page-wrapper">
-
-  <nav class="breadcrumbs">
-    <a href="/">Home</a> /
-    <a href="/products">Products</a> /
-    <span>{product.name}</span>
-  </nav>
-
-  <section class="hero">
-    <div class="product-image">
-      <img src={product.img} alt={product.name} loading="lazy" />
-    </div>
-    <div class="product-summary">
-      <h1>{product.name}</h1>
-      <div class="summary-grid">
-        <span>INCI:</span><span>{product.latin || "-"}</span>
-        <span>Origin:</span><span>{product.origin || "-"}</span>
-        <span>Category:</span><span>{product.category || "-"}</span>
-        <span>Part used:</span><span>{product.part_used || "-"}</span>
-        <span>Extraction method:</span><span>{product.method || "-"}</span>
+<Layout title={`${product.name} | Yuhui Biotechnology`}>
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-2 gap-10">
+      <img src={product.img} alt={product.name} class="w-full h-[400px] object-contain border rounded" />
+      <div>
+        <h1 class="text-4xl font-bold text-[#4a5d4e] mb-6">{product.name}</h1>
+        <p class="mb-4"><b>INCI:</b> {product.latin}</p>
+        <a href="/contact" class="inline-block bg-[#4a5d4e] text-white px-6 py-3 rounded">Send Inquiry</a>
       </div>
-      <a href="#quote" class="inquiry-btn">Send Inquiry</a>
     </div>
   </section>
 
-  <section>
-    <h2>Product Overview</h2>
-    <div class="description">
-      <p>{description}</p>
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-[#4a5d4e]">Product Description</h2>
+    <p class="leading-relaxed text-gray-700 whitespace-pre-line">{description}</p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">Technical Data</h2>
+    <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+      {techFields.map(([k, v]) => (
+        <p><b>{k}:</b> {v}</p>
+      ))}
     </div>
   </section>
-
-  <section>
-    <h2>Applications</h2>
-    <div class="tags">
-      <div class="tag">Aromatherapy</div>
-      <div class="tag">Skincare</div>
-      <div class="tag">Cosmetics</div>
-      <div class="tag">Soap Making</div>
-      <div class="tag">Perfume</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Specifications</h2>
-    <table class="specs-table">
-      <tr><th>Product Name</th><td>{product.name}</td></tr>
-      <tr><th>Category</th><td>{product.category}</td></tr>
-      <tr><th>Type</th><td>{product.product_type}</td></tr>
-      {product.method && <tr><th>Extraction</th><td>{product.method}</td></tr>}
-      {product.latin && <tr><th>Botanical Name</th><td>{product.latin}</td></tr>}
-    </table>
-  </section>
-
-  <section>
-    <h2>Packaging</h2>
-    <div class="packaging">
-      <div class="pack-size">1 kg</div>
-      <div class="pack-size">5 kg</div>
-      <div class="pack-size">25 kg</div>
-      <div class="pack-size">180 kg</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Related Products</h2>
-    <div class="product-grid">
-      {relatedProducts.map((item) => {
-        // ✅ 这里修复成和全局一致的规则
-        const slug = item.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/gi, '');
-        return (
-          <div class="product-card">
-            <a href={`/products/${slug}`}>
-              <img src={item.img} alt={item.name} />
-              <h4>{item.name}</h4>
-            </a>
-          </div>
-        )
-      })}
-    </div>
-  </section>
-
-  <section>
-    <h2>FAQ</h2>
-    <div class="faq-item">
-      <div class="faq-question">Can I get samples?</div>
-      <div class="faq-answer">Yes, samples are available for quality testing.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Do you provide COA and MSDS?</div>
-      <div class="faq-answer">Yes, documents are available upon request.</div>
-    </div>
-  </section>
-
-  <section id="quote" class="quote-section">
-    <h2>Request a Quote</h2>
-    <form class="quote-form">
-      <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" required>
-      </div>
-      <div class="form-group">
-        <label>Business Email</label>
-        <input type="email" required>
-      </div>
-      <div class="form-group">
-        <label>Company</label>
-        <input type="text" required>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Send</button>
-    </form>
-  </section>
-
-</div>
-
-</body>
-</html>
+</Layout>

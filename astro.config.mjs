@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://yuhui-products.pages.dev/', // 必须加上这一行
-  base: '/',                                // 必须加上这一行
-  integrations: [tailwind()]
+  site: 'https://yuhuibiotec.com',
+  base: '/',
+  integrations: [tailwind(), sitemap()]
 });

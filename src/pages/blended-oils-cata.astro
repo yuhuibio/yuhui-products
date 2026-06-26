@@ -1,17 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import products from "../data/blended-oils.json";
 ---
 
 <Layout title="Blended Oils | Xian Yuhui Biotechnology">
-    
+
     <!-- Hero Banner -->
     <section class="py-10 mb-16">
-        <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">Bulk Blended Oils</h2>
+        <h2 class="text-center text-4xl font-bold mb-10 text-gray-900">
+            Bulk Blended Oils
+        </h2>
+
         <div class="relative w-full overflow-hidden">
             <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
+
             <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
-                <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">100% Pure & Natural</h3>
-                <p class="text-3xl font-normal tracking-wide">Quality You Can Trust | Supply You Can Rely On</p>
+                <h3 class="text-6xl font-bold uppercase mb-6 tracking-wider">
+                    100% Pure & Natural
+                </h3>
+                <p class="text-3xl font-normal tracking-wide">
+                    Quality You Can Trust | Supply You Can Rely On
+                </p>
             </div>
         </div>
     </section>
@@ -19,56 +28,53 @@ import Layout from '../layouts/Layout.astro';
     <!-- Search Section -->
     <div class="flex justify-end px-12 mb-6">
         <div class="flex items-center border border-gray-200 rounded-md overflow-hidden shadow-sm">
-            <input type="text" placeholder="Search Products..." class="px-4 py-2 outline-none text-gray-600 w-48 focus:w-64 transition-all duration-300">
+            <input
+                type="text"
+                placeholder="Search Products..."
+                class="px-4 py-2 outline-none text-gray-600 w-48 focus:w-64 transition-all duration-300"
+            />
             <button class="bg-[#facc15] px-4 py-2.5 hover:bg-[#eab308] transition-colors">
                 🔍
             </button>
         </div>
     </div>
 
-    <!-- Product Grid Container -->
+    <!-- Product Grid -->
     <div class="container mx-auto flex gap-20 px-6 mb-20">
+
+        <!-- Sidebar -->
         <aside class="w-48 flex-shrink-0">
             <ul class="space-y-5" id="filterList">
-                <li><a href="#" class="font-bold border-l-2 border-black pl-3 text-black" data-filter="all">All Ingredients</a></li>
+                <li>
+                    <a href="#" class="font-bold border-l-2 border-black pl-3 text-black">
+                        All Ingredients
+                    </a>
+                </li>
             </ul>
         </aside>
 
+        <!-- Main -->
         <main class="flex-grow">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="productGrid"></div>
-            <div class="flex justify-center mt-10 gap-4" id="pagination"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {products.map((p) => (
+                    <div class="border border-gray-200 p-5 rounded-lg flex flex-col hover:shadow-lg transition">
+                        
+                        <div class="h-64 bg-gray-50 mb-4 flex items-center justify-center rounded">
+                            <img src={p.img} alt={p.name} class="max-h-full object-contain" />
+                        </div>
+
+                        <h4 class="font-bold text-gray-800">{p.name}</h4>
+                        <p class="text-sm text-gray-500 italic mb-4">{p.latin}</p>
+
+                        <a href={`/products/${p.slug}`} 
+                           class="mt-auto bg-[#4a5d4e] text-white py-2 rounded text-center text-sm hover:bg-emerald-900 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                ))}
+            </div>
         </main>
     </div>
 
-    <script>
-        const products = [
-            { name: "Lymphatic Drainage Blend", latin: "Ginger + Grapeseed", img: "/images/blend-relax.jpg" },
-            { name: "Energy Boost Blend", latin: "Peppermint + Lemon", img: "/images/blend-energy.jpg" },
-            { name: "Sleep Well Blend", latin: "Lavender + Sandalwood", img: "/images/sleep-well-blend.jpg" },
-            { name: "Stress Relief Blend", latin: "Bergamot + Ylang Ylang", img: "/images/stress-relief-blend.jpg" },
-            { name: "Immune Support Blend", latin: "Tea Tree + Eucalyptus", img: "/images/immune-support-blend.jpg" },
-            { name: "Focus & Clarity Blend", latin: "Rosemary + Peppermint", img: "/images/blend-focus.jpg" },
-            { name: "Breath Easy Blend", latin: "Eucalyptus + Peppermint", img: "/images/blend-breath.jpg" },
-            { name: "Skin Care Blend", latin: "Lavender + Geranium", img: "/images/blend-skin.jpg" },
-            { name: "Muscle Relief Blend", latin: "Peppermint + Rosemary", img: "/images/blend-muscle.jpg" },
-            { name: "Deodorizing Blend", latin: "Lemon + Tea Tree", img: "/images/blend-deo.jpg" },
-            { name: "Romantic Blend", latin: "Jasmine + Ylang Ylang", img: "/images/blend-romantic.jpg" },
-            { name: "Fresh Home Blend", latin: "Citrus Mix", img: "/images/blend-fresh.jpg" }
-        ];
-
-        function render() {
-            const grid = document.getElementById('productGrid');
-            grid.innerHTML = products.map(p => `
-                <div class="border border-gray-200 p-5 rounded-lg flex flex-col hover:shadow-lg transition">
-                    <div class="h-64 bg-gray-50 mb-4 flex items-center justify-center rounded">
-                        <img src="${p.img}" alt="${p.name}" class="max-h-full object-contain">
-                    </div>
-                    <h4 class="font-bold text-gray-800">${p.name}</h4>
-                    <p class="text-sm text-gray-500 italic mb-4">${p.latin}</p>
-                    <a href="/products/${p.name.toLowerCase().replace(/\s+/g, '-')}" class="mt-auto bg-[#4a5d4e] text-white py-2 rounded text-center text-sm hover:bg-emerald-900 transition">View Details</a>
-                </div>
-            `).join('');
-        }
-        render();
-    </script>
 </Layout>
