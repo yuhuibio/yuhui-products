@@ -123,12 +123,39 @@ const recommendedProducts = allProducts
       <img src={product.img} alt={product.name} class="w-full h-[400px] object-contain border rounded" />
 
       <div>
-        <h1 class="text-4xl font-bold text-[#4a5d4e] mb-6">{product.name}</h1>
-        <p class="mb-4"><b>INCI:</b> {product.latin}</p>
-        <a href="/contact" class="inline-block bg-[#4a5d4e] text-white px-6 py-3 rounded">
-          Send Inquiry
-        </a>
-      </div>
+  <h1 class="text-4xl font-bold text-[#4a5d4e] mb-4">
+    {product.name}
+  </h1>
+
+  <p class="mb-2 text-sm text-gray-700">
+      <span class="font-semibold">INCI:</span> {product.latin}
+  </p>
+
+  <div class="text-sm text-gray-700 space-y-1 mb-6">
+    {product.origin && (
+      <p><b>Origin:</b> {product.origin}</p>
+    )}
+
+    {product.partUsed && (
+      <p><b>Plant Part:</b> {product.partUsed}</p>
+    )}
+
+    {product.aroma && (
+      <p><b>Aroma:</b> {product.aroma}</p>
+    )}
+
+    {product.appearance && (
+      <p><b>Appearance:</b> {product.appearance}</p>
+    )}
+  </div>
+
+  <a
+    href="/contact"
+    class="inline-block bg-[#4a5d4e] text-white px-6 py-3 rounded hover:opacity-90"
+  >
+    Send Inquiry
+  </a>
+</div>
     </div>
   </section>
 
