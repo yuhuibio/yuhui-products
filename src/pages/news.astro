@@ -1,74 +1,58 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
 import { allNews } from '../data/news.js';
 ---
 
-<Header />
+<Layout title="News & Insights | Yuhui Biotechnology">
 
-<!-- BANNER -->
-<section class="relative h-[300px] flex items-center px-10 bg-[#e5edea]">
-  <div>
-    <h1 class="text-4xl font-bold text-[#4a5d4e]">News & Insights</h1>
-    <p class="text-gray-600 mt-2">Latest company updates</p>
-  </div>
-</section>
+  <!-- BANNER -->
+  <section class="relative h-[300px] flex items-center px-10 bg-[#e5edea]">
+    <div>
+      <h1 class="text-4xl font-bold text-[#4a5d4e]">News & Insights</h1>
+      <p class="text-gray-600 mt-2">Latest company updates</p>
+    </div>
+  </section>
 
-<!-- CONTENT -->
-<div class="max-w-7xl mx-auto px-6 py-12 flex gap-10">
+  <!-- CONTENT -->
+  <div class="max-w-7xl mx-auto px-6 py-12 flex gap-10">
 
-  <!-- LEFT -->
-  <aside class="w-1/4">
-    <h2 class="font-bold mb-4 text-[#4a5d4e]">Recent News</h2>
-    <div id="recentNews"></div>
-  </aside>
+    <!-- LEFT -->
+    <aside class="w-1/4">
+      <h2 class="font-bold mb-4 text-[#4a5d4e]">Recent News</h2>
 
-  <!-- RIGHT -->
-  <main class="w-3/4">
-    <div id="newsGrid" class="grid md:grid-cols-2 gap-6"></div>
-  </main>
+      {allNews.slice(0, 4).map((n) => (
+        <a
+          href={`/news-detail?id=${n.id}`}
+          class="block border-l-4 border-[#4a5d4e] pl-3 mb-3 hover:bg-gray-50"
+        >
+          <p class="text-xs text-gray-500">{n.date}</p>
+          <p class="text-sm">{n.title}</p>
+        </a>
+      ))}
 
-</div>
+    </aside>
 
-<Footer />
+    <!-- RIGHT -->
+    <main class="w-3/4">
+      <div class="grid md:grid-cols-2 gap-6">
 
-<!-- ⚠️ 关键：必须这样写 -->
-<script is:inline define:vars={{ allNews }}>
-function renderNews() {
-  const grid = document.getElementById("newsGrid");
+        {allNews.map((n) => (
+          <a
+            href={`/news-detail?id=${n.id}`}
+            class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
+          >
+            <img src={n.img} class="h-48 w-full object-cover" />
+            <div class="p-4">
+              <h3 class="font-semibold mb-2">{n.title}</h3>
+              <p class="text-sm text-gray-500">{n.date}</p>
+              <p class="text-sm text-gray-600 mt-2">{n.desc}</p>
+            </div>
+          </a>
+        ))}
 
-  if (!grid) return;
-
-  grid.innerHTML = allNews.map(n => `
-    <a href="/news-detail?id=${n.id}"
-       class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition">
-      <img src="${n.img}" class="h-48 w-full object-cover" />
-      <div class="p-4">
-        <h3 class="font-semibold mb-2">${n.title}</h3>
-        <p class="text-sm text-gray-500">${n.date}</p>
-        <p class="text-sm text-gray-600 mt-2">${n.desc}</p>
       </div>
-    </a>
-  `).join("");
-}
+    </main>
 
-function renderRecent() {
-  const box = document.getElementById("recentNews");
+  </div>
 
-  if (!box) return;
-
-  box.innerHTML = allNews.slice(0, 4).map(n => `
-    <a href="/news-detail?id=${n.id}"
-       class="block border-l-4 border-[#4a5d4e] pl-3 mb-3 hover:bg-gray-50">
-      <p class="text-xs text-gray-500">${n.date}</p>
-      <p class="text-sm">${n.title}</p>
-    </a>
-  `).join("");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderNews();
-  renderRecent();
-});
-</script>
+</Layout>
