@@ -5,5 +5,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://yuhuibiotec.com',
   base: '/',
-  integrations: [tailwind(), sitemap()]
+  trailingSlash: 'ignore',
+  integrations: [
+    tailwind(),
+    sitemap()
+  ]
 });
