@@ -168,33 +168,32 @@ const recommendedProducts = allProducts
     </section>
   )}
 
-  <!-- You might be interested in -->
-  <section class="max-w-6xl mx-auto px-4 py-14">
-    <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">
-      You might be interested in
-    </h2>
+<section class="max-w-6xl mx-auto px-4 py-14">
+  <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">
+    You might be interested in
+  </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {recommendedProducts.map((p) => (
-        <a
-          href={`/products/${p.slug}`}
-          class="group border rounded-lg overflow-hidden hover:shadow-md transition"
-        >
-          <div class="h-[140px] bg-white flex items-center justify-center">
-            <img
-              src={p.img}
-              alt={p.name}
-              class="max-h-full object-contain group-hover:scale-105 transition"
-            />
-          </div>
+  <div class="flex gap-4 overflow-x-auto pb-2">
+    {recommendedProducts.slice(0, 6).map((p) => (
+      <a
+        href={`/products/${p.slug}`}
+        class="min-w-[160px] border rounded-lg overflow-hidden hover:shadow-md transition flex-shrink-0"
+      >
+        <div class="h-[120px] bg-white flex items-center justify-center">
+          <img
+            src={p.img}
+            alt={p.name}
+            class="max-h-full object-contain hover:scale-105 transition"
+          />
+        </div>
 
-          <div class="p-3 text-sm text-center text-[#4a5d4e] font-medium">
-            {p.name}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+        <div class="p-2 text-xs text-center text-[#4a5d4e] font-medium">
+          {p.name}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
 
   <!-- Explore -->
   <section class="max-w-6xl mx-auto px-4 py-10">
