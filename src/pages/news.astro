@@ -3,47 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allNews = await getCollection('news');
+// 按日期降序排序
+const sortedNews = allNews.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
 <Layout title="News & Insights | Yuhui Biotechnology">
-
-  <!-- BANNER -->
   <section class="relative h-[300px] flex items-center px-10 bg-[#e5edea]">
     <div>
-      <h1 class="text-4xl font-bold text-[#4a5d4e]">News & Insights</h1>
-      <p class="text-gray-600 mt-2">Latest company updates</p>
+      <h1 class="text-4xl font-bold text-[#4a5d4e]">新闻与资讯</h1>
+      <p class="text-gray-600 mt-2">获取公司最新动态</p>
     </div>
   </section>
 
-  <!-- CONTENT -->
   <div class="max-w-7xl mx-auto px-6 py-12 flex gap-10">
-
-    <!-- LEFT -->
     <aside class="w-1/4">
-      <h2 class="font-bold mb-4 text-[#4a5d4e]">Recent News</h2>
-
-      {allNews.slice(0, 4).map((n) => (
-        <a
-          href={`/news/${n.slug}`}
-          class="block border-l-4 border-[#4a5d4e] pl-3 mb-3 hover:bg-gray-50"
-        >
+      <h2 class="font-bold mb-4 text-[#4a5d4e]">近期新闻</h2>
+      {sortedNews.slice(0, 4).map((n) => (
+        <a href={`/news/${n.slug}`} class="block border-l-4 border-[#4a5d4e] pl-3 mb-3 hover:bg-gray-50">
           <p class="text-xs text-gray-500">{n.data.date}</p>
           <p class="text-sm">{n.data.title}</p>
         </a>
       ))}
-
     </aside>
 
-    <!-- RIGHT -->
     <main class="w-3/4">
       <div class="grid md:grid-cols-2 gap-6">
-
-        {allNews.map((n) => (
-          <a
-            href={`/news/${n.slug}`}
-            class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
-          >
-            <img src={n.data.img} class="h-48 w-full object-cover" />
+        {sortedNews.map((n) => (
+          <a href={`/news/${n.slug}`} class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition">
+            <img src={n.data.img} alt={n.data.title} class="h-48 w-full object-cover" />
             <div class="p-4">
               <h3 class="font-semibold mb-2">{n.data.title}</h3>
               <p class="text-sm text-gray-500">{n.data.date}</p>
@@ -51,10 +38,7 @@ const allNews = await getCollection('news');
             </div>
           </a>
         ))}
-
       </div>
     </main>
-
   </div>
-
 </Layout>
