@@ -5,41 +5,11 @@ export const allNews = [
     date: "2024-12-31",
     image: "/images/news/news-1.jpg",
     desc: "Season greetings to all global partners and clients.",
-content: `A Year in Review: Highlights & Achievements
-
-2024 was a year of exciting milestones. We introduced new products to our collection, received outstanding feedback from customers, and continued to ensure that our essential oils meet the highest quality standards. Whether you've enjoyed our best-selling oils or explored new offerings, we're proud to have been part of your wellness journey.
-
-Here are a few highlights from 2024:
-
-**Expanded Product Range:**
-We have launched a series of compound essential oils including fat burning and weight loss essential oils, whitening and tender skin essential oils, sunscreen repair essential oils, gastrointestinal conditioning essential oils, lymphatic detoxification essential oils, etc.
-
-**Customer Satisfaction:**
-Thanks to your feedback, we improved our packaging and shipping processes to serve you better.
-
-**Sustainability Commitment:**
-Our dedication to sustainable sourcing and eco-friendly packaging continues to be a priority.
-
-Looking Ahead: Exciting Plans for 2025
-
-We are thrilled to continue serving you in the new year with even more exciting offerings and initiatives. Here's a sneak peek at what's coming up in 2024:
-
-**New Product Launches:**
-Stay tuned for new essential oil blends and wellness products designed to support your health, beauty, and relaxation needs.
-
-**Exclusive Offers:**
-We'll be rolling out special discounts and promotions to help you discover the best of nature at an even better price.
-
-**Sustainability Efforts:**
-We will further enhance our sustainability efforts to ensure that every bottle of oil you receive is as kind to the Earth as it is to you.
-
-Wishing You a Year of Wellness and Joy
-
-We hope that 2025 brings you peace, joy, and a renewed sense of well-being. Whether you're looking to relax, rejuvenate, or enhance your daily self-care routine, we are here to provide the highest quality essential oils to support you every step of the way.
+     slug: "2024-year-in-review"
 
 
 
-Thank you for being a customer of our company.We look forward to another wonderful year with you!`
+
   },
 
   {

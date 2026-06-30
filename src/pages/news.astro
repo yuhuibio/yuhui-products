@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { allNews } from '../data/news.js';
+import { getCollection } from 'astro:content';
+
+const allNews = await getCollection('news');
 ---
 
 <Layout title="News & Insights | Yuhui Biotechnology">
@@ -22,11 +24,11 @@ import { allNews } from '../data/news.js';
 
       {allNews.slice(0, 4).map((n) => (
         <a
-          href={`/news-detail?id=${n.id}`}
+          href={`/news/${n.slug}`}
           class="block border-l-4 border-[#4a5d4e] pl-3 mb-3 hover:bg-gray-50"
         >
-          <p class="text-xs text-gray-500">{n.date}</p>
-          <p class="text-sm">{n.title}</p>
+          <p class="text-xs text-gray-500">{n.data.date}</p>
+          <p class="text-sm">{n.data.title}</p>
         </a>
       ))}
 
@@ -38,14 +40,14 @@ import { allNews } from '../data/news.js';
 
         {allNews.map((n) => (
           <a
-            href={`/news-detail?id=${n.id}`}
+            href={`/news/${n.slug}`}
             class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
           >
-            <img src={n.img} class="h-48 w-full object-cover" />
+            <img src={n.data.img} class="h-48 w-full object-cover" />
             <div class="p-4">
-              <h3 class="font-semibold mb-2">{n.title}</h3>
-              <p class="text-sm text-gray-500">{n.date}</p>
-              <p class="text-sm text-gray-600 mt-2">{n.desc}</p>
+              <h3 class="font-semibold mb-2">{n.data.title}</h3>
+              <p class="text-sm text-gray-500">{n.data.date}</p>
+              <p class="text-sm text-gray-600 mt-2">{n.data.desc}</p>
             </div>
           </a>
         ))}

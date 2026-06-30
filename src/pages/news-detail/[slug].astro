@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+
+  return news.map((n) => ({
+    params: { slug: n.slug },
+    props: { news: n },
+  }));
+}
+
+const { news } = Astro.props;
+const { Content } = await news.render();
+---
+
+<Layout title={news.data.title + " | Yuhui Biotechnology"}>
+
+  <!-- BANNER -->
+  <section class="h-[250px] flex items-center px-10 bg-[#e5edea]">
+    <h1 class="text-3xl font-bold text-[#4a5d4e]">
+      {news.data.title}
+    </h1>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="max-w-4xl mx-auto px-6 py-12">
+
+    <img
+      src={news.data.img}
+      class="w-full rounded-xl mb-8"
+    />
+
+    <p class="text-gray-500 mb-6">{news.data.date}</p>
+
+    <div class="prose max-w-none text-gray-700">
+      <Content />
+    </div>
+
+  </div>
+
+</Layout>
