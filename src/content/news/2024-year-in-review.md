@@ -1,20 +1,19 @@
-Happy New Year from XIAN YUHUI BIOTECHNOLOGY CO., LTD!
-
-As we welcome 2025, we would like to take a moment to reflect on the incredible journey we’ve shared with you in the past year. It has been a year full of growth, learning, and building stronger connections with our global partners.
-
-We are sincerely grateful for your continued trust in our essential oil products and long-term cooperation.
-
+---
+title: "Happy New Year from XIAN YUHUI BIOTECHNOLOGY CO., LTD"
+date: "2024-12-31"
+img: "/images/news/news-1.jpg"
+desc: "2024 Year-end review and 2025 outlook for global partners."
 ---
 
 ## A Year in Review: Highlights & Achievements
 
-2024 was a year of exciting milestones. We introduced new products to our collection, received outstanding feedback from customers, and continued to ensure that our essential oils meet strict quality standards.
+2024 was a year of exciting milestones. We introduced new products to our collection and strengthened cooperation with global partners in the essential oils industry.
 
-Whether you have used our best-selling products or explored new formulations, we are proud to have supported your wellness and business growth.
+We sincerely appreciate your continued trust in our essential oil products.
 
 ---
 
-### Expanded Product Range
+## Expanded Product Range
 
 We have launched a series of compound essential oils including:
 
@@ -24,74 +23,48 @@ We have launched a series of compound essential oils including:
 - Sleep Well Blended Oils  
 - Lymphatic Detoxification Blended Oils  
 
-👉 Explore our full product formulations:  
-[Essential Oil Collection](/products)
+👉 Explore our full range:  
 
-Popular product solutions include:
 
-- [Fresh Home Blend](/products/fresh-home-blend)  
-- [Skin Care Blend](/products/skin-care-blend)  
-- [Muscle Relief Blend](/products/muscle-relief-blend)  
-- [Sleep Well Blend](/products/sleep-well-blend)  
-- [Lymphatic Drainage Blend](/products/lymphatic-drainage-blend)
+Featured formulations:
 
-These products are widely used in beauty care, wellness applications, and functional aromatherapy solutions.
+-   
+-   
+-   
+-   
+-   
 
 ---
 
-### Customer Satisfaction
+## Customer Satisfaction
 
-Thanks to your valuable feedback, we have continuously improved our packaging, labeling, and international shipping processes to better serve global clients.
+We continuously improve packaging, labeling, and international logistics to serve global clients better.
 
-👉 Learn more about our manufacturing strength and quality system:  
-[About Xian Yuhui Biotechnology](/about)
+👉 Learn more about us:  
 
----
-
-### Sustainability Commitment
-
-Our dedication to sustainable sourcing and eco-friendly packaging remains a core part of our long-term strategy.
-
-We work closely with our supply chain partners to ensure responsible raw material sourcing and environmentally conscious production.
 
 ---
 
-## Looking Ahead: Exciting Plans for 2025
+## Sustainability Commitment
 
-We are excited to continue serving global customers with more innovative essential oil solutions and customized services.
-
----
-
-### New Product Launches
-
-Stay tuned for new essential oil blends and functional wellness products designed to support health, beauty, relaxation, and lifestyle needs.
-
-👉 Explore our latest products:  
-[Browse Essential Oils](/products)
+We maintain long-term commitment to sustainable sourcing and eco-friendly production practices across our supply chain.
 
 ---
 
-### Exclusive Offers & OEM/ODM Services
+## Looking Ahead to 2025
 
-We will be introducing special promotions and wholesale opportunities for global distributors, brand owners, and importers.
+We will continue launching innovative essential oil products and supporting global distributors with OEM/ODM services.
 
-For bulk orders, private label, or customization services:  
-👉 [Contact Us for Wholesale Inquiry](/contact)
+👉 Browse products:  
 
----
 
-### Sustainability Efforts
+👉 Contact for cooperation:  
 
-We will further strengthen our sustainability practices to ensure every product we deliver meets international environmental expectations.
 
 ---
 
 ## Closing Message
 
-We hope 2025 brings peace, joy, and renewed well-being to you and your business.
+Thank you for being a valued partner of XIAN YUHUI BIOTECHNOLOGY CO., LTD.
 
-Whether you are looking to relax, rejuvenate, or develop your own brand line of essential oils, we are here to support you with high-quality, reliable products.
-
-Thank you for being a valued partner of XIAN YUHUI BIOTECHNOLOGY CO., LTD. We look forward to another successful year together.
-
-👉 If you would like to request samples or start cooperation, please visit our [Contact Page](/contact).
+We look forward to another successful year of cooperation.
