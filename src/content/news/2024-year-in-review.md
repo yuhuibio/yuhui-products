@@ -5,66 +5,59 @@ img: "/images/news/news-1.jpg"
 desc: "2024 Year-end review and 2025 outlook for global partners."
 ---
 
-## A Year in Review: Highlights & Achievements
+# 2024 Year-End Review: A Milestone Year for XIAN YUHUI
 
-2024 was a year of exciting milestones. We introduced new products to our collection and strengthened cooperation with global partners in the essential oils industry.
-
-We sincerely appreciate your continued trust in our essential oil products.
+As we close the chapter on 2024, we would like to extend our deepest gratitude to our global partners. This year has been defined by **innovation, expansion, and a renewed commitment to excellence** in the essential oils industry.
 
 ---
 
-## Expanded Product Range
+## 🚀 Expanding Our Horizons: New Product Collections
+We have significantly diversified our portfolio to meet the growing demands of the wellness market. Our newly launched compound essential oils include:
 
-We have launched a series of compound essential oils including:
+*   **Fresh Home Blended Oils:** Elevate any environment with pure, natural aromatics.
+*   **Skin Care Blended Oils:** Premium formulations designed for radiant, healthy skin.
+*   **Muscle Relief Blended Oils:** Targeted relief for an active lifestyle.
+*   **Sleep Well Blended Oils:** Crafted for deep relaxation and restorative rest.
+*   **Lymphatic Detoxification Blended Oils:** Supporting holistic wellness routines.
 
-- Fresh Home Blended Oils  
-- Skin Care Blended Oils  
-- Muscle Relief Blended Oils  
-- Sleep Well Blended Oils  
-- Lymphatic Detoxification Blended Oils  
-
-👉 Explore our full range:  
-
-
-Featured formulations:
-
--   
--   
--   
--   
--   
+👉 **[<span style="color: #00008B;">Explore Our Complete Essential Oil Collection</span>](/products)**
 
 ---
 
-## Customer Satisfaction
+## 🌟 Featured Formulations
+Our R&D team has meticulously curated these top-performing blends:
 
-We continuously improve packaging, labeling, and international logistics to serve global clients better.
-
-👉 Learn more about us:  
-
-
----
-
-## Sustainability Commitment
-
-We maintain long-term commitment to sustainable sourcing and eco-friendly production practices across our supply chain.
+| Product Name | Primary Benefit |
+| :--- | :--- |
+| **Lavender Relaxation** | Stress relief & sleep support |
+| **Eucalyptus Respiratory** | Clear breathing & refreshing |
+| **Tea Tree Skin Purifying** | Natural antibacterial care |
+| **Peppermint Energy** | Mental clarity & focus |
+| **Rosemary Focus** | Cognitive support & stimulation |
 
 ---
 
-## Looking Ahead to 2025
+## 🌏 Commitment to Excellence
+### Quality & Logistics
+We continue to optimize our **international logistics and packaging standards** to ensure that your products arrive safely and maintain their integrity, no matter where you are in the world.
 
-We will continue launching innovative essential oil products and supporting global distributors with OEM/ODM services.
+### Sustainability
+Sustainability is the heartbeat of our supply chain. From eco-friendly sourcing to energy-efficient production, we are dedicated to minimizing our environmental footprint.
 
-👉 Browse products:  
-
-
-👉 Contact for cooperation:  
-
+👉 **[<span style="color: #00008B;">Learn more about our quality commitment</span>](/about-us)**
 
 ---
 
-## Closing Message
+## 展望 2025 | The Future is Bright
+In 2025, we are scaling our **OEM/ODM capabilities** to provide even more tailored solutions for our global distributors. Whether you are looking for private labeling or custom formulation development, we are ready to grow with you.
 
-Thank you for being a valued partner of XIAN YUHUI BIOTECHNOLOGY CO., LTD.
+### Ready to elevate your business?
+*   **[<span style="color: #00008B;">Browse Our Latest Catalog</span>](/products)**
+*   **[<span style="color: #00008B;">Discuss Your OEM/ODM Project</span>](/contact)**
 
-We look forward to another successful year of cooperation.
+---
+
+> **Message from the Team:**
+> Thank you for being an integral part of the XIAN YUHUI journey. Here is to a prosperous and healthy 2025!
+
+---
