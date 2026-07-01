@@ -49,13 +49,14 @@ const { Content } = await news.render();
     </aside>
 
     <!-- 右侧：正文区域 -->
-    <main class="md:col-span-3">
+<main class="md:col-span-3">
       <img src={news.data.img} class="w-full rounded-xl mb-8 shadow-sm" alt={news.data.title} />
       <p class="text-gray-500 mb-8 font-medium">{news.data.date}</p>
 
       <div class="prose prose-lg max-w-none text-gray-700 
                   prose-a:text-[#00008B] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-                  prose-headings:text-[#4a5d4e]">
+                  prose-headings:text-[#4a5d4e]
+                  prose-p:mb-4 prose-p:mt-0">
         <Content />
       </div>
 
