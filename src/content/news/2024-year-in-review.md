@@ -11,7 +11,7 @@ As we close the chapter on 2024, we would like to extend our deepest gratitude t
 
 ---
 
-## 🚀 Expanding Our Horizons: New Product Collections
+## Expanding Our Horizons: New Product Collections
 We have significantly diversified our portfolio to meet the growing demands of the wellness market. Our newly launched compound essential oils include:
 
 *   **Fresh Home Blended Oils:** Elevate any environment with pure, natural aromatics.
@@ -20,11 +20,11 @@ We have significantly diversified our portfolio to meet the growing demands of t
 *   **Sleep Well Blended Oils:** Crafted for deep relaxation and restorative rest.
 *   **Lymphatic Detoxification Blended Oils:** Supporting holistic wellness routines.
 
-👉 **[<span style="color: #00008B;">Explore Our Complete Essential Oil Collection</span>](/products)**
+ **[<span style="color: #00008B;">Explore Our Complete Essential Oil Collection</span>](/products)**
 
 ---
 
-## 🌟 Featured Formulations
+## Featured Formulations
 Our R&D team has meticulously curated these top-performing blends:
 
 | Product Name | Primary Benefit |
@@ -37,14 +37,14 @@ Our R&D team has meticulously curated these top-performing blends:
 
 ---
 
-## 🌏 Commitment to Excellence
+## Commitment to Excellence
 ### Quality & Logistics
 We continue to optimize our **international logistics and packaging standards** to ensure that your products arrive safely and maintain their integrity, no matter where you are in the world.
 
 ### Sustainability
 Sustainability is the heartbeat of our supply chain. From eco-friendly sourcing to energy-efficient production, we are dedicated to minimizing our environmental footprint.
 
-👉 **[<span style="color: #00008B;">Learn more about our quality commitment</span>](/about-us)**
+ **[<span style="color: #00008B;">Learn more about our quality commitment</span>](/about-us)**
 
 ---
 
