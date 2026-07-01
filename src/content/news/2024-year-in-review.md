@@ -48,7 +48,7 @@ Sustainability is the heartbeat of our supply chain. From eco-friendly sourcing 
 
 ---
 
-## 展望 2025 | The Future is Bright
+## The Future is Bright
 In 2025, we are scaling our **OEM/ODM capabilities** to provide even more tailored solutions for our global distributors. Whether you are looking for private labeling or custom formulation development, we are ready to grow with you.
 
 ### Ready to elevate your business?
