@@ -19,7 +19,7 @@ const { Content } = await news.render();
 
   <!-- BANNER -->
   <section class="h-[250px] flex items-center px-10 bg-[#e5edea]">
-    <h1 class="text-3xl font-bold text-[#4a5d4e]">
+    <h1 class="text-3xl md:text-4xl font-bold text-[#4a5d4e]">
       {news.data.title}
     </h1>
   </section>
@@ -29,12 +29,20 @@ const { Content } = await news.render();
 
     <img
       src={news.data.img}
-      class="w-full rounded-xl mb-8"
+      class="w-full rounded-xl mb-8 shadow-sm"
+      alt={news.data.title}
     />
 
-    <p class="text-gray-500 mb-6">{news.data.date}</p>
+    <p class="text-gray-500 mb-8 font-medium">{news.data.date}</p>
 
-    <div class="prose max-w-none text-gray-700">
+    <!-- 
+      这里使用了 prose-lg 自动处理行距和段间距
+      prose-a:text-[#00008B] 强制所有链接变为你要求的深蓝色
+      prose-headings:text-[#4a5d4e] 让标题颜色与你的 Banner 呼应，更专业
+    -->
+    <div class="prose prose-lg max-w-none text-gray-700 
+                prose-a:text-[#00008B] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                prose-headings:text-[#4a5d4e]">
       <Content />
     </div>
 
