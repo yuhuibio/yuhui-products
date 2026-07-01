@@ -1,7 +1,7 @@
 ---
 title: "Happy New Year from XIAN YUHUI BIOTECHNOLOGY CO., LTD"
 date: "2024-12-31"
-img: "/images/news/news-1.jpg"
+img: "/images/news-1.jpg"
 desc: "2024 Year-end review and 2025 outlook for global partners."
 ---
 
