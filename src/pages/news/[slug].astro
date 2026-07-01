@@ -4,47 +4,77 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const news = await getCollection('news');
-
-  return news.map((n) => ({
+  const sortedNews = news.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  
+  return sortedNews.map((n, i) => ({
     params: { slug: n.slug },
-    props: { news: n },
+    props: { 
+      news: n,
+      prev: sortedNews[i + 1] || null,
+      next: sortedNews[i - 1] || null,
+      allNews: sortedNews.slice(0, 5), // 取最近5篇作为侧边栏
+    },
   }));
 }
 
-const { news } = Astro.props;
+const { news, prev, next, allNews } = Astro.props;
 const { Content } = await news.render();
 ---
 
 <Layout title={news.data.title + " | Yuhui Biotechnology"}>
 
   <!-- BANNER -->
-  <section class="h-[250px] flex items-center px-10 bg-[#e5edea]">
-    <h1 class="text-2xl md:text-2xl font-bold text-[#4a5d4e]">
+  <section class="h-[200px] flex items-center px-10 bg-[#e5edea]">
+    <h1 class="text-2xl md:text-3xl font-bold text-[#4a5d4e] leading-tight">
       {news.data.title}
     </h1>
   </section>
 
-  <!-- CONTENT -->
-  <div class="max-w-4xl mx-auto px-6 py-12">
+  <!-- CONTENT GRID: 电脑端两列 (1/4 + 3/4)，手机端一列 -->
+  <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+    
+    <!-- 左侧：Recent News -->
+    <aside class="hidden md:block">
+      <h3 class="font-bold text-[#4a5d4e] mb-6 border-b pb-2">Recent News</h3>
+      <ul class="space-y-4">
+        {allNews.map((item) => (
+          <li>
+            <a href={`/news/${item.slug}`} class="text-sm hover:text-[#00008B] transition-colors">
+              {item.data.title}
+            </a>
+            <p class="text-xs text-gray-400 mt-1">{item.data.date}</p>
+          </li>
+        ))}
+      </ul>
+    </aside>
 
-    <img
-      src={news.data.img}
-      class="w-full rounded-xl mb-8 shadow-sm"
-      alt={news.data.title}
-    />
+    <!-- 右侧：正文区域 -->
+    <main class="md:col-span-3">
+      <img src={news.data.img} class="w-full rounded-xl mb-8 shadow-sm" alt={news.data.title} />
+      <p class="text-gray-500 mb-8 font-medium">{news.data.date}</p>
 
-    <p class="text-gray-500 mb-8 font-medium">{news.data.date}</p>
+      <div class="prose prose-lg max-w-none text-gray-700 
+                  prose-a:text-[#00008B] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                  prose-headings:text-[#4a5d4e]">
+        <Content />
+      </div>
 
-    <!-- 
-      这里使用了 prose-lg 自动处理行距和段间距
-      prose-a:text-[#00008B] 强制所有链接变为你要求的深蓝色
-      prose-headings:text-[#4a5d4e] 让标题颜色与你的 Banner 呼应，更专业
-    -->
-    <div class="prose prose-lg max-w-none text-gray-700 
-                prose-a:text-[#00008B] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-                prose-headings:text-[#4a5d4e]">
-      <Content />
-    </div>
+      <!-- 底部导航 -->
+      <nav class="mt-16 pt-8 border-t border-gray-200 flex justify-between items-center gap-6">
+        {prev ? (
+          <a href={`/news/${prev.slug}`} class="flex flex-col group text-left">
+            <span class="text-xs text-gray-400 uppercase tracking-wide">Previous</span>
+            <span class="font-semibold text-[#4a5d4e] group-hover:underline">{prev.data.title}</span>
+          </a>
+        ) : <div />}
+        {next ? (
+          <a href={`/news/${next.slug}`} class="flex flex-col group text-right items-end">
+            <span class="text-xs text-gray-400 uppercase tracking-wide">Next</span>
+            <span class="font-semibold text-[#4a5d4e] group-hover:underline">{next.data.title}</span>
+          </a>
+        ) : <div />}
+      </nav>
+    </main>
 
   </div>
 
