@@ -12,14 +12,16 @@ const productsCollection = defineCollection({
   })),
 });
 
-// 2. 新增的博客集合定义 (这是让 getCollection('blog') 生效的关键)
+// 2. 新增的博客集合定义
 const blogCollection = defineCollection({
-  type: 'content', // 博客用 content 类型
+  type: 'content', 
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
     author: z.string(),
+    // 在这里补上 img 字段定义：
+    img: z.string().optional(), 
     category: z.enum([
       'Essential Oils 101', 
       'Health & Wellness', 
@@ -29,7 +31,6 @@ const blogCollection = defineCollection({
     ]),
   }),
 });
-
 // 3. 将两个集合都导出
 export const collections = {
   'products': productsCollection,
