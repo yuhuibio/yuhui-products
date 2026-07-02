@@ -1,7 +1,7 @@
 ---
 title: "Leading the Way: Our Company Recognized as a Key Supplier of Clove Leaf Oil"
 date: "2024-04-17"
-img: "/images/news/news-2.jpg"
+img: "/images/news-2.jpg"
 desc: "Our company is recognized as a key global supplier of high-quality Clove Leaf Oil, backed by a strong industry reputation and commitment to excellence."
 ---
 
