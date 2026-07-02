@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
-// 1. 你原有的产品集合定义
+// 1. 产品集合
 const productsCollection = defineCollection({
   type: 'data',
   schema: z.array(z.object({
@@ -12,7 +12,7 @@ const productsCollection = defineCollection({
   })),
 });
 
-// 2. 新增的博客集合定义
+// 2. 博客集合
 const blogCollection = defineCollection({
   type: 'content', 
   schema: z.object({
@@ -20,8 +20,7 @@ const blogCollection = defineCollection({
     pubDate: z.date(),
     description: z.string(),
     author: z.string(),
-    // 在这里补上 img 字段定义：
-    img: z.string().optional(), 
+    img: z.string().optional(),
     category: z.enum([
       'Essential Oils 101', 
       'Health & Wellness', 
@@ -31,8 +30,21 @@ const blogCollection = defineCollection({
     ]),
   }),
 });
-// 3. 将两个集合都导出
+
+// 3. 新闻集合 (合并进来了)
+const newsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    date: z.string(),
+    img: z.string(), // 确保 Markdown 里必须有 img 字段
+    desc: z.string(),
+  }),
+});
+
+// 4. 统一导出
 export const collections = {
   'products': productsCollection,
   'blog': blogCollection,
+  'news': newsCollection,
 };
