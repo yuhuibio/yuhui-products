@@ -1,7 +1,7 @@
 ---
 title: "Expanding Supply: High-Quality Plant Extract Liquids and Essential Oils Reach Australian Markets"
 date: "2023-09-14"
-img: "/images/news/news-3.jpg"
+img: "/images/news-3.jpg"
 desc: "We have successfully exported premium wholesale plant extract liquids and essential oils to Australia. Partner with a leading supplier of natural ingredients for your cosmetic, health, and pharmaceutical needs."
 ---
 
