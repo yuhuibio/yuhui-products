@@ -10,7 +10,7 @@ desc: "We have successfully exported premium wholesale plant extract liquids and
 We are proud to announce that our company has successfully exported a significant shipment of **wholesale plant extract liquids** and **natural essential oils** to the Australian market. This strategic expansion marks a major milestone in our commitment to serving the growing global demand for premium botanical ingredients.
 
 <figure>
-  <img src="/images/news/australia-export.jpg" alt="Exporting premium plant extract liquids and essential oils to Australian distributors" />
+  <img src="/images/australia-export.jpg" alt="Exporting premium plant extract liquids and essential oils to Australian distributors" />
 </figure>
 
 ---
