@@ -1,8 +1,9 @@
 ---
 title: "XIAN YUHUI BIOTEC Exports Premium Rosehip Oil to Australia"
-date: 2016-10-26
+date: "2016-10-26"
 img: "/images/organic-rosehip-oil.jpg"
 author: "Sophia"
+desc: "Xian Yuhui Biotechnology successfully exports premium, cold-pressed rosehip oil to Australia, meeting international skincare standards."
 ---
 
 [Xi'an, China] – [XIAN YUHUI BIOTECHNOLOGY CO., LTD](https://www.yuhuibiotec.com), a premier [natural skincare products manufacturer](https://www.yuhuibiotec.com/products), is proud to announce the successful export of high-quality, pure **rosehip oil** to the Australian market. As global demand for clean beauty continues to rise, our signature rosehip oil has quickly become a favorite among skincare enthusiasts known for its nourishing and rejuvenating properties.
