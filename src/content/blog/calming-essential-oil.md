@@ -7,8 +7,6 @@ author: "Jessica"
 category: "Essential Oils 101"
 img: "/images/stress-relief-oil.jpg"
 ---
-# Beyond Lavender: 5 Calming Essential Oils for Stress Relief (That Actually Work)
-
 We’ve all heard it a thousand times: "Just use some lavender." 
 
 While lavender is a classic, it’s not for everyone. For some, the intense floral scent is overwhelming; for others, it doesn't help at all. If you’re looking for a way to unwind but can’t stand the smell of lavender, you’re not alone.
