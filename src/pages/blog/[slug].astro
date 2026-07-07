@@ -25,7 +25,7 @@ const { Content } = await post.render();
 
     <!-- 文章主体 -->
     <main class="flex-grow">
-      <article class="prose lg:prose-lg">
+      <article class="prose lg:prose-lg prose-headings:leading-tight prose-headings:mb-6">
         <h1>{post.data.title}</h1>
         <p class="text-sm text-gray-500">
           Author: {post.data.author} | Published: {post.data.pubDate.toLocaleDateString()}
