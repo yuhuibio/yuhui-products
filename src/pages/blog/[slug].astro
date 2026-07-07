@@ -44,4 +44,12 @@ const { Content } = await post.render();
       </nav>
     </main>
   </div>
+<style>
+  /* 强制覆盖 prose 的默认标题样式 */
+  .prose h1 {
+    line-height: 1.2 !important;  /* 增加标题行间距 */
+    margin-bottom: 2rem !important; /* 增加标题下方间距 */
+    margin-top: 1rem !important;    /* 增加标题上方间距 */
+  }
+</style>
 </Layout>
