@@ -1,10 +1,12 @@
 ---
+
 title: "Understanding the Differences: Absolutes, Essential Oils, and Hydrosols"
-pubDate: "2016-08-01"
+pubDate: 2016-08-01
 description: "A comprehensive guide to understanding natural aromatic ingredients. Learn how absolutes, essential oils, and hydrosols differ in production, potency, and application."
 img: "/images/absolutes-hydrosols.jpg"
 category: "Essential Oils 101"
 author: "Sophia"
+
 ---
 
 In the world of natural skincare ingredients, understanding production methods is key to choosing the right raw materials for your formulations. While terms like "absolutes," "essential oils," and "hydrosols" are often used interchangeably, they represent distinct extraction processes, chemical profiles, and applications.
