@@ -1,7 +1,8 @@
 ---
 title: "World Sleep Day: The Ultimate Guide to Essential Oils for Quality Sleep"
-date: "2022-03-21"
-desc: "Celebrate World Sleep Day with our expert guide. Explore the best essential oils for sleep, including lavender, sandalwood, and frankincense, to help you achieve restful nights."
+pubDate: 2022-03-21
+description: "Celebrate World Sleep Day with our expert guide. Explore the best essential oils for sleep, including lavender, sandalwood, and frankincense, to help you achieve restful nights."
+category: "Essential Oils 101"
 img: "/images/world-sleep-day.jpg"
 author: "Sophia"
 ---

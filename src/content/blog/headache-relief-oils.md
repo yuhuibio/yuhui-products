@@ -1,10 +1,13 @@
+
 ---
 title: "Natural Relief: The Best Essential Oils for Headaches & Migraines"
-date: "2023-01-30"
-desc: "Discover the best essential oils for headache relief, including peppermint, lavender, and eucalyptus, to naturally soothe tension and sinus pain."
+pubDate: 2023-01-30
+description: "Discover the best essential oils for headache relief, including peppermint, lavender, and eucalyptus, to naturally soothe tension and sinus pain."
+category: "Essential Oils 101"
 img: "/images/headache-relief.jpg"
 author: "Jessica"
 ---
+
 
 Headaches can be physically debilitating and disrupt your daily productivity. While pharmaceutical options exist, many people are turning to natural remedies for safer, long-term management. [Essential oils](https://www.yuhuibiotec.com/products) are one of the most effective natural tools for soothing tension headaches, migraines, and sinus-related discomfort.
 
