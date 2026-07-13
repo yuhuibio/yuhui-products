@@ -1,7 +1,7 @@
 ---
 title: "Understanding the Differences: Absolutes, Essential Oils, and Hydrosols"
 pubDate: "2016-08-01"
-description:"A comprehensive guide to understanding natural aromatic ingredients. Learn how absolutes, essential oils, and hydrosols differ in production, potency, and application."
+description: "A comprehensive guide to understanding natural aromatic ingredients. Learn how absolutes, essential oils, and hydrosols differ in production, potency, and application."
 img: "/images/absolutes-hydrosols.jpg"
 category: "Essential Oils 101"
 author: "Sophia"
