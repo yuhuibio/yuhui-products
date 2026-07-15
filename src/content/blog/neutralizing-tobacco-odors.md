@@ -4,7 +4,7 @@ pubDate: 2026-07-15
 description: "Discover how to effectively eliminate stubborn cigarette smells in luxury hotels and office environments using high-purity, professional-grade essential oils."
 slug: "neutralize-tobacco-odors-commercial-spaces"
 author: "Jessica"
-category: "Commercial Solutions"
+category: "Essential Oils Business"
 img: "/images/essential-oil-air-purification.jpg"
 ---
 
