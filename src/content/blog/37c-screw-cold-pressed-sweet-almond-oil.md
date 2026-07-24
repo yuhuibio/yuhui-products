@@ -3,7 +3,7 @@ title: "37°C Screw Cold-Pressed Sweet Almond Oil: A Premium Botanical Ingredien
 pubDate: 2026-07-24
 description: "Explore the technical highlights, purity standards, and cosmetic applications of our 37°C screw cold-pressed sweet almond oil."
 img: "/images/cold-pressed-sweet-almond-oil.jpg"
-category: "Carrier Oils & Extracts"
+category: "Essential Oils 101"
 author: "Sophia"
 ---
 
