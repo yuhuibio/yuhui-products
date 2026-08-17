@@ -15,7 +15,7 @@ When formulating high-performance personal care and cosmetic products, selecting
 
 Sweet almond oil has long been a staple in skincare, aromatherapy, and cosmetic manufacturing due to its rich emollient properties, Vitamin E content, and skin-friendly fatty acids. However, the extraction technique dictates the final quality, stability, and therapeutic efficacy of the oil.
 
-Our product utilizes a specialized **37°C screw cold-pressing process**. By strictly controlling the temperature threshold during mechanical expression, we prevent thermal degradation of the delicate nutrients naturally present in the almonds. For formulators looking to expand their portfolio, pairing this with other botanical active ingredients—such as our high-purity [Black Tea Extract Powder](/products/black-tea-extract-powder)—can elevate anti-aging and antioxidant cosmetic lines.
+Our product utilizes a specialized **37°C screw cold-pressing process**. By strictly controlling the temperature threshold during mechanical expression, we prevent thermal degradation of the delicate nutrients naturally present in the almonds. For formulators looking to expand their portfolio, pairing this with other botanical active ingredients can elevate anti-aging and antioxidant cosmetic lines.
 
 ## Key Technical Characteristics & Visual Appearance
 
