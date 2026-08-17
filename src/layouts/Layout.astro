@@ -2,13 +2,21 @@
 // src/layouts/Layout.astro
 import '../styles/global.css';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro'; // 确保你已经创建了 Footer 组件
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
+  description?: string; // 1. 允许外部传入 description
 }
 
-const { title = "Xian Yuhui Biotechnology" } = Astro.props;
+// 2. 接收传进来的 title 和 description，如果没有就用默认值
+const { 
+  title = "Xian Yuhuibio - Essential Oils Manufacturer", 
+  description = "Premium essential oils supplier and manufacturer from China. Bulk essential oils, carrier oils, and botanical extracts." 
+} = Astro.props;
+
+// 3. 核心：自动根据当前访问的路径，生成绝对规范路径 (Canonical URL)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -16,14 +24,20 @@ const { title = "Xian Yuhui Biotechnology" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 动态标题 -->
     <title>{title}</title>
- <!-- ⭐ Favicon（关键） -->
-    <link rel="icon" type="image/png" href="/favicon-v2.png?v=1" />
-<link rel="shortcut icon" href="/favicon-v2.png?v=1" />
-<link rel="apple-touch-icon" href="/favicon-v2.png?v=1" />
 
-    <!-- ⭐ SEO基础优化（建议保留） -->
-    <meta name="description" content="Premium essential oils supplier and manufacturer from China. Bulk essential oils, carrier oils, and botanical extracts." />
+    <!-- 动态描述 -->
+    <meta name="description" content={description} />
+
+    <!-- ⭐ 核心：规范标签（彻底解决 Duplicate pages / Missing Canonical 错误） -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- ⭐ Favicon（保留您的原配置） -->
+    <link rel="icon" type="image/png" href="/favicon-v2.png?v=1" />
+    <link rel="shortcut icon" href="/favicon-v2.png?v=1" />
+    <link rel="apple-touch-icon" href="/favicon-v2.png?v=1" />
 
     <!-- ⭐ 浏览器主题色 -->
     <meta name="theme-color" content="#4a5d4e" />
@@ -35,11 +49,11 @@ const { title = "Xian Yuhui Biotechnology" } = Astro.props;
     <Header />
 
     <!-- 页面主体内容区域 -->
-  <main class="flex-grow">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-    <slot />
-  </div>
-</main>
+    <main class="flex-grow">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <slot />
+      </div>
+    </main>
 
     <!-- 底部页脚 -->
     <Footer />
