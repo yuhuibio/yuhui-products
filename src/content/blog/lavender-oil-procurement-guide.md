@@ -4,7 +4,7 @@ pubDate: 2026-07-06
 description: "Not all lavender oils are created equal. Discover why botanical variety matters and explore 5 expert-approved essential oils for stress relief beyond the standard lavender."
 slug: "beyond-the-label-lavender-oil-procurement"
 author: "Jessica"
-category: "Essential Oils 101"
+category: "Essential Oils Business"
 img: "/images/lavender-variety-guide.jpg"
 ---
 

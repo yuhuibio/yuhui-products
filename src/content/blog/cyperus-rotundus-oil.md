@@ -4,7 +4,7 @@ pubDate: 2026-07-15
 description: "Are you looking for a reliable Cyperus rotundus essential oil supplier? Discover why botanical purity, GC/MS testing, and transparent sourcing are critical for your premium skincare and wellness formulations."
 slug: "sourcing-cyperus-rotundus-essential-oil-supplier"
 author: "Jessica"
-category: "Essential Oils 101"
+category: "Essential Oils Business"
 img: "/images/cyperus-rotundus-oil.jpg"
 ---
 

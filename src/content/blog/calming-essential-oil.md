@@ -4,7 +4,7 @@ pubDate: 2026-07-06
 description: "Not a fan of lavender? Discover 5 calming essential oils for your humidifier that soothe stress and anxiety without the floral notes. Expert-approved guide."
 slug: "calming-essential-oils-beyond-lavender"
 author: "Jessica"
-category: "Essential Oils 101"
+category: "Health & Wellness"
 img: "/images/stress-relief-oil.jpg"
 ---
 We’ve all heard it a thousand times: "Just use some lavender." 

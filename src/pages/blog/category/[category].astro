@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import BlogSidebar from '../../../components/BlogSidebar.astro';
+
+// 获取所有文章，并根据分类自动生成路径
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  
+  // 从文章中提取所有唯一分类 (确保您的 Markdown Frontmatter 里有 category 字段)
+  const allCategories = [...new Set(allPosts.map((post) => post.data.category))];
+
+  return allCategories.map((category) => ({
+    params: { category: category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-') },
+    props: { category, posts: allPosts.filter((post) => post.data.category === category) },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<Layout title={`${category} | Xian Yuhui Biotechnology Blog`}>
+  <div class="max-w-6xl mx-auto py-12 px-6 flex gap-12">
+    <BlogSidebar />
+
+    <main class="flex-grow border-r border-gray-300 pr-12">
+      <h1 class="text-3xl font-bold text-green-900 mb-8 uppercase">Category: {category}</h1>
+      
+      <div class="grid grid-cols-2 gap-8">
+        {posts.map((post) => (
+          <article class="group">
+            <a href={`/blog/${post.slug}`}>
+              <img 
+                src={post.data.img || '/default-placeholder.jpg'} 
+                alt={post.data.title} 
+                class="w-full h-64 object-cover mb-4" 
+              />
+              <h2 class="text-xl font-bold mb-2 group-hover:text-[#4a5d4e]">{post.data.title}</h2>
+              <p class="text-sm text-gray-500 mb-2">{post.data.pubDate.toLocaleDateString()}</p>
+              <p class="text-gray-600 text-sm line-clamp-2">{post.data.description}</p>
+            </a>
+          </article>
+        ))}
+      </div>
+    </main>
+  </div>
+</Layout>

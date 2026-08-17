@@ -2,7 +2,7 @@
 title: "How Lavender Oil Can Help You Sleep Better"
 pubDate: 2015-08-19
 description: "Discover the science behind lavender essential oil and how its calming properties can improve sleep quality, reduce anxiety, and promote deep slumber."
-category: "Essential Oils 101"
+category: "Health & Wellness"
 img: "/images/lavender-oil-blend.jpg"
 author: "Sophia"
 ---
