@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://yuhuibiotec.com',
+  site: 'https://www.yuhuibiotec.com', 
   base: '/',
   trailingSlash: 'ignore',
   integrations: [
