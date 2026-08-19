@@ -3,20 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import products from "../data/blended-oils.json";
 ---
 
-<Layout title="Blended Oils | Xian Yuhui Biotechnology">
+<Layout 
+  title="Wholesale Blended Essential Oils | Xian Yuhui Biotechnology"
+  description="Explore our wholesale collection of 100% pure blended essential oils. Premium natural formulations for aromatherapy, skincare, and wellness brands. Request a quote today!"
+>
 
     <!-- Hero Banner -->
     <section class="py-10 mb-16">
-        <!-- 改为 h1，完美解决 H1 Missing 问题 -->
+        <!-- 页面主标题 -->
         <h1 class="text-center text-4xl font-bold mb-10 text-gray-900">
             Bulk Blended Oils
         </h1>
 
         <div class="relative w-full overflow-hidden">
-            <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover">
+            <!-- ✅ 优化点：将泛泛的 alt="Banner" 改为包含核心关键词的描述，解决 Missing alt text 警告 -->
+            <img src="/images/banner-oils.jpg" alt="Wholesale bulk blended essential oils banner" class="w-full h-auto object-cover">
 
             <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
-                <!-- 顺次调整为 h2 -->
                 <h2 class="text-6xl font-bold uppercase mb-6 tracking-wider">
                     100% Pure & Natural
                 </h2>
