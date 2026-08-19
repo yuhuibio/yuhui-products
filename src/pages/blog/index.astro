@@ -7,28 +7,38 @@ const allPosts = await getCollection('blog');
 ---
 
 <Layout title="Blog | Xian Yuhui">
-  <div class="max-w-6xl mx-auto py-12 px-6 flex gap-12">
-    <BlogSidebar />
+  <div class="max-w-6xl mx-auto py-12 px-6">
+    
+    <!-- ✅ 关键修复：在页面顶部显式增加 h1 主标题，完美解决 H1 Missing -->
+    <header class="mb-10">
+      <h1 class="text-3xl font-bold text-gray-900 border-b pb-4">Our Blog & Articles</h1>
+    </header>
 
-    <!-- 主容器，带右侧装饰线 -->
-    <main class="flex-grow border-r border-gray-300 pr-12">
-      <div class="grid grid-cols-2 gap-8">
-       {allPosts.map(post => (
-          <article class="group">
-            <a href={`/blog/${post.slug}`}>
-              <!-- 【关键修改点】将 post.data.image 改为 post.data.img -->
-              <img 
-                src={post.data.img || '/default-placeholder.jpg'} 
-                alt={post.data.title} 
-                class="w-full h-64 object-cover mb-4" 
-              />
-              <h2 class="text-xl font-bold mb-2 group-hover:text-[#4a5d4e]">{post.data.title}</h2>
-              <p class="text-sm text-gray-500 mb-2">{post.data.pubDate.toLocaleDateString()}</p>
-              <p class="text-gray-600 text-sm line-clamp-2">{post.data.description}</p>
-            </a>
-          </article>
-        ))}
-      </div>
-    </main>
+    <div class="flex gap-12">
+      <BlogSidebar />
+
+      <!-- 主容器，带右侧装饰线 -->
+      <main class="flex-grow border-r border-gray-300 pr-12">
+        <div class="grid grid-cols-2 gap-8">
+         {allPosts.map(post => (
+            <article class="group">
+              <a href={`/blog/${post.slug}`}>
+                <!-- 【关键修改点】将 post.data.image 改为 post.data.img -->
+                <img 
+                  src={post.data.img || '/default-placeholder.jpg'} 
+                  alt={post.data.title} 
+                  class="w-full h-64 object-cover mb-4" 
+                />
+                <!-- ✅ 顺次将文章标题改为 h3 -->
+                <h3 class="text-xl font-bold mb-2 group-hover:text-[#4a5d4e]">{post.data.title}</h3>
+                <p class="text-sm text-gray-500 mb-2">{post.data.pubDate.toLocaleDateString()}</p>
+                <p class="text-gray-600 text-sm line-clamp-2">{post.data.description}</p>
+              </a>
+            </article>
+          ))}
+        </div>
+      </main>
+    </div>
+
   </div>
 </Layout>
