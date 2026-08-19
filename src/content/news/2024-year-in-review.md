@@ -1,8 +1,8 @@
 ---
-title: "Happy New Year from XIAN YUHUI BIOTECHNOLOGY CO., LTD"
+title: "2024 Year-in-Review | Xian Yuhui Biotechnology"
 date: "2024-12-31"
 img: "/images/news-1.jpg"
-desc: "2024 Year-end review and 2025 outlook for global partners."
+desc: "Explore Xian Yuhui's 2024 milestones in the essential oils industry, our new product expansions, and our 2025 commitment to global B2B quality partnerships."
 ---
 
 # 2024 Year-End Review: A Milestone Year for XIAN YUHUI
@@ -20,7 +20,7 @@ We have significantly diversified our portfolio to meet the growing demands of t
 *   **Sleep Well Blended Oils:** Crafted for deep relaxation and restorative rest.
 *   **Lymphatic Detoxification Blended Oils:** Supporting holistic wellness routines.
 
- **[<span style="color: #00008B;">Explore Our Complete Essential Oil Collection</span>](/products)**
+[**Explore Our Complete Essential Oil Collection**](/products)
 
 ---
 
@@ -44,7 +44,7 @@ We continue to optimize our **international logistics and packaging standards** 
 ### Sustainability
 Sustainability is the heartbeat of our supply chain. From eco-friendly sourcing to energy-efficient production, we are dedicated to minimizing our environmental footprint.
 
- **[<span style="color: #00008B;">Learn more about our quality commitment</span>](/about-us)**
+[**Learn more about our quality commitment**](/about-us)
 
 ---
 
@@ -52,12 +52,10 @@ Sustainability is the heartbeat of our supply chain. From eco-friendly sourcing 
 In 2025, we are scaling our **OEM/ODM capabilities** to provide even more tailored solutions for our global distributors. Whether you are looking for private labeling or custom formulation development, we are ready to grow with you.
 
 ### Ready to elevate your business?
-*   **[<span style="color: #00008B;">Browse Our Latest Catalog</span>](/products)**
-*   **[<span style="color: #00008B;">Discuss Your OEM/ODM Project</span>](/contact)**
+*   [**Browse Our Latest Catalog**](/products)
+*   [**Discuss Your OEM/ODM Project**](/contact)
 
 ---
 
 > **Message from the Team:**
 > Thank you for being an integral part of the XIAN YUHUI journey. Here is to a prosperous and healthy 2025!
-
----

@@ -6,17 +6,22 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
-  description?: string; // 1. 允许外部传入 description
+  description?: string;
+  image?: string; // 1. 允许外部传入分享图片
 }
 
-// 2. 接收传进来的 title 和 description，如果没有就用默认值
+// 2. 接收传进来的参数，如果没有就用默认值
 const { 
   title = "Xian Yuhuibio - Essential Oils Manufacturer", 
-  description = "Premium essential oils supplier and manufacturer from China. Bulk essential oils, carrier oils, and botanical extracts." 
+  description = "Premium essential oils supplier and manufacturer from China. Bulk essential oils, carrier oils, and botanical extracts.",
+  image = "/images/default-share.jpg" // 默认分享图，建议在 public/images/ 下准备一张
 } = Astro.props;
 
 // 3. 核心：自动根据当前访问的路径，生成绝对规范路径 (Canonical URL)
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// 4. 生成绝对路径的分享图片 URL（社交媒体抓取需要绝对地址）
+const socialImageURL = new URL(image, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -31,10 +36,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- 动态描述 -->
     <meta name="description" content={description} />
 
-    <!-- ⭐ 核心：规范标签（彻底解决 Duplicate pages / Missing Canonical 错误） -->
+    <!-- ⭐ 核心：规范标签 -->
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- ⭐ Favicon（保留您的原配置） -->
+    <!-- ⭐ Open Graph / Facebook / LinkedIn / WhatsApp 社交媒体分享标签 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- ⭐ X (Twitter) Card 分享标签 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <!-- ⭐ Favicon（保留你的原配置） -->
     <link rel="icon" type="image/png" href="/favicon-v2.png?v=1" />
     <link rel="shortcut icon" href="/favicon-v2.png?v=1" />
     <link rel="apple-touch-icon" href="/favicon-v2.png?v=1" />
