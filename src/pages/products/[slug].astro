@@ -4,7 +4,6 @@ import oils from "../../data/oils.json";
 import carriers from "../../data/carrier-oils.json";
 import blends from "../../data/blended-oils.json";
 
-// 1. 专门用于 getStaticPaths 的合并逻辑
 export async function getStaticPaths() {
   const pathsData = [...oils, ...carriers, ...blends];
   return pathsData.map((p) => ({
@@ -13,49 +12,33 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. 页面主体逻辑
 const { product } = Astro.props;
 
 if (!product) {
   throw new Error("Product not found");
 }
 
-// 3. 数据
 const allProducts = [...oils, ...carriers, ...blends];
 
 function generateDescription(p) {
   const base = `${p.name} (INCI: ${p.latin})`;
-
   if (p.category === "carrier" || p.type === "carrier") {
-    return `${base} is a premium carrier oil derived from natural botanical sources. It is widely used in skincare, cosmetic formulations, and aromatherapy applications as a base ingredient for dilution and formulation support.
-
-It is produced using ${p.method || "carefully controlled extraction methods"} to ensure purity, stability, and excellent skin compatibility.
-
-Carrier oils serve as essential base materials for blending essential oils and improving formulation safety and absorption.`;
+    return `${base} is a premium carrier oil derived from natural botanical sources. Widely used in skincare, cosmetic formulations, and aromatherapy as a base ingredient for dilution. Produced using ${p.method || "carefully controlled extraction"} for purity and stability.`;
   }
-
   if (p.category === "blend" || p.type === "blend") {
-    return `${base} is a professionally formulated aromatic blend designed for targeted wellness applications.
-
-It combines carefully selected natural ingredients to create a balanced aroma profile suitable for diffusion, massage, spa treatments, and functional aromatherapy use.
-
-This blend is ready to use and optimized for emotional and environmental wellness support.`;
+    return `${base} is a professionally formulated aromatic blend designed for targeted wellness applications. Combines natural ingredients for a balanced aroma profile suitable for diffusion, massage, and spa treatments.`;
   }
-
-  return `${base} is a natural essential oil extracted from ${p.origin || "selected botanical sources"} using ${p.method || "controlled extraction methods"}.
-
-It is widely used in aromatherapy, fragrance formulation, skincare, and cosmetic applications due to its characteristic aroma and plant-derived properties.
-
-It blends well with carrier oils and other essential oils for professional formulation and product development.`;
+  return `${base} is a natural essential oil extracted from ${p.origin || "botanical sources"} using ${p.method || "controlled extraction"}. Widely used in aromatherapy, fragrance, and cosmetic applications.`;
 }
 
+// 生成唯一描述，并截断至150字符，防止超长
 const description = generateDescription(product);
+const seoDescription = description.length > 150 ? description.substring(0, 150) + "..." : description;
 
 const techFields = [
   ["Latin Name", product.latin],
   ["Category", product.category],
   ["Extraction Method", product.method],
-
   ["CAS / Code", product.cas || product.odor],
   ["Relative Density", product.relativeDensity],
   ["Refractive Index", product.refractiveIndex],
@@ -65,50 +48,33 @@ const techFields = [
   ["Storage Conditions", product.storageConditions]
 ].filter(([_, v]) => v);
 
-// 文字推荐（Blend well with）
 const showBlendWith = product.category !== "blend";
-
 const relatedProducts = showBlendWith
-  ? allProducts
-      .filter(
-        (p) =>
-          p.category === product.category &&
-          p.slug !== product.slug
-      )
-      .slice(0, 5)
+  ? allProducts.filter((p) => p.category === product.category && p.slug !== product.slug).slice(0, 5)
   : [];
 
-// 图片推荐（You might be interested in）
 const recommendedProducts = allProducts
   .filter((p) => p.slug !== product.slug)
   .sort(() => 0.5 - Math.random())
   .slice(0, 8);
 ---
 
-<Layout title={`${product.name} | Yuhui Biotechnology`}>
+<Layout 
+  title={`${product.name} | Wholesale Pure Essential Oils | Yuhui Biotechnology`} 
+  description={seoDescription}
+  image={product.img}
+>
 
   <!-- Breadcrumb -->
   <section class="max-w-6xl mx-auto px-4 pt-10">
     <nav class="text-sm text-gray-500 mb-4">
-      <a href="/">Home</a>
+      <a href="/" class="hover:text-black">Home</a>
       <span> › </span>
-      <a href="/catalogue/">Products</a>
+      <a href="/catalogue/" class="hover:text-black">Products</a>
       <span> › </span>
-
-      <a href={
-        product.category === "carrier"
-          ? "/carrier-oils-cata/"
-          : product.category === "blend"
-          ? "/blended-oils-cata/"
-          : "/essential-oils-cata/"
-      }>
-        {product.category === "carrier"
-          ? "Carrier Oils"
-          : product.category === "blend"
-          ? "Blended Oils"
-          : "Essential Oils"}
+      <a href={product.category === "carrier" ? "/carrier-oils-cata/" : product.category === "blend" ? "/blended-oils-cata/" : "/essential-oils-cata/"}>
+        {product.category === "carrier" ? "Carrier Oils" : product.category === "blend" ? "Blended Oils" : "Essential Oils"}
       </a>
-
       <span> › </span>
       <span class="text-gray-900">{product.name}</span>
     </nav>
@@ -117,42 +83,19 @@ const recommendedProducts = allProducts
   <!-- Top -->
   <section class="max-w-6xl mx-auto px-4 py-10">
     <div class="grid md:grid-cols-2 gap-10">
-      <img src={product.img} alt={product.name} class="w-full h-[400px] object-contain border rounded" />
+      <img src={product.img} alt={`Wholesale ${product.name} - ${product.latin}`} class="w-full h-[400px] object-contain border rounded" loading="lazy" />
 
       <div>
-  <h1 class="text-4xl font-bold text-[#4a5d4e] mb-4">
-    {product.name}
-  </h1>
-
-  <p class="mb-2 text-sm text-gray-700">
-      <span class="font-semibold">INCI:</span> {product.latin}
-  </p>
-
- <div class="text-sm text-gray-700 space-y-2 leading-relaxed mb-6">
-    {product.origin && (
-      <p><b>Origin:</b> {product.origin}</p>
-    )}
-
-    {product.partUsed && (
-      <p><b>Plant Part:</b> {product.partUsed}</p>
-    )}
-
-    {product.aroma && (
-      <p><b>Aroma:</b> {product.aroma}</p>
-    )}
-
-    {product.appearance && (
-      <p><b>Appearance:</b> {product.appearance}</p>
-    )}
-  </div>
-
-  <a
-    href="/contact"
-    class="inline-block bg-[#4a5d4e] text-white px-6 py-3 rounded hover:opacity-90"
-  >
-    Send Inquiry
-  </a>
-</div>
+        <h1 class="text-4xl font-bold text-[#4a5d4e] mb-4">{product.name}</h1>
+        <p class="mb-2 text-sm text-gray-700"><span class="font-semibold">INCI:</span> {product.latin}</p>
+        <div class="text-sm text-gray-700 space-y-2 leading-relaxed mb-6">
+          {product.origin && <p><b>Origin:</b> {product.origin}</p>}
+          {product.partUsed && <p><b>Plant Part:</b> {product.partUsed}</p>}
+          {product.aroma && <p><b>Aroma:</b> {product.aroma}</p>}
+          {product.appearance && <p><b>Appearance:</b> {product.appearance}</p>}
+        </div>
+        <a href="/contact" class="inline-block bg-[#4a5d4e] text-white px-6 py-3 rounded hover:opacity-90">Send Inquiry</a>
+      </div>
     </div>
   </section>
 
@@ -166,66 +109,34 @@ const recommendedProducts = allProducts
   <section class="max-w-6xl mx-auto px-4 py-10">
     <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">Technical Data</h2>
     <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
-      {techFields.map(([k, v]) => (
-        <p><b>{k}:</b> {v}</p>
-      ))}
+      {techFields.map(([k, v]) => (<p><b>{k}:</b> {v}</p>))}
     </div>
   </section>
 
   <!-- Blend well with -->
   {showBlendWith && (
     <section class="max-w-6xl mx-auto px-4 py-10">
-      <h2 class="text-2xl font-bold mb-4 text-[#4a5d4e]">
-        Blend well with
-      </h2>
-
+      <h2 class="text-2xl font-bold mb-4 text-[#4a5d4e]">Blend well with</h2>
       <div class="grid md:grid-cols-2 gap-3 text-sm">
         {relatedProducts.map((p) => (
-          <a
-            href={`/products/${p.slug}`}
-            class="text-[#4a5d4e] underline hover:opacity-80"
-          >
-            {p.name}
-          </a>
+          <a href={`/products/${p.slug}`} class="text-[#4a5d4e] underline hover:opacity-80">{p.name}</a>
         ))}
       </div>
     </section>
   )}
 
-<section class="max-w-6xl mx-auto px-4 py-14">
-  <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">
-    You might be interested in
-  </h2>
-
-  <div class="flex gap-5 overflow-x-auto pb-2">
-    {recommendedProducts.slice(0, 6).map((p) => (
-      <a
-        href={`/products/${p.slug}`}
-        class="min-w-[180px] border rounded-lg overflow-hidden hover:shadow-md transition flex-shrink-0"
-      >
-        <div class="h-[160px] bg-white flex items-center justify-center p-2">
-          <img
-            src={p.img}
-            alt={p.name}
-            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-300"
-          />
-        </div>
-
-        <div class="p-2 text-xs text-center text-[#4a5d4e] font-medium">
-          {p.name}
-        </div>
-      </a>
-    ))}
-  </div>
-</section>
-
-  <!-- Explore -->
-  <section class="max-w-6xl mx-auto px-4 py-10">
-    <div class="text-sm text-gray-600">
-      Explore more:
-      <a href="/essential-oils-cata/" class="text-[#4a5d4e] underline">Essential Oils</a>,
-      <a href="/carrier-oils-cata/" class="text-[#4a5d4e] underline">Carrier Oils</a>,
-      <a href="/blended-oils-cata/" class="text-[#4a5d4e] underline">Blended Oils</a>
+  <!-- Recommended -->
+  <section class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">You might be interested in</h2>
+    <div class="flex gap-5 overflow-x-auto pb-2">
+      {recommendedProducts.slice(0, 6).map((p) => (
+        <a href={`/products/${p.slug}`} class="min-w-[180px] border rounded-lg overflow-hidden hover:shadow-md transition flex-shrink-0">
+          <div class="h-[160px] bg-white flex items-center justify-center p-2">
+            <img src={p.img} alt={p.name} class="max-h-full max-w-full object-contain" loading="lazy" />
+          </div>
+          <div class="p-2 text-xs text-center text-[#4a5d4e] font-medium">{p.name}</div>
+        </a>
+      ))}
     </div>
   </section>
 
