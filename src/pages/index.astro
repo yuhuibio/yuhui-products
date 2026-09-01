@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import oils from "../data/oils.json";
 import carriers from "../data/carrier-oils.json";
 import blends from "../data/blended-oils.json";
+import ContactForm from '../components/ContactForm.astro';
 
 // 合并产品 + 统一类型
 const allProducts = [...oils, ...carriers, ...blends].map(p => ({
@@ -167,20 +168,12 @@ const featuredProducts = allProducts
   </section>
 
   <!-- CONTACT -->
-  <section class="py-20 px-12 bg-custom-green">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-      <img src="/images/product-showcase.jpg" class="rounded-2xl" />
+<section class="py-20 px-12 bg-custom-green">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <img src="/images/product-showcase.jpg" class="rounded-2xl" />
 
-      <form class="space-y-6">
-        <input class="w-full p-3 border rounded" placeholder="Name" />
-        <input class="w-full p-3 border rounded" placeholder="Email" />
-        <textarea class="w-full p-3 border rounded" rows="4"></textarea>
-
-        <button class="bg-[#4a5d4e] text-white px-10 py-3 rounded">
-          SUBMIT
-        </button>
-      </form>
-    </div>
-  </section>
-
+    <!-- 这里直接调用我们刚刚封装好的专业表单组件 -->
+    <ContactForm />
+  </div>
+</section>
 </Layout>
