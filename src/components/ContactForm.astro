@@ -1,0 +1,40 @@
+<form action="https://api.web3forms.com/submit" method="POST">
+  <!-- 你的 Access Key -->
+  <input type="hidden" name="access_key" value="e4d9a8f2-7781-4af8-9964-c4a6a8e3c5b6">
+
+  <!-- 邮件主题（可选，方便在邮箱里一眼识别） -->
+  <input type="hidden" name="subject" value="New Inquiry From Website">
+
+  <!-- 姓名 -->
+  <div>
+    <label>Your Name</label>
+    <input type="text" name="name" required placeholder="Enter your name">
+  </div>
+
+  <!-- 邮箱 -->
+  <div>
+    <label>Email Address</label>
+    <input type="email" name="email" required placeholder="Enter your email">
+  </div>
+
+  <!-- WhatsApp / WeChat 行 -->
+  <div>
+    <label>WhatsApp / WeChat</label>
+    <input type="text" name="whatsapp_wechat" placeholder="Enter your WhatsApp or WeChat">
+  </div>
+
+  <!-- Country 行 -->
+  <div>
+    <label>Country</label>
+    <input type="text" name="country" placeholder="Enter your country">
+  </div>
+
+  <!-- 留言内容 -->
+  <div>
+    <label>Message</label>
+    <textarea name="message" required placeholder="Type your message here..."></textarea>
+  </div>
+
+  <!-- 提交按钮 -->
+  <button type="submit">Submit Inquiry</button>
+</form>
