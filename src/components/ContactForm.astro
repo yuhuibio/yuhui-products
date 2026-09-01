@@ -1,40 +1,49 @@
-<form action="https://api.web3forms.com/submit" method="POST">
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="space-y-4 bg-white p-8 rounded-xl shadow-lg w-full"
+>
   <!-- 你的 Access Key -->
   <input type="hidden" name="access_key" value="e4d9a8f2-7781-4af8-9964-c4a6a8e3c5b6">
 
-  <!-- 邮件主题（可选，方便在邮箱里一眼识别） -->
+  <!-- 邮件主题 -->
   <input type="hidden" name="subject" value="New Inquiry From Website">
 
-  <!-- 姓名 -->
+  <!-- Anti Spam -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+  <!-- Name -->
   <div>
-    <label>Your Name</label>
-    <input type="text" name="name" required placeholder="Enter your name">
+    <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+    <input type="text" name="name" required placeholder="Enter your name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a5d4e]">
   </div>
 
-  <!-- 邮箱 -->
+  <!-- Email -->
   <div>
-    <label>Email Address</label>
-    <input type="email" name="email" required placeholder="Enter your email">
+    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+    <input type="email" name="email" required placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a5d4e]">
   </div>
 
-  <!-- WhatsApp / WeChat 行 -->
+  <!-- WhatsApp / WeChat -->
   <div>
-    <label>WhatsApp / WeChat</label>
-    <input type="text" name="whatsapp_wechat" placeholder="Enter your WhatsApp or WeChat">
+    <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp / WeChat</label>
+    <input type="text" name="whatsapp_wechat" placeholder="Enter your WhatsApp or WeChat" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a5d4e]">
   </div>
 
-  <!-- Country 行 -->
+  <!-- Country -->
   <div>
-    <label>Country</label>
-    <input type="text" name="country" placeholder="Enter your country">
+    <label class="block text-sm font-medium text-gray-700 mb-1">Country</label>
+    <input type="text" name="country" placeholder="Enter your country" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a5d4e]">
   </div>
 
-  <!-- 留言内容 -->
+  <!-- Message -->
   <div>
-    <label>Message</label>
-    <textarea name="message" required placeholder="Type your message here..."></textarea>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+    <textarea name="message" required rows="4" placeholder="Type your message here..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4a5d4e]"></textarea>
   </div>
 
-  <!-- 提交按钮 -->
-  <button type="submit">Submit Inquiry</button>
+  <!-- Submit Button -->
+  <button type="submit" class="w-full bg-[#4a5d4e] text-white py-3 rounded-lg font-bold hover:opacity-90 transition">
+    Submit Inquiry
+  </button>
 </form>
