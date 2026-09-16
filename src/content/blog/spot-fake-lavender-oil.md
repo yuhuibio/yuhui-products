@@ -1,5 +1,5 @@
 ---
-title: "How to Spot Fake Lavender Oil: A B2B Buyer’s Guide"
+title: "How to Identify Fake & Adulterated Lavender Oil for B2B Buyers"
 pubDate: 2026-06-06
 description: "Learn how to identify pure lavender oil through simple, practical tests. A professional manufacturing guide for B2B buyers and cosmetic brands looking to avoid adulterated products."
 img: "/images/lavender-oil-testing.jpg"
