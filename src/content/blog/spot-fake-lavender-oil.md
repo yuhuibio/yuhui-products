@@ -7,7 +7,7 @@ category: "Essential Oils 101"
 author: "Jessica Zhang"
 ---
 
-When sourcing botanical extracts for your cosmetic, aromatherapy, or personal care brand, product authenticity is everything. If you are searching for a reliable [**wholesale lavender oil supplier**](https://www.yuhuibiotec.com/products/lavender-oil/) or looking to partner with a trusted [**lavender oil manufacturer**](https://www.yuhuibiotec.com/products/lavender-oil/), one of your biggest challenges is ensuring that the product is 100% pure and unadulterated.
+When sourcing botanical extracts for your cosmetic, aromatherapy, or personal care brand, product authenticity is everything. If you are searching for a reliable [**wholesale lavender oil supplier**](https://www.yuhuibiotec.com/products/lavender-oil/) or looking to partner with a trusted [**lavender oil manufacturer**](https://www.yuhuibiotec.com/about/), one of your biggest challenges is ensuring that the product is 100% pure and unadulterated.
 
 Pure essential oils are produced through careful distillation without any chemical additives. However, the global market is flooded with synthetic dilutions, carrier oil blends, and mislabeled hybrid oils.
 
@@ -47,7 +47,7 @@ While physical tests are great for quick screening, professional B2B importers n
 If you want to dive deeper into the complexities of international procurement and what to look for when vetting suppliers, be sure to check out our previous guide: [**Beyond the Label: A Comprehensive Lavender Oil Procurement Guide**](https://www.yuhuibiotec.com/blog/beyond-the-label-lavender-oil-procurement/).
 
 ## **Looking for a Reliable Lavender Oil Manufacturer?**
-At Xian Yuhui Biotechnology, we specialize in providing premium, uncompromised botanical extracts and essential oils for global brands and wholesalers. To learn more about our manufacturing standards, facility capabilities, and commitment to quality, feel free to visit our [**About Us page**](https://www.yuhuibiotec.com/about-us).
+At Xian Yuhui Biotechnology, we specialize in providing premium, uncompromised botanical extracts and essential oils for global brands and wholesalers. To learn more about our manufacturing standards, facility capabilities, and commitment to quality, feel free to visit our [**About Us page**](https://www.yuhuibiotec.com/about/).
 
 **Looking for high‑quality botanical ingredients?**
 
