@@ -195,16 +195,19 @@
   },
 
   {
-    "name": "Sweet Orange Oil",
-"slug": "sweet-orange-oil",
-    "latin": "Citrus sinensis",
-    "category": "citrus",
-    "method": "Cold Pressed",
-    "img": "/images/sweet-orange-oil.jpg",
-    "inci": "Citrus Sinensis Peel Oil Expressed",
-    "origin": "Brazil",
-    "partUsed": "Orange Peel"
-  },
+  "name": "Sweet Orange Oil",
+  "slug": "sweet-orange-oil",
+  "latin": "Citrus sinensis",
+  "category": "citrus",
+  "method": "Cold Pressed",
+  "img": "/images/sweet‑orange‑oil.jpg",
+  "inci": "Citrus Sinensis Peel Oil Expressed",
+  "origin": "Brazil",
+  "partUsed": "Fresh Fruit Peel",
+  "shortDesc": "Sweet orange essential oil (Citrus sinensis) with a fresh citrus aroma for cosmetics, aromatherapy, natural fragrances, and botanical formulations.",
+  "description": "Sweet orange essential oil is known for its bright citrus aroma, refreshing character, and versatile applications across beauty, wellness, and fragrance industries. Derived from the peel of Citrus sinensis, this natural botanical oil brings a vibrant orange note to personal care products, aromatherapy blends, natural fragrances, and cosmetic formulations.\n\nPopular for its cheerful scent profile and excellent blending versatility, sweet orange oil is widely used by cosmetic brands, fragrance developers, and manufacturers creating plant‑based products. It pairs well with essential oils such as <a href=\"/products/neroli-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Neroli Oil</a> and <a href=\"/products/lavender-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Lavender Oil</a> to develop fresh and balanced aromatic compositions."
+},
+
   {
     "name": "Frankincense Oil",
 "slug": "frankincense-oil",
