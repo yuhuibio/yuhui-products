@@ -233,7 +233,10 @@
     "img": "/images/cinnamon-bark-oil.jpg",
     "inci": "Cinnamomum Verum Bark Oil",
     "origin": "Sri Lanka",
-    "partUsed": "Inner Bark"
+    "partUsed": "Inner Bark",
+"shortDesc": "Cinnamon bark essential oil (Cinnamomum verum) with a warm spicy aroma for perfumery, personal care, aromatherapy, and botanical fragrance blends.",
+"description": "Cinnamon bark essential oil is recognized for its rich warm aroma, sweet spicy character, and distinctive botanical profile. Obtained from the bark of Cinnamomum verum, this aromatic oil is valued in fragrance creation, personal care products, aromatherapy blends, and natural botanical formulations.\n\nWith its deep and memorable scent, cinnamon bark oil brings a unique spicy note to premium fragrance compositions and seasonal personal care products. It is suitable for brands, manufacturers, and fragrance developers seeking distinctive natural ingredients. Cinnamon bark oil can be combined with essential oils such as <a href=\"/products/sweet-orange-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Sweet Orange Oil</a> and <a href=\"/products/frankincense-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Frankincense Oil</a> to create warm, balanced aromatic blends."
+
   },
   {
     "name": "Lemon Oil",
