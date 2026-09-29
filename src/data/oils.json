@@ -213,13 +213,16 @@
   {
     "name": "Frankincense Oil",
 "slug": "frankincense-oil",
-    "latin": "Boswellia serrata",
+    "latin": "Boswellia serrata/Boswellia carterii",
     "category": "wood",
     "method": "Steam Distilled",
     "img": "/images/frankincense-oil.jpg",
     "inci": "Boswellia Serrata Gum Oil",
     "origin": "India",
-    "partUsed": "Tree Resin Gum"
+    "partUsed": "Tree Resin Gum",
+"shortDesc": "Frankincense essential oil (Boswellia carterii/Boswellia serrata) with a warm resinous aroma for luxury skincare, perfumery, aromatherapy, and botanical formulations.",
+"description": "Frankincense essential oil is valued for its warm, woody, and resinous aroma, traditionally sourced from the aromatic resin of Boswellia carterii trees. With its distinctive scent profile and rich botanical heritage, it is widely used in premium skincare products, fine fragrance blends, aromatherapy, and natural personal care formulations.\n\nKnown as a classic ingredient in botanical perfumery, frankincense oil adds depth and sophistication to aromatic creations. It is suitable for cosmetic brands, fragrance developers, and wellness manufacturers seeking unique plant-based ingredients. Frankincense oil blends well with essential oils such as <a href=\"/products/rose-damascena-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Rose Damascena Oil</a> and <a href=\"/products/sweet-orange-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Sweet Orange Oil</a> to create balanced woody and citrus aromatic profiles."
+
   },
   {
     "name": "Cinnamon Bark Oil",
