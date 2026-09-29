@@ -1,7 +1,7 @@
 [
-  {
+ {
     "name": "Peppermint Oil",
-   "slug": "peppermint-oil",
+    "slug": "peppermint-oil",
     "latin": "Mentha piperita",
     "category": "herbal",
     "method": "Steam Distilled",
@@ -17,11 +17,11 @@
     "solubility": "Soluble in vegetable carrier oils and ethanol, insoluble in water and glycerin",
     "shelfLife": "24 months unopened",
     "storageConditions": "Store in sealed opaque containers, cool dark environment, avoid high temperature and direct sunlight",
- "shortDesc": "Premium peppermint essential oil (Mentha piperita oil) for cosmetics, aromatherapy, and natural wellness applications. Reliable bulk botanical ingredient supply",
-"description": "Our natural peppermint essential oil is extracted from premium Mentha piperita leaves and valued for its refreshing aroma, cooling sensation, and broad application potential. As a botanical ingredient supplier, we provide high-quality peppermint oil for cosmetics, personal care products, aromatherapy blends, and wellness formulations.
-Designed for B2B buyers, our peppermint essential oil supports consistent quality and flexible sourcing options for manufacturers and distributors. It can be combined with other botanical oils such as [Lavender Oil](/products/lavender-oil/) and [Tea Tree Oil](/products/tea-tree-oil/) to create functional essential oil blends for various applications."
+    "shortDesc": "Premium peppermint essential oil (Mentha piperita oil) for cosmetics, aromatherapy, and natural wellness applications. Reliable bulk botanical ingredient supply",
+    "description": "Our natural peppermint essential oil is extracted from premium Mentha piperita leaves and valued for its refreshing aroma, cooling sensation, and broad application potential. As a botanical ingredient supplier, we provide high-quality peppermint oil for cosmetics, personal care products, aromatherapy blends, and wellness formulations.\n\nDesigned for B2B buyers, our peppermint essential oil supports consistent quality and flexible sourcing options for manufacturers and distributors. It can be combined with other botanical oils such as [Lavender Oil](/products/lavender-oil/) and [Tea Tree Oil](/products/tea-tree-oil/) to create functional essential oil blends for various applications."
+},
 
-   },
+
 {
     "name": "Lavender Oil",
 "slug": "lavender-oil",
