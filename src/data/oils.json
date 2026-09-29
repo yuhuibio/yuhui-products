@@ -247,8 +247,11 @@
     "img": "/images/lemon-oil.jpg",
     "inci": "Citrus Limon Peel Oil Expressed",
     "origin": "Italy",
-    "partUsed": "Lemon Peel"
-  },
+    "partUsed": "Lemon Peel",
+"shortDesc": "Lemon essential oil (Citrus limon) with a bright citrus aroma for cosmetics, aromatherapy, personal care, and natural fragrance formulations.",
+  "description": "Lemon essential oil is appreciated for its fresh, crisp citrus aroma and vibrant fragrance character. Derived from the peel of Citrus limon, this botanical oil is widely used in personal care products, natural fragrances, aromatherapy blends, and cosmetic formulations where a clean and refreshing citrus note is desired.\n\nWith its versatile scent profile, lemon oil is a popular ingredient for brands and manufacturers developing bright, botanical‑inspired products. It blends well with essential oils such as <a href=\"/products/sweet-orange-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Sweet Orange Oil</a> and <a href=\"/products/frankincense-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Frankincense Oil</a> to create balanced fragrance compositions ranging from fresh citrus accords to warm aromatic blends."
+},
+
   {
     "name": "Magnolia Oil",
 "slug": "magnolia-oil",
