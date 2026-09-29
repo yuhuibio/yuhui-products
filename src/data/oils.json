@@ -387,7 +387,10 @@
     "img": "/images/tangerine-oil.jpg",
     "inci": "Citrus Tangerina Peel Oil Expressed",
     "origin": "USA",
-    "partUsed": "Tangerine Peel"
+    "partUsed": "Tangerine Peel",
+"shortDesc": "Tangerine essential oil (Citrus reticulata) with a sweet fruity citrus aroma for cosmetics, aromatherapy, perfumery, and botanical formulations.",
+"description": "Tangerine essential oil is known for its sweet, fresh citrus aroma and bright fruity character. Derived from the peel of Citrus reticulata, this natural botanical oil brings a cheerful citrus note to personal care products, natural fragrances, aromatherapy blends, and cosmetic formulations.\n\nWith its smooth and uplifting scent profile, tangerine oil is a versatile ingredient for brands and manufacturers creating botanical beauty and wellness products. We provide bulk Tangerine essential oil for companies seeking quality botanical essential oil ingredients. Tangerine oil can be blended with <a href=\"/products/sweet-orange-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Sweet Orange Oil</a> and <a href=\"/products/bergamot-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Bergamot Oil</a> to develop balanced citrus fragrance compositions."
+
   },
   {
     "name": "Bitter Orange Oil",
@@ -398,7 +401,10 @@
     "img": "/images/bitter-orange-oil.jpg",
     "inci": "Citrus Aurantium Peel Oil Expressed",
     "origin": "Spain",
-    "partUsed": "Sour Orange Peel"
+    "partUsed": "Sour Orange Peel",
+"shortDesc": "Bitter orange essential oil (Citrus aurantium) with a fresh citrus aroma for perfumery, skincare, aromatherapy, and botanical fragrance formulations.",
+"description": "Bitter orange essential oil is valued for its fresh citrus aroma with a refined, slightly bitter character and elegant fragrance profile. Derived from Citrus aurantium fruit peel, this botanical oil is used in natural perfumery, skincare products, personal care formulations, and aromatherapy blends where a sophisticated citrus note is desired.\n\nWith its distinctive aromatic character, bitter orange oil provides a versatile ingredient option for fragrance brands, cosmetic manufacturers, and wellness product developers. We provide bulk Bitter orange essential oil for companies seeking botanical essential oil ingredients for premium formulations. It blends well with <a href=\"/products/neroli-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Neroli Oil</a> and <a href=\"/products/bergamot-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Bergamot Oil</a> to create elegant citrus‑floral fragrance compositions."
+
   },
   {
     "name": "Blood Orange Oil",
@@ -409,7 +415,10 @@
     "img": "/images/blood-orange-oil.jpg",
     "inci": "Citrus Sinensis Peel Oil Expressed",
     "origin": "Italy",
-    "partUsed": "Blood Orange Peel"
+    "partUsed": "Blood Orange Peel",
+"shortDesc": "Blood orange essential oil (Citrus sinensis) with a rich sweet citrus aroma for perfumery, skincare, aromatherapy, and botanical formulations.",
+"description": "Blood orange essential oil is known for its rich, sweet citrus aroma with a distinctive fruity character and vibrant fragrance profile. Derived from Citrus sinensis fruit peel, this specialty botanical oil brings a luxurious orange note to natural perfumery, skincare products, personal care formulations, and aromatherapy blends.\n\nWith its deeper citrus character compared with traditional orange oils, blood orange oil offers a unique ingredient option for brands and manufacturers creating premium botanical products. We provide bulk Blood orange essential oil for companies seeking distinctive botanical essential oil ingredients. It can be combined with <a href=\"/products/bergamot-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Bergamot Oil</a> and <a href=\"/products/neroli-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Neroli Oil</a> to create sophisticated citrus‑floral fragrance compositions."
+
   },
 
   {
@@ -421,7 +430,10 @@
     "img": "/images/petitgrain-oil.jpg",
     "inci": "Citrus Aurantium Leaf Oil",
     "origin": "Paraguay",
-    "partUsed": "Orange Tree Leaves & Twigs"
+    "partUsed": "Orange Tree Leaves & Twigs",
+"shortDesc": "Petitgrain essential oil (Citrus aurantium) with a fresh green citrus aroma for perfumery, skincare, aromatherapy, and botanical formulations.",
+"description": "Petitgrain essential oil is known for its fresh green aroma with subtle citrus and woody notes. Obtained from the leaves and young twigs of Citrus aurantium, this botanical oil offers a distinctive fragrance profile widely used in natural perfumery, skincare products, personal care formulations, and aromatherapy blends.\n\nWith its elegant balance of citrus freshness and herbal depth, petitgrain oil is a valuable ingredient for brands and manufacturers creating sophisticated botanical products. We provide bulk Petitgrain essential oil for companies seeking unique botanical essential oil ingredients. It blends well with <a href=\"/products/neroli-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Neroli Oil</a> and <a href=\"/products/bergamot-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Bergamot Oil</a> to develop refined citrus‑green aromatic compositions."
+
   },
 
   {
@@ -433,7 +445,10 @@
     "img": "/images/tea-tree-oil.jpg",
     "inci": "Melaleuca Alternifolia Leaf Oil",
     "origin": "Australia",
-    "partUsed": "Fresh Tea Tree Leaves"
+    "partUsed": "Fresh Tea Tree Leaves",
+"shortDesc": "Tea tree essential oil (Melaleuca alternifolia) with a fresh herbal aroma for skincare, personal care, aromatherapy, and natural formulations.",
+"description": "Tea tree essential oil is recognized for its fresh, clean herbal aroma and distinctive botanical profile. Derived from Melaleuca alternifolia leaves, this natural essential oil is widely used in skincare products, personal care formulations, aromatherapy blends, and botanical wellness applications.\n\nWith its refreshing character and versatile formulation potential, tea tree oil is a popular ingredient for brands and manufacturers developing natural beauty and personal care products. We provide bulk Tea tree essential oil for companies seeking reliable botanical essential oil ingredients. It can be combined with <a href=\"/products/rosemary-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Rosemary Oil</a> and <a href=\"/products/lavender-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Lavender Oil</a> to create balanced herbal aromatic blends."
+
   },
   {
     "name": "Basil Oil",
