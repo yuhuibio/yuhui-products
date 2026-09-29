@@ -162,7 +162,14 @@
     "img": "/images/neroli-oil.jpg",
     "inci": "Citrus Aurantium Flower Oil",
     "origin": "France",
-    "partUsed": "Orange Blossom Flowers"
+    "partUsed": "Orange Blossom Flowers",
+{
+  "shortDesc": "Neroli essential oil (Citrus aurantium) with a delicate citrus-floral aroma for luxury perfumery, skincare, aromatherapy, and botanical fragrance blends.",
+
+  "description": "Neroli essential oil is celebrated for its refined floral aroma with fresh citrus notes and a soft, elegant character. Obtained from the blossoms of Citrus aurantium, this premium botanical oil is widely used in fine fragrances, luxury skincare formulations, aromatherapy products, and natural personal care applications.
+
+Known for its sophisticated scent profile, neroli oil brings a distinctive floral freshness to high-end beauty and fragrance creations. It is an ideal ingredient for perfume houses, cosmetic brands, and manufacturers developing botanical formulations. Neroli oil can be combined with complementary floral oils such as [Rose Damascena Oil](/products/rose-damascena-oil/) and [Jasmine Oil](/products/jasmine-oil/) to create elegant fragrance compositions."
+}
   },
   {
     "name": "Chamomile (Roman)",
@@ -176,7 +183,7 @@
     "partUsed": "Whole Flower Heads"
   },
   {
-    "name": "Chamomile (German)",
+    "name": "Chamomile Oil(German)",
 "slug": "chamomile-german",
     "latin": "Matricaria chamomilla",
     "category": "floral",
@@ -184,7 +191,10 @@
     "img": "/images/chamomile-german-oil.jpg",
     "inci": "Matricaria Recutita Flower Oil",
     "origin": "Hungary",
-    "partUsed": "Whole Flower Tops"
+    "partUsed": "Whole Flower Tops",
+"shortDesc": "German chamomile essential oil (Matricaria chamomilla) with a deep herbal aroma for skincare, aromatherapy, natural wellness, and botanical formulations.",
+"description": "German chamomile essential oil is recognized for its distinctive deep blue appearance and warm herbal aroma, derived from the flowers of Matricaria chamomilla. With its unique botanical profile, it is widely used in soothing skincare products, aromatherapy blends, natural wellness formulations, and personal care applications.\n\nFavored by formulators seeking distinctive plant-based ingredients, German chamomile oil adds a gentle herbal character to premium cosmetic and wellness products. It is suitable for brands, manufacturers, and distributors developing botanical formulations and can be blended with complementary essential oils such as <a href=\"/products/lavender-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Lavender Oil<a href=\"/products/rosemary-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Rosemary Oil</a> for balanced aromatic compositions."
+
   },
   {
     "name": "Sweet Orange Oil",
