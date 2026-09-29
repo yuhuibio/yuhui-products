@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import oils from "../../data/oils.json";
 import carriers from "../../data/carrier-oils.json";
 import blends from "../../data/blended-oils.json";
-
 export async function getStaticPaths() {
   const pathsData = [...oils, ...carriers, ...blends];
   return pathsData.map((p) => ({
@@ -11,16 +10,13 @@ export async function getStaticPaths() {
     props: { product: p }
   }));
 }
-
 const { product } = Astro.props;
-
 if (!product) {
   throw new Error("Product not found");
 }
-
 const allProducts = [...oils, ...carriers, ...blends];
-
 function generateDescription(p) {
+  if(p.description) return p.description;
   const base = `${p.name} (INCI: ${p.latin})`;
   if (p.category === "carrier" || p.type === "carrier") {
     return `${base} is a premium carrier oil derived from natural botanical sources. Widely used in skincare, cosmetic formulations, and aromatherapy as a base ingredient for dilution. Produced using ${p.method || "carefully controlled extraction"} for purity and stability.`;
@@ -30,11 +26,8 @@ function generateDescription(p) {
   }
   return `${base} is a natural essential oil extracted from ${p.origin || "botanical sources"} using ${p.method || "controlled extraction"}. Widely used in aromatherapy, fragrance, and cosmetic applications.`;
 }
-
-// 生成唯一描述，并截断至150字符，防止超长
 const description = generateDescription(product);
-const seoDescription = description.length > 150 ? description.substring(0, 150) + "..." : description;
-
+const seoDescription = product.shortDesc ?? (description.length > 150 ? description.substring(0, 150) + "..." : description);
 const techFields = [
   ["Latin Name", product.latin],
   ["Category", product.category],
@@ -47,24 +40,20 @@ const techFields = [
   ["Shelf Life", product.shelfLife],
   ["Storage Conditions", product.storageConditions]
 ].filter(([_, v]) => v);
-
 const showBlendWith = product.category !== "blend";
 const relatedProducts = showBlendWith
   ? allProducts.filter((p) => p.category === product.category && p.slug !== product.slug).slice(0, 5)
   : [];
-
 const recommendedProducts = allProducts
   .filter((p) => p.slug !== product.slug)
   .sort(() => 0.5 - Math.random())
   .slice(0, 8);
 ---
-
 <Layout 
   title={`${product.name} | Wholesale Pure Essential Oils | Yuhui Biotechnology`} 
   description={seoDescription}
   image={product.img}
 >
-
   <!-- Breadcrumb -->
   <section class="max-w-6xl mx-auto px-4 pt-10">
     <nav class="text-sm text-gray-500 mb-4">
@@ -79,12 +68,10 @@ const recommendedProducts = allProducts
       <span class="text-gray-900">{product.name}</span>
     </nav>
   </section>
-
   <!-- Top -->
   <section class="max-w-6xl mx-auto px-4 py-10">
     <div class="grid md:grid-cols-2 gap-10">
       <img src={product.img} alt={`Wholesale ${product.name} - ${product.latin}`} class="w-full h-[400px] object-contain border rounded" loading="lazy" />
-
       <div>
         <h1 class="text-4xl font-bold text-[#4a5d4e] mb-4">{product.name}</h1>
         <p class="mb-2 text-sm text-gray-700"><span class="font-semibold">INCI:</span> {product.latin}</p>
@@ -98,13 +85,11 @@ const recommendedProducts = allProducts
       </div>
     </div>
   </section>
-
   <!-- Description -->
   <section class="max-w-6xl mx-auto px-4 py-10">
     <h2 class="text-2xl font-bold mb-4 text-[#4a5d4e]">Product Description</h2>
     <p class="leading-relaxed text-gray-700 whitespace-pre-line">{description}</p>
   </section>
-
   <!-- Technical -->
   <section class="max-w-6xl mx-auto px-4 py-10">
     <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">Technical Data</h2>
@@ -112,7 +97,6 @@ const recommendedProducts = allProducts
       {techFields.map(([k, v]) => (<p><b>{k}:</b> {v}</p>))}
     </div>
   </section>
-
   <!-- Blend well with -->
   {showBlendWith && (
     <section class="max-w-6xl mx-auto px-4 py-10">
@@ -124,7 +108,6 @@ const recommendedProducts = allProducts
       </div>
     </section>
   )}
-
   <!-- Recommended -->
   <section class="max-w-6xl mx-auto px-4 py-14">
     <h2 class="text-2xl font-bold mb-6 text-[#4a5d4e]">You might be interested in</h2>
@@ -139,5 +122,4 @@ const recommendedProducts = allProducts
       ))}
     </div>
   </section>
-
 </Layout>
