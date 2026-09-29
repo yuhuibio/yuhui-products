@@ -167,16 +167,19 @@
     "description": "Neroli essential oil is celebrated for its refined floral aroma with fresh citrus notes and a soft, elegant character. Obtained from the blossoms of Citrus aurantium, this premium botanical oil is widely used in fine fragrances, luxury skincare formulations, aromatherapy products, and natural personal care applications.\n\nKnown for its sophisticated scent profile, neroli oil brings a distinctive floral freshness to high-end beauty and fragrance creations. It is an ideal ingredient for perfume houses, cosmetic brands, and manufacturers developing botanical formulations. Neroli oil can be combined with complementary floral oils such as <a href=\"/products/rose-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Rose Damascena Oil</a> and <a href=\"/products/jasmine-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Jasmine Oil</a> to create elegant fragrance compositions."
   },
   {
-    "name": "Chamomile (Roman)",
-    "slug": "chamomile-roman",
-    "latin": "Chamaemelum nobile",
-    "category": "floral",
-    "method": "Steam Distilled",
-    "img": "/images/chamomile-roman-oil.jpg",
-    "inci": "Chamaemelum Nobile Flower Oil",
-    "origin": "UK",
-    "partUsed": "Whole Flower Heads"
-  },
+  "name": "Chamomile (Roman)",
+  "slug": "chamomile-roman",
+  "latin": "Chamaemelum nobile",
+  "category": "floral",
+  "method": "Steam Distilled",
+  "img": "/images/chamomile-roman-oil.jpg",
+  "inci": "Chamaemelum Nobile Flower Oil",
+  "origin": "UK",
+  "partUsed": "Whole Flower Heads",
+  "shortDesc": "Roman chamomile essential oil (Chamaemelum nobile) with a sweet herbal‑floral aroma for skincare, aromatherapy, personal care, and natural wellness products.",
+  "description": "Roman chamomile essential oil is appreciated for its soft, sweet herbal aroma with gentle floral notes, making it a valued ingredient in premium skincare, aromatherapy, and personal care formulations. Derived from Chamaemelum nobile flowers, this botanical oil offers a refined aromatic profile for brands developing natural wellness and beauty products.\n\nWith its delicate fragrance and versatile formulation potential, Roman chamomile oil is used by cosmetic manufacturers, wellness brands, and aromatherapy suppliers seeking distinctive botanical ingredients. It blends beautifully with essential oils such as <a href=\"/products/lavender-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Lavender Oil</a> and <a href=\"/products/neroli-oil/\" class=\"text-[#4a5d4e] underline hover:opacity-80\">Neroli Oil</a> to create elegant aromatic compositions."
+},
+
   {
     "name": "Chamomile Oil(German)",
     "slug": "chamomile-german",
