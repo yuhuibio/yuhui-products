@@ -14,12 +14,7 @@ For essential oil importers, fragrance manufacturers, cosmetic formulators and d
 ## Three Oils, One Botanical Source
 The bitter orange tree (*Citrus aurantium*), also known as sour orange or Seville orange, has been valued for centuries in traditional botanical applications and natural perfumery.
 A unique characteristic of this citrus species is that different parts of the same tree can produce three commercially important essential oils.
-| Product | Plant Part | Extraction Method | Typical Aroma |
-|---|---|---|---|
-| [Bitter Orange Oil](/products/bitter-orange-oil/) | Fruit peel | Cold pressing | Fresh, citrusy, slightly bitter-sweet |
-| [Neroli Oil](/products/neroli-oil/) | Fresh flowers | Steam distillation | Floral, sweet, elegant and citrusy |
-| [Petitgrain Oil](/products/petitgrain-oil/) | Leaves and young twigs | Steam distillation | Green, fresh, woody and citrusy |
-The botanical origin may be the same, but the harvested plant material determines the final essential oil profile.
+
 ---
 # 1. Bitter Orange Oil — Extracted from the Fruit Peel
 - **Botanical name:** *Citrus aurantium*
