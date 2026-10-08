@@ -10,7 +10,7 @@ author: "Sophia"
 One bitter orange tree can produce three unique essential oils: **[Bitter Orange Oil](/products/bitter-orange-oil/)** from the fruit peel, **[Neroli Oil](/products/neroli-oil/)** from the flowers, and **[Petitgrain Oil](/products/petitgrain-oil/)** from the leaves and young twigs.
 Although all three oils originate from the same botanical source, **Citrus aurantium**, they are not interchangeable. Different plant parts, extraction methods and chemical compositions create completely different aroma profiles and application characteristics.
 For essential oil importers, fragrance manufacturers, cosmetic formulators and distributors, understanding the differences between these three oils helps ensure the right ingredient selection for each formulation.
----
+
 ## Three Oils, One Botanical Source
 The bitter orange tree (*Citrus aurantium*), also known as sour orange or Seville orange, has been valued for centuries in traditional botanical applications and natural perfumery.
 A unique characteristic of this citrus species is that different parts of the same tree can produce three commercially important essential oils.
