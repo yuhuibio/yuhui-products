@@ -148,20 +148,20 @@ const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
                       class="related-image-link"
                       aria-label={`Read ${related.data.title}`}
                     >
-                      {related.data.coverImage ? (
-                        <img
-                          src={related.data.coverImage}
-                          alt={related.data.title}
-                          loading="lazy"
-                          decoding="async"
-                          width="640"
-                          height="400"
-                        />
-                      ) : (
-                        <div class="related-image-placeholder">
-                          <span>BOTANICAL INSIGHTS</span>
-                        </div>
-                      )}
+                      {related.data.img ? (
+  <img
+    src={related.data.img}
+    alt={related.data.title}
+    loading="lazy"
+    decoding="async"
+    width="640"
+    height="400"
+  />
+) : (
+  <div class="related-image-placeholder">
+    <span>BOTANICAL INSIGHTS</span>
+  </div>
+)}
                     </a>
 
                     <div class="related-card-body">
