@@ -1,12 +1,9 @@
-
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import BlogSidebar from '../../components/BlogSidebar.astro';
-
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-
   return posts.map((post, index) => ({
     params: { slug: post.slug },
     props: {
@@ -16,14 +13,11 @@ export async function getStaticPaths() {
     },
   }));
 }
-
 const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
-
 // 根据 topics 标签匹配相关文章
 const allPosts = await getCollection('blog');
 const currentTopics = post.data.topics ?? [];
-
 const relatedPosts = allPosts
   .filter((candidate) => candidate.slug !== post.slug)
   .map((candidate) => ({
@@ -39,103 +33,150 @@ const relatedPosts = allPosts
   )
   .slice(0, 3);
 ---
-
 <Layout title={post.data.title}>
-  <div class="max-w-7xl mx-auto py-12 px-6 flex gap-8">
-    <!-- 侧边栏 -->
-    <BlogSidebar />
+  <!-- 页面底色，营造高级氛围感 -->
+  <div class="bg-slate-50 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 lg:flex gap-10 xl:gap-14">
+      <!-- Sticky 侧边栏：仅大屏 sticky，移动端取消固定 -->
+      <aside class="lg:w-72 xl:w-80 lg:flex-shrink-0 order-2 lg:order-1 mt-12 lg:mt-0">
+        <div class="lg:sticky lg:top-8">
+          <BlogSidebar />
+        </div>
+      </aside>
 
-    <!-- 文章主体 -->
-    <main class="flex-grow min-w-0">
-      <article
-        class="prose prose-base lg:prose-base mx-auto
-               prose-headings:font-semibold
-               prose-headings:leading-snug
-               prose-headings:mt-12
-               prose-headings:mb-8
-               prose-headings:text-3xl"
-      >
-        <h1>{post.data.title}</h1>
+      <!-- 主内容区域 -->
+      <main class="flex-grow min-w-0 order-1 lg:order-2">
+        <!-- 文章白色主卡片容器，所有内容统一在这个容器内 -->
+        <div class="max-w-3xl bg-white rounded-2xl shadow-sm p-8 sm:p-10 lg:p-12">
+          <article>
+            <!-- 文章头部 -->
+            <header class="mb-12">
+              <!-- 分类标签 -->
+              {post.data.category && (
+                <span class="inline-block text-sm font-medium text-[#4a5d4e] bg-[#f2f5f2] px-3 py-1 rounded-full mb-5">
+                  {post.data.category}
+                </span>
+              )}
+              <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight tracking-tight mb-6">
+                {post.data.title}
+              </h1>
+              <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                <span>Author: {post.data.author}</span>
+                <span>•</span>
+                <span>Published: {post.data.pubDate.toLocaleDateString()}</span>
+                {currentTopics.length > 0 && (
+                  <>
+                    <span>•</span>
+                    <div class="flex flex-wrap gap-2">
+                      {currentTopics.map(topic => (
+                        <span class="bg-slate-100 px-2 py-0.5 rounded text-xs text-slate-600">#{topic}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            </header>
 
-        <p class="text-sm text-gray-500">
-          Author: {post.data.author} |
-          Published: {post.data.pubDate.toLocaleDateString()}
-        </p>
+            <!-- Markdown正文区域 -->
+            <div
+              class="prose prose-base lg:prose-base max-w-none
+                     prose-headings:font-semibold
+                     prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-5 prose-h2:text-slate-800
+                     prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-slate-800
+                     prose-p:text-slate-700 prose-p:leading-relaxed
+                     prose-a:text-[#4a5d4e] hover:prose-a:underline
+                     prose-strong:text-slate-900
+                     prose-blockquote:border-l-[#4a5d4e] prose-blockquote:bg-slate-50
+                     prose-img:rounded-xl prose-img:shadow-sm
+                     prose-code:text-[#4a5d4e] prose-code:bg-slate-100 prose-code:px-1 prose-code:rounded
+                     prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-xl"
+            >
+              <Content />
+            </div>
+          </article>
+        </div>
 
-        <Content />
-      </article>
+        <!-- Related Articles 相关文章区块（不在白色文章卡片内，独立区块） -->
+        {relatedPosts.length > 0 && (
+          <section class="mt-16">
+            <h2 class="text-2xl font-semibold text-slate-800 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map(({ post: related }) => (
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-slate-100">
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-[#4a5d4e] mb-3">
+                      {related.data.category}
+                    </p>
+                    <h3 class="text-lg font-semibold leading-snug mb-4">
+                      <a
+                        href={`/blog/${related.slug}`}
+                        class="text-slate-900 hover:text-[#4a5d4e] transition-colors"
+                      >
+                        {related.data.title}
+                      </a>
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                      {related.data.description}
+                    </p>
+                    <a
+                      href={`/blog/${related.slug}`}
+                      class="inline-flex items-center mt-5 text-sm font-semibold text-[#4a5d4e] hover:underline gap-1"
+                    >
+                      Read Article
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
-      <!-- Related Articles -->
-      {relatedPosts.length > 0 && (
-        <section class="mt-16 pt-8 border-t border-gray-200">
-          <h2 class="text-2xl font-semibold text-gray-800 mb-6">
-            Related Articles
-          </h2>
-
+        <!-- 上下篇导航 -->
+        <nav class="mt-16">
+          <h2 class="sr-only">Article navigation</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {relatedPosts.map(({ post: related }) => (
-              <article class="border border-gray-200 rounded-lg p-5 hover:border-[#4a5d4e] transition-colors">
-                <p class="text-sm text-gray-500 mb-2">
-                  {related.data.category}
-                </p>
-
-                <h3 class="text-lg font-semibold leading-snug mb-3">
-                  <a
-                    href={`/blog/${related.slug}`}
-                    class="text-[#4a5d4e] hover:underline"
-                  >
-                    {related.data.title}
-                  </a>
-                </h3>
-
-                <p class="text-sm text-gray-600 leading-relaxed">
-                  {related.data.description}
-                </p>
-
+            <div>
+              {prevPost && (
                 <a
-                  href={`/blog/${related.slug}`}
-                  class="inline-block mt-4 text-sm font-semibold text-[#4a5d4e] hover:underline"
+                  href={`/blog/${prevPost.slug}`}
+                  class="block h-full bg-white rounded-xl shadow-sm p-6 border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
-                  Read Article →
+                  <span class="inline-flex items-center text-sm text-slate-500 gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Previous Article
+                  </span>
+                  <div class="mt-3 font-semibold text-slate-800">
+                    {prevPost.data.title}
+                  </div>
                 </a>
-              </article>
-            ))}
+              )}
+            </div>
+            <div>
+              {nextPost && (
+                <a
+                  href={`/blog/${nextPost.slug}`}
+                  class="block h-full bg-white rounded-xl shadow-sm p-6 border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md text-right"
+                >
+                  <span class="inline-flex items-center justify-end text-sm text-slate-500 gap-2">
+                    Next Article
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                  <div class="mt-3 font-semibold text-slate-800">
+                    {nextPost.data.title}
+                  </div>
+                </a>
+              )}
+            </div>
           </div>
-        </section>
-      )}
-
-      <!-- 底部导航 -->
-      <nav class="mt-16 pt-8 border-t flex justify-between gap-4">
-        <div>
-          {prevPost && (
-            <a
-              href={`/blog/${prevPost.slug}`}
-              class="text-[#4a5d4e] font-bold"
-            >
-              ← Prev: {prevPost.data.title}
-            </a>
-          )}
-        </div>
-
-        <div class="text-right">
-          {nextPost && (
-            <a
-              href={`/blog/${nextPost.slug}`}
-              class="text-[#4a5d4e] font-bold"
-            >
-              Next: {nextPost.data.title} →
-            </a>
-          )}
-        </div>
-      </nav>
-    </main>
+        </nav>
+      </main>
+    </div>
   </div>
-
-  <style>
-    .prose h1 {
-      line-height: 1.2 !important;
-      margin-bottom: 2rem !important;
-      margin-top: 1rem !important;
-    }
-  </style>
 </Layout>
