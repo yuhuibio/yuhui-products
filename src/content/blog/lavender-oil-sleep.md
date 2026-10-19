@@ -1,3 +1,4 @@
+
 ---
 title: "How Lavender Oil Can Help You Sleep Better"
 pubDate: 2015-08-19
@@ -5,10 +6,12 @@ description: "Discover the science behind lavender essential oil and how its cal
 category: "Health & Wellness"
 img: "/images/lavender-oil-blend.jpg"
 author: "Sophia"
- - lavender-oil
+topics:
+  - lavender-oil
   - sleep-and-relaxation
   - aromatherapy
 ---
+
 
 Lavender (*Lavandula angustifolia*) is more than just a beautiful garden favorite with slim, sage-green leaves and spiky purple flowers. For centuries, this versatile herb has been cherished for its medicinal properties. While 17th-century apothecaries valued it for soothing head and brain ailments, modern science now reveals its profound impact on sleep quality.
 
