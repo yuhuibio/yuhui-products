@@ -1,3 +1,4 @@
+
 ---
 title: "Chinese Mint Oil vs Peppermint Oil: A B2B Buyer’s Guide"
 pubDate: 2026-09-30
@@ -5,9 +6,11 @@ description: "B2B buyer’s guide comparing Chinese Mint Oil (Mentha haplocalyx)
 img: "/images/chinese-mint-peppermint-comparison.jpg"
 category: "Essential Oils 101"
 author: "Sophia"
-- chinese-mint-oil
+topics:
+  - chinese-mint-oil
   - peppermint-oil
 ---
+
 
 # Chinese Mint Oil vs Peppermint Oil: A B2B Buyer’s Guide
 
