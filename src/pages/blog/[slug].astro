@@ -1,149 +1,846 @@
+
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import BlogSidebar from '../../components/BlogSidebar.astro';
+
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post, index) => ({
+
+  // 按发布日期排序，确保上一篇和下一篇顺序正确
+  const sortedPosts = [...posts].sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+
+  return sortedPosts.map((post, index) => ({
     params: { slug: post.slug },
     props: {
       post,
-      prevPost: posts[index - 1] || null,
-      nextPost: posts[index + 1] || null
+      prevPost: sortedPosts[index - 1] || null,
+      nextPost: sortedPosts[index + 1] || null,
     },
   }));
 }
+
 const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
-// 根据 topics 标签匹配相关文章
+
 const allPosts = await getCollection('blog');
 const currentTopics = post.data.topics ?? [];
+
+// 按共同 topics 数量排序，最多显示 2 篇相关文章
 const relatedPosts = allPosts
   .filter((candidate) => candidate.slug !== post.slug)
   .map((candidate) => ({
     post: candidate,
     sharedTopics: currentTopics.filter((topic) =>
       (candidate.data.topics ?? []).includes(topic)
-    ).length
+    ).length,
   }))
   .filter((item) => item.sharedTopics > 0)
-  .sort((a, b) =>
-    b.sharedTopics - a.sharedTopics ||
-    b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf()
+  .sort(
+    (a, b) =>
+      b.sharedTopics - a.sharedTopics ||
+      b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf()
   )
-  .slice(0, 3);
+  .slice(0, 2);
+
+const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
 ---
+
 <Layout title={post.data.title}>
-  <div class="bg-white min-h-screen">
-    <div class="max-w-7xl mx-auto px-6 py-16 lg:py-20 lg:flex gap-12 xl:gap-16">
-      <!-- Sticky侧边栏，极简，无多余背景 -->
-      <aside class="lg:w-64 xl:w-72 lg:flex-shrink-0 order-2 lg:order-1 mt-12 lg:mt-0">
-        <div class="lg:sticky lg:top-10">
+  <div class="blog-page">
+    <!-- 页面顶部路径 -->
+    <div class="breadcrumb-wrap">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog/">Insights</a>
+        <span>/</span>
+        <span class="breadcrumb-current">{post.data.category}</span>
+      </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="blog-layout">
+
+      <!-- 桌面端侧边栏 -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-inner">
+          <p class="sidebar-eyebrow">EXPLORE</p>
+          <h2 class="sidebar-heading">Our Insights</h2>
+          <div class="sidebar-rule"></div>
           <BlogSidebar />
+          <div class="sidebar-note">
+            <span class="note-line"></span>
+            <p>Botanical knowledge.<br />Better ingredient decisions.</p>
+          </div>
         </div>
       </aside>
 
-      <!-- 主内容区：无外层大卡片！纯留白排版 -->
-      <main class="flex-grow min-w-0 order-1 lg:order-2">
-        <div class="max-w-3xl">
-          <article>
-            <!-- 文章头部，极简，不花哨 -->
-            <header class="mb-14">
-              {post.data.category && (
-                <p class="text-sm font-medium text-[#4a5d4e] mb-4">
-                  {post.data.category}
-                </p>
-              )}
-              <h1 class="text-4xl sm:text-5xl font-semibold text-slate-900 leading-[1.15] tracking-tight mb-6">
-                {post.data.title}
-              </h1>
-              <div class="text-sm text-slate-500">
-                <span>Author: {post.data.author}</span>
-                <span class="mx-2">|</span>
-                <span>Published: {post.data.pubDate.toLocaleDateString()}</span>
-                {currentTopics.length > 0 && (
-                  <>
-                    <span class="mx-2">|</span>
-                    <span>{currentTopics.join(', ')}</span>
-                  </>
-                )}
-              </div>
-            </header>
+      <!-- 文章主内容 -->
+      <main class="blog-main">
 
-            <!-- Markdown正文，干净prose，去掉多余装饰 -->
-            <div
-              class="prose prose-base lg:prose-base max-w-none
-              prose-headings:font-semibold
-              prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-5 prose-h2:text-slate-900
-              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-slate-900
-              prose-p:text-slate-700 prose-p:leading-relaxed
-              prose-a:text-[#4a5d4e] hover:prose-a:text-[#3b4c3e] hover:prose-a:no-underline
-              prose-strong:text-slate-900
-              prose-blockquote:border-l-[#4a5d4e] prose-blockquote:text-slate-600
-              prose-img:rounded-md
-              prose-code:text-[#4a5d4e] prose-code:bg-slate-50 prose-code:px-1 prose-code:rounded
-              prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-md"
-            >
-              <Content />
-            </div>
-          </article>
+        <!-- 文章头部 -->
+        <header class="article-header">
+          <div class="article-kicker">
+            <span class="kicker-dot"></span>
+            <span>{post.data.category}</span>
+          </div>
 
-          <!-- Related Articles：无卡片，纯文字+细边框底部，极简列表式 -->
-          {relatedPosts.length > 0 && (
-            <section class="mt-20 pt-12 border-t border-slate-200">
-              <h2 class="text-xl font-semibold text-slate-900 mb-8">Related Articles</h2>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedPosts.map(({ post: related }) => (
-                  <article>
-                    <p class="text-sm text-[#4a5d4e] font-medium mb-2">{related.data.category}</p>
-                    <h3 class="text-lg font-semibold mb-3">
-                      <a
-                        href={`/blog/${related.slug}`}
-                        class="text-slate-900 hover:text-[#4a5d4e] transition-colors"
-                      >
-                        {related.data.title}
-                      </a>
-                    </h3>
-                    <p class="text-sm text-slate-600">{related.data.description}</p>
-                    <a
-                      href={`/blog/${related.slug}`}
-                      class="inline-block mt-4 text-sm font-medium text-[#4a5d4e] hover:text-[#3b4c3e]"
-                    >
-                      Read Article →
-                    </a>
-                  </article>
-                ))}
-              </div>
-            </section>
+          <h1>{post.data.title}</h1>
+
+          {post.data.description && (
+            <p class="article-deck">{post.data.description}</p>
           )}
 
-          <!-- 上下篇导航：去掉卡片，左右文字布局，细分割线 -->
-          <nav class="mt-20 pt-12 border-t border-slate-200">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                {prevPost && (
-                  <a href={`/blog/${prevPost.slug}`} class="group block">
-                    <span class="text-sm text-slate-500">← Previous</span>
-                    <p class="mt-2 text-lg font-semibold text-slate-900 group-hover:text-[#4a5d4e] transition-colors">
-                      {prevPost.data.title}
-                    </p>
-                  </a>
-                )}
+          <div class="article-meta">
+            {post.data.author && (
+              <div class="author-meta">
+                <span class="meta-label">BY</span>
+                <span class="author-name">{post.data.author}</span>
               </div>
-              <div class="text-right">
-                {nextPost && (
-                  <a href={`/blog/${nextPost.slug}`} class="group block">
-                    <span class="text-sm text-slate-500">Next →</span>
-                    <p class="mt-2 text-lg font-semibold text-slate-900 group-hover:text-[#4a5d4e] transition-colors">
-                      {nextPost.data.title}
-                    </p>
-                  </a>
-                )}
-              </div>
-            </div>
-          </nav>
+            )}
+
+            <span class="meta-divider"></span>
+
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formattedDate}
+            </time>
+
+            <span class="meta-divider"></span>
+
+            <span>Botanical Insights</span>
+          </div>
+        </header>
+
+        <!-- 装饰性分隔线 -->
+        <div class="article-divider">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
+        <!-- 正文 -->
+        <article class="article-content prose prose-lg max-w-none">
+          <Content />
+        </article>
+
+        <!-- 相关文章 -->
+        {relatedPosts.length > 0 && (
+          <section class="related-section">
+            <div class="section-heading">
+              <div>
+                <p class="section-eyebrow">CONTINUE EXPLORING</p>
+                <h2>Related Articles</h2>
+              </div>
+              <span class="section-index">01 — 02</span>
+            </div>
+
+            <div class="related-grid">
+              {relatedPosts.map(({ post: related }, index) => (
+                <article class="related-card">
+                  <div class="related-card-top">
+                    <span class="related-number">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span class="related-category">
+                      {related.data.category}
+                    </span>
+                  </div>
+
+                  <h3>
+                    <a href={`/blog/${related.slug}`}>
+                      {related.data.title}
+                    </a>
+                  </h3>
+
+                  <p class="related-description">
+                    {related.data.description}
+                  </p>
+
+                  <a
+                    href={`/blog/${related.slug}`}
+                    class="related-link"
+                    aria-label={`Read ${related.data.title}`}
+                  >
+                    <span>Read Article</span>
+                    <span class="related-arrow">↗</span>
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- 上一篇 / 下一篇 -->
+        <nav class="post-navigation" aria-label="Article navigation">
+          <div class="navigation-item">
+            {prevPost && (
+              <a href={`/blog/${prevPost.slug}`} class="navigation-link">
+                <span class="navigation-label">← PREVIOUS ARTICLE</span>
+                <span class="navigation-title">{prevPost.data.title}</span>
+              </a>
+            )}
+          </div>
+
+          <div class="navigation-item navigation-next">
+            {nextPost && (
+              <a href={`/blog/${nextPost.slug}`} class="navigation-link">
+                <span class="navigation-label">NEXT ARTICLE →</span>
+                <span class="navigation-title">{nextPost.data.title}</span>
+              </a>
+            )}
+          </div>
+        </nav>
+
       </main>
     </div>
   </div>
+
+  <style>
+    .blog-page {
+      --forest: #354c3d;
+      --forest-dark: #26392d;
+      --sage: #7e927e;
+      --ink: #262c27;
+      --muted: #747a73;
+      --line: #e5e7df;
+      --paper: #fbfaf7;
+      color: var(--ink);
+      background: var(--paper);
+      min-height: 70vh;
+    }
+
+    .breadcrumb-wrap {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .breadcrumb {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 17px 40px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      letter-spacing: 0.025em;
+      color: var(--muted);
+    }
+
+    .breadcrumb a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--forest);
+    }
+
+    .breadcrumb-current {
+      color: var(--forest);
+    }
+
+    .blog-layout {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 58px 40px 100px;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      justify-content: center;
+      align-items: start;
+      gap: clamp(48px, 7vw, 110px);
+    }
+
+    .blog-sidebar {
+      min-width: 0;
+      padding-top: 12px;
+    }
+
+    .sidebar-inner {
+      position: sticky;
+      top: 32px;
+    }
+
+    .sidebar-eyebrow,
+    .section-eyebrow {
+      margin: 0 0 12px;
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.19em;
+    }
+
+    .sidebar-heading {
+      margin: 0;
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .sidebar-rule {
+      width: 38px;
+      height: 2px;
+      background: var(--forest);
+      margin: 22px 0 26px;
+    }
+
+    .sidebar-note {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .note-line {
+      display: block;
+      flex: 0 0 2px;
+      height: 34px;
+      background: var(--sage);
+    }
+
+    .sidebar-note p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 13px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .blog-main {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .article-header {
+      padding: 0 0 34px;
+    }
+
+    .article-kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--forest);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .kicker-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .article-header h1 {
+      margin: 0;
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 400;
+      line-height: 1.13;
+      letter-spacing: -0.035em;
+      text-wrap: pretty;
+    }
+
+    .article-deck {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: #646b63;
+      font-size: 17px;
+      line-height: 1.85;
+      font-weight: 400;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 27px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.025em;
+    }
+
+    .author-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meta-label {
+      color: var(--sage);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .author-name {
+      color: var(--forest-dark);
+      font-weight: 600;
+    }
+
+    .meta-divider {
+      width: 1px;
+      height: 12px;
+      background: #d8dbd2;
+    }
+
+    .article-divider {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 20px 0 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-divider span {
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #bdc7b9;
+    }
+
+    .article-divider span:first-child {
+      width: 24px;
+      height: 2px;
+      border-radius: 0;
+      background: var(--forest);
+    }
+
+    /* 正文排版 */
+    .article-content {
+      max-width: none;
+      color: #454b45;
+      font-size: 16px;
+      line-height: 1.95;
+      overflow-wrap: anywhere;
+    }
+
+    .article-content :global(h2) {
+      margin-top: 2.5em;
+      margin-bottom: 0.85em;
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(25px, 3vw, 32px);
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .article-content :global(h3) {
+      margin-top: 2em;
+      margin-bottom: 0.6em;
+      color: var(--forest-dark);
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .article-content :global(p) {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+    }
+
+    .article-content :global(a) {
+      color: var(--forest);
+      text-decoration-color: #a8b5a5;
+      text-underline-offset: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .article-content :global(a:hover) {
+      color: #70866f;
+    }
+
+    .article-content :global(img) {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 34px auto;
+      border-radius: 3px;
+    }
+
+    .article-content :global(ul),
+    .article-content :global(ol) {
+      padding-left: 1.5em;
+      margin: 0 0 1.6em;
+    }
+
+    .article-content :global(li) {
+      padding-left: 0.3em;
+      margin: 0.45em 0;
+    }
+
+    .article-content :global(blockquote) {
+      margin: 2em 0;
+      padding: 8px 0 8px 24px;
+      border-left: 2px solid var(--sage);
+      color: #5c665b;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .article-content :global(table) {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .article-content :global(th) {
+      background: #eef0e9;
+      color: var(--forest-dark);
+      font-weight: 650;
+    }
+
+    .article-content :global(th),
+    .article-content :global(td) {
+      padding: 12px 15px;
+      border: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .article-content :global(hr) {
+      margin: 3em 0;
+      border-color: var(--line);
+    }
+
+    /* Related Articles */
+    .related-section {
+      margin-top: 78px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .section-eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .section-index {
+      padding-bottom: 5px;
+      color: #969d92;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .related-card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px;
+      border: 1px solid #e3e5dd;
+      background: #fffefa;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .related-card:hover {
+      border-color: #aeb9a8;
+      background: #fff;
+    }
+
+    .related-card-top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .related-number {
+      color: #a0aa9b;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .related-category {
+      color: var(--forest);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .related-card h3 {
+      margin: 0 0 13px;
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.42;
+      overflow-wrap: anywhere;
+    }
+
+    .related-card h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .related-card h3 a:hover {
+      color: var(--forest);
+    }
+
+    .related-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .related-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 25px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      width: 100%;
+      color: var(--forest);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .related-arrow {
+      margin-left: auto;
+      font-size: 17px;
+      transition: transform 0.2s ease;
+    }
+
+    .related-link:hover .related-arrow {
+      transform: translate(3px, -3px);
+    }
+
+    /* 上下篇导航 */
+    .post-navigation {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 52px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .navigation-item {
+      min-width: 0;
+    }
+
+    .navigation-link {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      gap: 11px;
+      padding: 18px 0;
+      text-decoration: none;
+    }
+
+    .navigation-next {
+      text-align: right;
+    }
+
+    .navigation-label {
+      color: var(--sage);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .navigation-title {
+      color: var(--forest-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      transition: color 0.2s ease;
+    }
+
+    .navigation-link:hover .navigation-title {
+      color: var(--sage);
+    }
+
+    /* 平板 */
+    @media (max-width: 1100px) {
+      .blog-layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 42px;
+        padding-right: 28px;
+        padding-left: 28px;
+      }
+
+      .breadcrumb {
+        padding-right: 28px;
+        padding-left: 28px;
+      }
+
+      .related-card {
+        padding: 20px;
+      }
+    }
+
+    /* 手机 */
+    @media (max-width: 760px) {
+      .breadcrumb {
+        padding: 14px 20px;
+        gap: 8px;
+        font-size: 11px;
+      }
+
+      .blog-layout {
+        display: block;
+        padding: 35px 20px 60px;
+      }
+
+      .blog-sidebar {
+        display: none;
+      }
+
+      .article-header {
+        padding-bottom: 25px;
+      }
+
+      .article-kicker {
+        margin-bottom: 16px;
+        font-size: 10px;
+      }
+
+      .article-header h1 {
+        font-size: clamp(32px, 8vw, 43px);
+        line-height: 1.16;
+      }
+
+      .article-deck {
+        margin-top: 18px;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .article-meta {
+        gap: 10px;
+        margin-top: 21px;
+        font-size: 10px;
+      }
+
+      .article-divider {
+        padding: 17px 0 25px;
+      }
+
+      .article-content {
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .article-content :global(h2) {
+        margin-top: 2em;
+        font-size: 27px;
+      }
+
+      .article-content :global(h3) {
+        font-size: 19px;
+      }
+
+      .related-section {
+        margin-top: 52px;
+        padding-top: 26px;
+      }
+
+      .section-heading {
+        margin-bottom: 20px;
+      }
+
+      .section-heading h2 {
+        font-size: 29px;
+      }
+
+      .related-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .related-card {
+        padding: 21px;
+      }
+
+      .related-card-top {
+        margin-bottom: 18px;
+      }
+
+      .related-card h3 {
+        font-size: 21px;
+      }
+
+      .post-navigation {
+        gap: 12px;
+        margin-top: 35px;
+      }
+
+      .navigation-link {
+        padding: 12px 0;
+      }
+
+      .navigation-title {
+        font-size: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-page *,
+      .blog-page *::before,
+      .blog-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </Layout>
