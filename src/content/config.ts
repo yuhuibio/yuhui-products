@@ -20,6 +20,7 @@ const blogCollection = defineCollection({
     pubDate: z.date(),
     description: z.string(),
     author: z.string(),
+    topics: z.array(z.string()).optional(),
     img: z.string().optional(),
     category: z.enum([
       'Essential Oils 101', 

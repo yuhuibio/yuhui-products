@@ -6,6 +6,9 @@ slug: "beyond-the-label-lavender-oil-procurement"
 author: "Jessica"
 category: "Essential Oils Business"
 img: "/images/lavender-variety-guide.jpg"
+ - lavender-oil
+  - essential-oil-procurement
+  - essential-oil-quality
 ---
 
 In the global essential oil market, "Lavender Oil" is often treated as a generic term. However, for formulators and brand owners, the devil is in the details. As a professional supplier based in Xi'an, [XIAN YUHUI BIOTECHNOLOGY CO., LTD](/about-us) works closely with selected production bases in Xinjiang to ensure that transparency regarding botanical varieties remains our top priority.

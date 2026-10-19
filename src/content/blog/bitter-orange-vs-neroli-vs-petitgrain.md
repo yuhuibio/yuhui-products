@@ -5,6 +5,10 @@ description: "Discover the differences between Bitter Orange Oil, Neroli Oil and
 img: "/images/three-oils.jpg"
 category: "Essential Oils 101"
 author: "Sophia"
+topics:
+  - bitter-orange-oil
+  - neroli-oil
+  - petitgrain-oil
 ---
 # Three Essential Oils from One Bitter Orange Tree: Bitter Orange, Neroli and Petitgrain
 One bitter orange tree can produce three unique essential oils: **[Bitter Orange Oil](/products/bitter-orange-oil/)** from the fruit peel, **[Neroli Oil](/products/neroli-oil/)** from the flowers, and **[Petitgrain Oil](/products/petitgrain-oil/)** from the leaves and young twigs.

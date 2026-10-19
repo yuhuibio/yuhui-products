@@ -6,6 +6,11 @@ slug: "sourcing-cyperus-rotundus-essential-oil-supplier"
 author: "Jessica"
 category: "Essential Oils Business"
 img: "/images/cyperus-rotundus-oil.jpg"
+topics:
+  - cyperus-rotundus-oil
+  - essential-oil-sourcing
+  - essential-oil-quality
+
 ---
 
 In the fast-evolving world of botanical skincare and personal care, few ingredients carry as much functional potential—or require as much sourcing precision—as *Cyperus rotundus*. Traditionally known as Nagarmotha or Nutgrass, this ancient botanical has transitioned from traditional wellness systems into the spotlight of modern beauty formulations.

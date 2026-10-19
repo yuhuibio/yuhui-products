@@ -5,6 +5,10 @@ description: "Learn how to identify pure lavender oil through simple, practical 
 img: "/images/lavender-oil-testing.jpg"
 category: "Essential Oils 101"
 author: "Jessica Zhang"
+topics:
+  - lavender-oil
+  - essential-oil-quality
+  - essential-oil-authentication
 ---
 
 When sourcing botanical extracts for your cosmetic, aromatherapy, or personal care brand, product authenticity is everything. If you are searching for a reliable [**wholesale lavender oil supplier**](https://www.yuhuibiotec.com/products/lavender-oil/) or looking to partner with a trusted [**lavender oil manufacturer**](https://www.yuhuibiotec.com/about/), one of your biggest challenges is ensuring that the product is 100% pure and unadulterated.
