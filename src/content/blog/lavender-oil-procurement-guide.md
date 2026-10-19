@@ -6,7 +6,8 @@ slug: "beyond-the-label-lavender-oil-procurement"
 author: "Jessica"
 category: "Essential Oils Business"
 img: "/images/lavender-variety-guide.jpg"
- - lavender-oil
+topics:
+  - lavender-oil
   - essential-oil-procurement
   - essential-oil-quality
 ---
