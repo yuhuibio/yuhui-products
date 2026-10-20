@@ -1,28 +1,38 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
 import products from '../data/oils.json';
----
 
-<Layout 
+const categories = [
+  { label: 'All Single Essential Oils', value: 'all' },
+  { label: 'Floral Oils', value: 'floral' },
+  { label: 'Citrus Oils', value: 'citrus' },
+  { label: 'Herbal Oils', value: 'herbal' },
+  { label: 'Wood & Resin', value: 'wood-resin' },
+  { label: 'Spice Oils', value: 'spice' },
+---
+<Layout
   title="Bulk Single Essential Oils Catalog | Xian Yuhuibio"
   description="Explore our catalog of 100% pure & natural bulk single essential oils. Premium botanical extracts and wholesale essential oils from China."
 >
   <!-- Hero Banner -->
   <section class="py-10 mb-16">
-    <!-- ✅ 关键修复：将 h2 改为 h1，完美解决 H1 Missing -->
     <h1 class="text-center text-4xl font-bold mb-10 text-gray-900">
       Bulk Single Essential Oils
     </h1>
 
     <div class="relative w-full overflow-hidden">
-      <img src="/images/banner-oils.jpg" alt="Banner" class="w-full h-auto object-cover" />
+      <img
+        src="/images/banner-oils.jpg"
+        alt="Bulk single essential oils catalog"
+        class="w-full h-auto object-cover"
+      />
 
       <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
-        <!-- 顺次调整为 h2 -->
-        <h2 class="text-6xl font-bold uppercase mb-6 tracking-wider">
+        <h2 class="text-4xl md:text-6xl font-bold uppercase mb-6 tracking-wider">
           100% Pure & Natural
         </h2>
-        <p class="text-3xl font-normal tracking-wide">
+        <p class="text-lg md:text-3xl font-normal tracking-wide">
           Quality You Can Trust | Supply You Can Rely On
         </p>
       </div>
@@ -30,36 +40,50 @@ import products from '../data/oils.json';
   </section>
 
   <!-- Main Content -->
-  <div class="max-w-[1400px] mx-auto px-6 mb-20 flex gap-12">
+  <div class="max-w-[1400px] mx-auto px-6 mb-20 flex flex-col md:flex-row gap-8 md:gap-12">
 
-    <!-- Sidebar -->
-    <aside class="w-48 flex-shrink-0">
-      <ul class="space-y-5">
-        <li>
-          <a href="/essential-oils-cata" class="font-bold border-l-2 border-black pl-3 text-black">
-            All Single Essential Oils
-          </a>
-        </li>
-        <li><a href="#" class="text-gray-400 hover:text-black">Floral Oils</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-black">Citrus Oils</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-black">Herbal Oils</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-black">Wood & Resin</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-black">Spice Oils</a></li>
-      </ul>
+    <!-- Category Navigation -->
+    <aside class="md:w-48 md:flex-shrink-0">
+      <nav aria-label="Essential oil categories">
+        <ul class="flex flex-wrap gap-3 md:flex-col md:gap-5">
+          {categories.map((category) => (
+            <li>
+              <button
+                type="button"
+                data-category={category.value}
+                aria-pressed={category.value === 'all' ? 'true' : 'false'}
+                class={`category-filter text-left text-sm md:text-base ${
+                  category.value === 'all'
+                    ? 'font-bold border-l-2 border-black pl-3 text-black'
+                    : 'text-gray-500 hover:text-black'
+                }`}
+              >
+                {category.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </aside>
 
     <!-- Product Grid -->
-    <main class="flex-grow">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main class="flex-grow min-w-0">
+      <p id="filter-status" class="sr-only" aria-live="polite">
+        Showing all essential oils
+      </p>
 
+      <div id="oil-product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((p) => (
-          <div class="border border-gray-100 p-5 rounded-lg flex flex-col text-center hover:shadow-lg transition">
-
+          <div
+            class="oil-product-card border border-gray-100 p-5 rounded-lg flex flex-col text-center hover:shadow-lg transition"
+            data-product-category={p.category || ''}
+          >
             <div class="h-64 w-full bg-gray-50 mb-4 flex items-center justify-center rounded overflow-hidden">
               <img
                 src={p.img}
                 alt={p.name}
                 class="max-h-full max-w-full object-contain"
+                loading="lazy"
               />
             </div>
 
@@ -73,13 +97,62 @@ import products from '../data/oils.json';
             >
               View Details
             </a>
-
           </div>
         ))}
-
       </div>
-    </main>
 
+      <p id="no-products" class="hidden text-gray-500 text-center py-12">
+        No essential oils found in this category.
+      </p>
+    </main>
   </div>
 
+  <script>
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('.category-filter');
+    const productCards = document.querySelectorAll<HTMLElement>('.oil-product-card');
+    const noProducts = document.querySelector<HTMLElement>('#no-products');
+    const filterStatus = document.querySelector<HTMLElement>('#filter-status');
+
+    function applyFilter(category: string) {
+      let visibleCount = 0;
+
+      productCards.forEach((card) => {
+        const productCategory = card.dataset.productCategory?.toLowerCase() || '';
+        const matches = category === 'all' || productCategory === category;
+
+        card.classList.toggle('hidden', !matches);
+
+        if (matches) visibleCount++;
+      });
+
+      filterButtons.forEach((button) => {
+        const isActive = button.dataset.category === category;
+
+        button.setAttribute('aria-pressed', String(isActive));
+        button.classList.toggle('font-bold', isActive);
+        button.classList.toggle('border-l-2', isActive);
+        button.classList.toggle('border-black', isActive);
+        button.classList.toggle('pl-3', isActive);
+        button.classList.toggle('text-black', isActive);
+        button.classList.toggle('text-gray-500', !isActive);
+      });
+
+      if (noProducts) {
+        noProducts.classList.toggle('hidden', visibleCount !== 0);
+      }
+
+      if (filterStatus) {
+        const activeButton = Array.from(filterButtons).find(
+          (button) => button.dataset.category === category
+        );
+        filterStatus.textContent = `Showing ${visibleCount} products in ${activeButton?.textContent?.trim() || category}`;
+      }
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        applyFilter(button.dataset.category || 'all');
+      });
+    });
+  </script>
 </Layout>
