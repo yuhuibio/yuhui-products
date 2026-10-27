@@ -3,7 +3,7 @@ title: "Rosemary Essential Oil: Uses, Composition and Bulk Sourcing Guide"
 description: "A B2B sourcing guide to rosemary essential oil: botanical identity, steam distillation, chemical composition (1,8-cineole, camphor, alpha-pinene), applications in hair care, skin care, aromatherapy and fragrance, quality evaluation and bulk sourcing tips."
 pubDate: 2026-10-27
 category: "Essential Oils 101"
-image: "/images/rosemary-essential-oil.jpg"
+img: "/images/rosemary-essential-oil.jpg"
 author: "Sophia"
 ---
 
