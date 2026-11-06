@@ -28,7 +28,7 @@ In this guide, we explore what makes German Chamomile Essential Oil different, w
 
 German Chamomile (*Matricaria chamomilla L.*) is an annual herb belonging to the Asteraceae family. It is also commonly known by the botanical synonym *Matricaria recutita L.*
 
-![German chamomile flower (Matricaria chamomilla)](https://aka.doubaocdn.com/l/1aCotVEWzP)
+![German chamomile flower (Matricaria chamomilla)](/images/german-chamomile-flower.jpg)
 
 The plant is easily recognized by its white ray florets surrounding a yellow central disc. As the flower develops, its receptacle becomes increasingly conical and hollow.
 
@@ -58,7 +58,7 @@ German Chamomile is particularly interesting for formulators looking at blue ess
 
 The answer is **chamazulene**.
 
-![German chamomile flowering field](https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/912699783319650357~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1809480928&x-signature=Bz2s9auZXxuiFyILe2rSLzKy7y0%3D)
+![German chamomile flowering field](/images/german-chamomile-test.jpg)
 
 Chamazulene is a blue-colored sesquiterpene hydrocarbon responsible for much of the characteristic appearance of German Chamomile Essential Oil.
 
@@ -180,7 +180,7 @@ German Chamomile Essential Oil should not be presented as an established treatme
 
 For essential oil buyers, a product description and a blue appearance are not enough to establish quality. A more reliable assessment should include botanical identity, chemical composition, physical properties, and batch documentation.
 
-![Blue German Chamomile essential oil](https://aka.doubaocdn.com/l/VUPfaButT0)
+![Blue German Chamomile essential oil](/images/german-chamomile-oil.jpg)
 
 ### 1. Confirm the Botanical Identity
 
