@@ -2,7 +2,7 @@
 title: "Palmarosa Essential Oil: Aroma, Geraniol Content, Uses and Applications"
 description: "Discover Indian Palmarosa Essential Oil (Cymbopogon martinii), steam distilled from aromatic grass aerial parts. Learn about its geraniol content, floral aroma, cosmetic applications and sourcing considerations."
 pubDate: 2026-11-17
-category: "Essential Oils"
+category: "Essential Oils 101"
 image: "/images/palmarosa-essential-oil.jpg"
 author: "Sophia"
 ---
