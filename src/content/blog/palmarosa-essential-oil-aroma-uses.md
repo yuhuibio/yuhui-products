@@ -182,18 +182,19 @@ The following combinations are useful starting points for fragrance development.
 
 ![Palmarosa essential oil with complementary floral and woody botanical ingredients for fragrance blending](/images/palmarosa-essential-oil-blending.jpg)
 
+
 | Essential Oil | Fragrance Family | Blending Character |
 |---|---|---|
-| Rose | Floral | Enhances the rosy floral profile |
-| Geranium | Floral | Creates a fuller floral character |
-| Lavender | Floral-Herbal | Adds a soft herbal note |
-| Bergamot | Citrus | Provides a fresh citrus opening |
-| Sweet Orange | Citrus | Adds a sweet and bright note |
-| Sandalwood | Woody | Creates a warm, smooth base |
-| Cedarwood | Woody | Adds depth and dry woody notes |
-| Frankincense | Resinous | Introduces a warm, resinous character |
-| Ylang Ylang | Floral | Adds a rich, exotic floral note |
-| Patchouli | Earthy | Provides an earthy, grounding base |
+| [Rose Oil](/products/rose-oil/) | Floral | Enhances the rosy floral profile |
+| [Geranium Oil](/products/geranium-oil/) | Floral | Creates a fuller floral character |
+| [Lavender Oil](/products/lavender-oil/) | Floral-Herbal | Adds a soft herbal note |
+| [Bergamot Oil](/products/bergamot-oil/) | Citrus | Provides a fresh citrus opening |
+| [Sweet Orange Oil](/products/sweet-orange-oil/) | Citrus | Adds a sweet and bright note |
+| [Sandalwood Oil](/products/sandalwood-oil/) | Woody | Creates a warm, smooth base |
+| [Cedarwood Oil](/products/cedarwood-oil/) | Woody | Adds depth and dry woody notes |
+| [Frankincense Oil](/products/frankincense-oil/) | Resinous | Introduces a warm, resinous character |
+| [Ylang Ylang Oil](/products/ylang-ylang-oil/) | Floral | Adds a rich, exotic floral note |
+| [Patchouli Oil](/products/patchouli-oil/) | Earthy | Provides an earthy, grounding base |
 
 These combinations are fragrance suggestions. Actual blending ratios should be determined through formulation trials and appropriate safety assessments.
 
