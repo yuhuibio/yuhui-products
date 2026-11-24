@@ -1,6 +1,7 @@
 ---
 title: "Frankincense Oil Benefits and Uses: A Guide to Boswellia Carterii"
 pubDate: 2026-11-24
+---
 description: "Explore frankincense oil benefits and uses, from its botanical origins and traditional history to skincare, aromatherapy, and commercial applications of Boswellia carterii essential oil."
 slug: "frankincense-oil-benefits-uses"
 author: "Sophia"
@@ -9,9 +10,8 @@ img: "/images/frankincense-oil-guide.jpg"
 topics:
   - aromatherapy
   - sleep-and-relaxation
-  -frankincense-oil
+  - frankincense-oil
 ---
-
 # Frankincense Oil Benefits and Uses: A Guide to Boswellia Carterii
 
 Frankincense oil has been valued for centuries for its distinctive balsamic aroma and use in traditional incense, perfumery, and personal care. Today, frankincense essential oil remains an important botanical ingredient in aromatherapy, skincare, and fragrance formulations.
