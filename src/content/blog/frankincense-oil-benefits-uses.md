@@ -19,7 +19,7 @@ But what is frankincense oil good for? What makes it different from frankincense
 
 This guide explores the origins, composition, benefits, and applications of **Boswellia carterii essential oil**, commonly known as frankincense oil.
 
-<!-- Image 1: Boswellia carterii tree and natural frankincense resin -->
+![Boswellia carterii tree with frankincense resin collected from its trunk](/images/boswellia-carterii-tree-frankincense-resin.jpg)
 
 ## What Is Frankincense Oil?
 
@@ -37,7 +37,7 @@ During distillation, heat releases volatile aromatic compounds from the resin. T
 
 It is important to distinguish frankincense essential oil from frankincense resin extracts. The essential oil mainly contains volatile aromatic compounds, while boswellic acids are non-volatile constituents found in the resin and are not carried over into the distilled essential oil.
 
-<!-- Image 2: Frankincense resin tears and distilled essential oil -->
+![Natural frankincense resin tears beside frankincense essential oil](/images/frankincense-resin-and-essential-oil.jpg)
 
 ### Key Chemical Constituents
 
@@ -101,7 +101,7 @@ In perfumery, it can be used in:
 
 Its aromatic character makes it a useful ingredient for fragrance developers seeking depth and warmth in a formulation.
 
-<!-- Image 3: Frankincense essential oil used in a cosmetic or fragrance formulation -->
+![Frankincense essential oil used in a skincare and fragrance formulation](/images/frankincense-oil-skincare-formulation.jpg)
 
 ## How to Use Frankincense Oil
 
@@ -125,9 +125,11 @@ Do not apply undiluted essential oil directly to the skin.
 
 Frankincense oil can complement several aromatic families:
 
-- **Floral oils:** Rose and other floral essential oils create a rich, elegant fragrance.
-- **Citrus oils:** Sweet orange and other citrus oils add a fresh, bright note.
-- **Woody oils:** Woody essential oils enhance its warm, resinous character.
+Frankincense oil blends well with essential oils from different aromatic families:
+
+- **Floral oils:** [Rose Oil](https://www.yuhuibiotec.com/products/rose-oil/), [Jasmine Oil](https://www.yuhuibiotec.com/products/jasmine-oil/), and [Ylang Ylang Oil](https://www.yuhuibiotec.com/products/ylang-ylang-oil/) add rich, sweet, and elegant floral notes.
+- **Citrus oils:** [Sweet Orange Oil](https://www.yuhuibiotec.com/products/sweet-orange-oil/), [Bergamot Oil](https://www.yuhuibiotec.com/products/bergamot-oil/), and [Lemon Oil](https://www.yuhuibiotec.com/products/lemon-oil/) bring fresh, bright, and uplifting citrus characteristics.
+- **Woody oils:** [Sandalwood Oil](https://www.yuhuibiotec.com/products/sandalwood-oil/), [Cedarwood Oil](https://www.yuhuibiotec.com/products/cedarwood-oil/), and [Patchouli Oil](https://www.yuhuibiotec.com/products/patchouli-oil/) enhance the warm, deep, and earthy character of frankincense.
 
 The final blend should be developed according to the intended fragrance profile and product formulation.
 
@@ -143,7 +145,6 @@ In China, frankincense became part of traditional aromatic and medicinal practic
 
 Today, frankincense continues to connect traditional aromatic heritage with modern fragrance and personal care industries.
 
-<!-- Image 4: Traditional frankincense resin and incense -->
 
 ## Commercial Applications of Frankincense Essential Oil
 
@@ -171,15 +172,11 @@ Check the botanical name to distinguish Boswellia carterii oil from essential oi
 
 Confirm whether the oil is obtained through steam distillation or hydrodistillation.
 
-**3. Chemical composition**
-
-Request batch-specific GC-MS analysis where available to understand the volatile constituent profile.
-
-**4. Quality documentation**
+**3. Quality documentation**
 
 Review the available Certificate of Analysis (COA), product specifications, and other relevant technical documents.
 
-**5. Supply requirements**
+**4. Supply requirements**
 
 Discuss packaging, order quantities, samples, and delivery requirements with the supplier.
 
